@@ -50,9 +50,50 @@
                 <nav class="linkpva-primary-nav" id="primary-navigation" aria-label="Primary navigation" data-mobile-menu>
                     <ul>
                         <li><a class="is-active" href="index.html" aria-current="page">Home</a></li>
-                        <li><a href="shop.html">Shop</a></li>
+                        <li class="linkpva-has-submenu">
+                            <div class="linkpva-nav-item-row">
+                                <a href="shop.html">Shop</a>
+                                <button class="linkpva-submenu-toggle" type="button" aria-expanded="false" aria-controls="shop-submenu" aria-label="Open Shop submenu" data-submenu-toggle><i class="bi bi-chevron-down" aria-hidden="true"></i></button>
+                            </div>
+                            <ul class="linkpva-submenu linkpva-submenu-level-2" id="shop-submenu">
+                                <li class="linkpva-has-submenu">
+                                    <div class="linkpva-nav-item-row">
+                                        <a href="shop.html">Verified Accounts</a>
+                                        <button class="linkpva-submenu-toggle" type="button" aria-expanded="false" aria-controls="verified-submenu" aria-label="Open Verified Accounts submenu" data-submenu-toggle><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+                                    </div>
+                                    <ul class="linkpva-submenu linkpva-submenu-level-3" id="verified-submenu">
+                                        <li><a href="shop.html">US Verified Accounts</a></li>
+                                        <li><a href="shop.html">UK Verified Accounts</a></li>
+                                        <li><a href="shop.html">EU Verified Accounts</a></li>
+                                    </ul>
+                                </li>
+                                <li class="linkpva-has-submenu">
+                                    <div class="linkpva-nav-item-row">
+                                        <a href="shop.html">Old Accounts</a>
+                                        <button class="linkpva-submenu-toggle" type="button" aria-expanded="false" aria-controls="old-account-submenu" aria-label="Open Old Accounts submenu" data-submenu-toggle><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+                                    </div>
+                                    <ul class="linkpva-submenu linkpva-submenu-level-3" id="old-account-submenu">
+                                        <li><a href="shop.html">1–3 Years Old</a></li>
+                                        <li><a href="shop.html">3–5 Years Old</a></li>
+                                        <li><a href="shop.html">5+ Years Old</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="shop.html">PVA Accounts</a></li>
+                                <li><a href="shop.html">Accounts With Followers</a></li>
+                            </ul>
+                        </li>
                         <li><a href="#account-types">Categories</a></li>
-                        <li><a href="blog.html">Blog</a></li>
+                        <li class="linkpva-has-submenu">
+                            <div class="linkpva-nav-item-row">
+                                <a href="blog.html">Blog</a>
+                                <button class="linkpva-submenu-toggle" type="button" aria-expanded="false" aria-controls="blog-submenu" aria-label="Open Blog submenu" data-submenu-toggle><i class="bi bi-chevron-down" aria-hidden="true"></i></button>
+                            </div>
+                            <ul class="linkpva-submenu linkpva-submenu-level-2" id="blog-submenu">
+                                <li><a href="blog.html">Buyer Guides</a></li>
+                                <li><a href="blog.html">Account Types</a></li>
+                                <li><a href="blog.html">Order Help</a></li>
+                            </ul>
+                        </li>
                         <li><a href="#faq">FAQ</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>

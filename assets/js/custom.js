@@ -9,6 +9,21 @@
     const searchForm = document.querySelector("[data-search-form]");
     const backToTop = document.querySelector("[data-back-to-top]");
     const currentYear = document.querySelector("[data-current-year]");
+    const submenuToggles = document.querySelectorAll("[data-submenu-toggle]");
+
+    function closeSubmenus(scope) {
+        const container = scope || document;
+        const openItems = Array.from(container.querySelectorAll(".linkpva-has-submenu.is-submenu-open"));
+
+        if (container.matches && container.matches(".linkpva-has-submenu.is-submenu-open")) {
+            openItems.unshift(container);
+        }
+
+        openItems.forEach(function (item) {
+            item.classList.remove("is-submenu-open");
+            item.querySelector(":scope > .linkpva-nav-item-row > [data-submenu-toggle]").setAttribute("aria-expanded", "false");
+        });
+    }
 
     function setMenuState(isOpen) {
         if (!menuToggle || !mobileMenu) return;
@@ -18,6 +33,8 @@
         menuToggle.querySelector("i").className = isOpen ? "bi bi-x-lg" : "bi bi-list";
         mobileMenu.classList.toggle("is-open", isOpen);
         body.classList.toggle("is-menu-open", isOpen);
+
+        if (!isOpen) closeSubmenus(mobileMenu);
     }
 
     if (menuToggle && mobileMenu) {
@@ -43,6 +60,21 @@
             }
         });
     }
+
+    submenuToggles.forEach(function (toggle) {
+        toggle.addEventListener("click", function () {
+            const item = toggle.closest(".linkpva-has-submenu");
+            const willOpen = toggle.getAttribute("aria-expanded") !== "true";
+            const parentList = item.parentElement;
+
+            parentList.querySelectorAll(":scope > .linkpva-has-submenu.is-submenu-open").forEach(function (sibling) {
+                if (sibling !== item) closeSubmenus(sibling);
+            });
+
+            item.classList.toggle("is-submenu-open", willOpen);
+            toggle.setAttribute("aria-expanded", String(willOpen));
+        });
+    });
 
     document.querySelectorAll("[data-accordion] button").forEach(function (button) {
         button.addEventListener("click", function () {
@@ -83,6 +115,7 @@
 
     document.addEventListener("keydown", function (event) {
         if (event.key === "Escape") {
+            closeSubmenus();
             setMenuState(false);
 
             if (searchForm && !searchForm.hidden) {
