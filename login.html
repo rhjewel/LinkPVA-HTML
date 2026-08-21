@@ -1,13 +1,40 @@
 <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Static LinkPVA customer sign-in and registration interface."><title>Customer Sign In | LinkPVA</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"><link href="assets/css/bootstrap.min.css" rel="stylesheet"><link href="assets/css/bootstrap-icons.min.css" rel="stylesheet"><link href="assets/css/style.css" rel="stylesheet"></head><body><a class="linkpva-skip-link" href="#main-content">Skip to main content</a>
-<!-- Header Start --><header class="linkpva-header"><div class="container"><div class="linkpva-header-inner"><a class="linkpva-logo" href="index.html"><span class="linkpva-logo-mark">L</span><span>Link<span>PVA</span></span></a><a class="linkpva-text-link ms-auto" href="index.html"><i class="bi bi-arrow-left"></i> Back to website</a></div></div></header><!-- Header End -->
-<main id="main-content"><!-- Authentication Start --><section class="linkpva-auth-wrap"><div class="container"><div class="linkpva-content-card linkpva-auth-card"><a class="linkpva-logo" href="index.html"><span class="linkpva-logo-mark">L</span><span>Link<span>PVA</span></span></a><span class="linkpva-section-tag">Customer Account</span><h1>Sign in to your account</h1><p>View sample orders and account information. Authentication is not active in this static template.</p><div class="linkpva-notice is-warning"><i class="bi bi-exclamation-triangle"></i><span>Demo only—do not enter a real password.</span></div><form data-demo-form><div class="linkpva-form-field mb-3"><label for="login-email">Email address</label><input id="login-email" name="email" type="email" required></div><div class="linkpva-form-field mb-3"><div class="d-flex justify-content-between"><label for="login-password">Password</label><a class="small" href="#">Forgot password?</a></div><input id="login-password" name="password" type="password" required></div><label class="linkpva-checkbox mb-3"><input type="checkbox"><span>Remember this device</span></label><button class="linkpva-button linkpva-button-primary w-100" type="submit">Sign In Demo</button><p class="linkpva-form-status" role="status" data-form-status>Demo form validated. Authentication is not connected.</p></form><p class="text-center small mt-4 mb-0">New customer? <a href="#register">Create an account</a></p></div></div></section><!-- Authentication End -->
-<!-- Registration Start --><section class="linkpva-inner-section" id="register"><div class="container"><div class="linkpva-content-card linkpva-auth-card"><span class="linkpva-section-tag">New Customer</span><h2>Create a demo account</h2><p>Registration will be provided by the future commerce system.</p><form data-demo-form><div class="linkpva-form-field mb-3"><label for="register-name">Display name</label><input id="register-name" required></div><div class="linkpva-form-field mb-3"><label for="register-email">Email address</label><input id="register-email" type="email" required></div><div class="linkpva-form-field mb-3"><label for="register-password">Password</label><input id="register-password" type="password" required><small>Demo only—do not use a real password.</small></div><label class="linkpva-checkbox"><input type="checkbox" required><span>I agree to the <a href="terms.html">terms</a> and <a href="privacy.html">privacy policy</a>.</span></label><button class="linkpva-button linkpva-button-primary w-100 mt-3" type="submit">Register Demo</button><p class="linkpva-form-status" role="status" data-form-status>Demo form validated. No account was created.</p></form></div></div></section><!-- Registration End --></main>
+<!-- Header Start --><header class="linkpva-header"><div class="container"><div class="linkpva-header-inner"><a class="linkpva-logo" href="index.html"><img src="assets/images/logo.svg" width="190" height="46" alt="LinkPVA"></a><a class="linkpva-text-link ms-auto" href="index.html"><i class="bi bi-arrow-left"></i> Back to website</a></div></div></header><!-- Header End -->
+<main id="main-content">
+<!-- Authentication Start -->
+<section class="linkpva-auth-wrap">
+<div class="container">
+<div class="linkpva-content-card linkpva-auth-card">
+<a class="linkpva-logo" href="index.html"><img src="assets/images/logo.svg" width="190" height="46" alt="LinkPVA"></a>
+<span class="linkpva-section-tag">Customer Account</span>
+<h1>Access your account</h1>
+<p>Sign in to view sample orders or create a new customer account. Authentication is not active in this static template.</p>
+<div class="linkpva-notice is-warning"><i class="bi bi-exclamation-triangle"></i><span>Demo only—do not enter a real password.</span></div>
+<div class="linkpva-tabs linkpva-auth-tabs" data-tabs>
+<div class="linkpva-tab-nav linkpva-auth-tab-nav" role="tablist" aria-label="Customer account options">
+<button class="is-active" type="button" role="tab" aria-selected="true" aria-controls="auth-login-panel" data-tab-target="auth-login-panel"><i class="bi bi-box-arrow-in-right"></i> Sign In</button>
+<button type="button" role="tab" aria-selected="false" aria-controls="auth-register-panel" data-tab-target="auth-register-panel"><i class="bi bi-person-plus"></i> Register</button>
+</div>
+<div class="linkpva-tab-panel" id="auth-login-panel" role="tabpanel">
+<h2>Welcome back</h2><p>Enter your customer details to continue.</p>
+<form data-demo-form><div class="linkpva-form-field mb-3"><label for="login-email">Email address</label><input id="login-email" name="email" type="email" autocomplete="email" required></div><div class="linkpva-form-field mb-3"><div class="d-flex justify-content-between"><label for="login-password">Password</label><a class="small" href="#">Forgot password?</a></div><input id="login-password" name="password" type="password" autocomplete="current-password" required></div><label class="linkpva-checkbox mb-3"><input type="checkbox"><span>Remember this device</span></label><button class="linkpva-button linkpva-button-primary w-100" type="submit">Sign In Demo</button><p class="linkpva-form-status" role="status" tabindex="-1" data-form-status>Demo form validated. Authentication is not connected.</p></form>
+</div>
+<div class="linkpva-tab-panel" id="auth-register-panel" role="tabpanel" hidden>
+<h2>Create an account</h2><p>Registration will be provided by the future commerce system.</p>
+<form data-demo-form><div class="linkpva-form-field mb-3"><label for="register-name">Display name</label><input id="register-name" name="display_name" autocomplete="name" required></div><div class="linkpva-form-field mb-3"><label for="register-email">Email address</label><input id="register-email" name="email" type="email" autocomplete="email" required></div><div class="linkpva-form-field mb-3"><label for="register-password">Password</label><input id="register-password" name="password" type="password" autocomplete="new-password" required><small>Demo only—do not use a real password.</small></div><label class="linkpva-checkbox"><input type="checkbox" required><span>I agree to the <a href="terms.html">terms</a> and <a href="privacy.html">privacy policy</a>.</span></label><button class="linkpva-button linkpva-button-primary w-100 mt-3" type="submit">Register Demo</button><p class="linkpva-form-status" role="status" tabindex="-1" data-form-status>Demo form validated. No account was created.</p></form>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Authentication End -->
+</main>
 <!-- Footer Start -->
     <footer class="linkpva-footer">
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-4">
-                    <a class="linkpva-logo linkpva-footer-logo" href="index.html" aria-label="LinkPVA home"><span class="linkpva-logo-mark" aria-hidden="true">L</span><span>Link<span>PVA</span></span></a>
+                    <a class="linkpva-logo linkpva-footer-logo" href="index.html" aria-label="LinkPVA home"><img src="assets/images/logo-white.svg" width="190" height="46" alt="LinkPVA"></a>
                     <p class="linkpva-footer-about">A marketplace interface for comparing LinkedIn account listings with clear specifications and a straightforward ordering experience.</p>
                     <div class="linkpva-social-links"><a href="#" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a><a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a><a href="#" aria-label="Telegram"><i class="bi bi-telegram" aria-hidden="true"></i></a></div>
                 </div>

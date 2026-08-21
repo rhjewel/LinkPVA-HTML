@@ -330,31 +330,12 @@ svg {
 .linkpva-logo {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
   flex: 0 0 auto;
-  color: var(--color-accent);
-  font-family: var(--font-heading);
-  font-size: 23px;
-  font-weight: 800;
-  letter-spacing: -0.04em;
 }
-.linkpva-logo > span:last-child > span {
-  color: var(--color-primary);
-}
-.linkpva-logo:hover {
-  color: var(--color-accent);
-}
-
-.linkpva-logo-mark {
-  display: grid;
-  width: 38px;
-  height: 38px;
-  place-items: center;
-  color: #fff;
-  background: linear-gradient(145deg, #3b82f6, #1d4ed8);
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.26);
-  font-size: 21px;
+.linkpva-logo img {
+  display: block;
+  width: auto;
+  height: 46px;
 }
 
 .linkpva-primary-nav {
@@ -993,6 +974,9 @@ svg {
   transform: translateY(-6px);
   box-shadow: var(--shadow-md);
 }
+.linkpva-product-card:hover .linkpva-product-visual > img {
+  transform: scale(1.045);
+}
 .linkpva-product-card:hover .linkpva-product-footer a {
   color: #fff;
   background: var(--color-primary);
@@ -1007,21 +991,11 @@ svg {
   overflow: hidden;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.5), transparent), #eaf2ff;
 }
-.linkpva-product-visual::before, .linkpva-product-visual::after {
-  position: absolute;
-  width: 145px;
-  height: 145px;
-  content: "";
-  border: 1px solid rgba(37, 99, 235, 0.12);
-  border-radius: 50%;
-}
-.linkpva-product-visual::before {
-  top: -70px;
-  right: -35px;
-}
-.linkpva-product-visual::after {
-  bottom: -85px;
-  left: -50px;
+.linkpva-product-visual > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.25s ease;
 }
 .linkpva-product-visual.is-purple {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.5), transparent), #efedff;
@@ -1037,6 +1011,7 @@ svg {
   position: absolute;
   top: 15px;
   left: 15px;
+  z-index: 3;
   padding: 5px 9px;
   color: var(--color-primary);
   background: rgba(255, 255, 255, 0.92);
@@ -1549,6 +1524,9 @@ svg {
   transform: translateY(-6px);
   box-shadow: var(--shadow-md);
 }
+.linkpva-blog-card:hover .linkpva-blog-visual > img {
+  transform: scale(1.045);
+}
 
 .linkpva-blog-visual {
   position: relative;
@@ -1559,23 +1537,11 @@ svg {
   color: #fff;
   background: linear-gradient(145deg, #60a5fa, #1d4ed8);
 }
-.linkpva-blog-visual::before, .linkpva-blog-visual::after {
-  position: absolute;
-  content: "";
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 50%;
-}
-.linkpva-blog-visual::before {
-  top: -80px;
-  right: -45px;
-  width: 190px;
-  height: 190px;
-}
-.linkpva-blog-visual::after {
-  bottom: -80px;
-  left: -40px;
-  width: 150px;
-  height: 150px;
+.linkpva-blog-visual > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.25s ease;
 }
 .linkpva-blog-visual > i {
   position: relative;
@@ -1733,10 +1699,9 @@ svg {
 
 .linkpva-footer-logo {
   margin-bottom: 20px;
-  color: #fff;
 }
-.linkpva-footer-logo:hover {
-  color: #fff;
+.linkpva-footer-logo img {
+  height: 44px;
 }
 
 .linkpva-footer-about {
@@ -2152,15 +2117,14 @@ svg {
   .linkpva-utility-bar {
     font-size: 11px;
   }
-  .linkpva-logo {
-    font-size: 20px;
-  }
-  .linkpva-logo-mark {
-    width: 35px;
-    height: 35px;
+  .linkpva-logo img {
+    height: 40px;
   }
   .linkpva-header-inner {
     gap: 8px;
+  }
+  .linkpva-header-inner > .ms-auto .linkpva-stock {
+    display: none;
   }
   .linkpva-header-actions {
     gap: 5px;
@@ -2560,10 +2524,10 @@ svg {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
 }
-.linkpva-product-main-visual .linkpva-profile-preview {
-  width: 150px;
-  height: 150px;
-  font-size: 44px;
+.linkpva-product-main-visual > img {
+  width: 100%;
+  min-height: inherit;
+  object-fit: cover;
 }
 
 .linkpva-product-thumbnails {
@@ -2573,6 +2537,7 @@ svg {
   margin-top: 12px;
 }
 .linkpva-product-thumbnails button {
+  overflow: hidden;
   min-height: 82px;
   color: var(--color-primary);
   background: var(--color-background);
@@ -2580,6 +2545,11 @@ svg {
   border-radius: 10px;
   cursor: pointer;
   font-size: 22px;
+}
+.linkpva-product-thumbnails button img {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
 }
 .linkpva-product-thumbnails button.is-active, .linkpva-product-thumbnails button:hover {
   border-color: var(--color-primary);
@@ -2866,9 +2836,13 @@ svg {
   padding: 80px 0;
   background: var(--color-background);
 }
+.linkpva-auth-wrap .container {
+  display: grid;
+  place-items: center;
+}
 
 .linkpva-auth-card {
-  width: min(100%, 480px);
+  width: min(100%, 560px);
   padding: 38px;
 }
 .linkpva-auth-card .linkpva-logo {
@@ -2878,6 +2852,47 @@ svg {
   font-size: 28px;
 }
 .linkpva-auth-card > p {
+  color: var(--color-text-muted);
+  font-size: 13px;
+}
+
+.linkpva-auth-tabs {
+  margin-top: 26px;
+}
+
+.linkpva-auth-tab-nav {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px;
+  padding: 5px;
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: 11px;
+}
+.linkpva-auth-tab-nav button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border: 0;
+  border-radius: 8px;
+}
+.linkpva-auth-tab-nav button.is-active {
+  color: #fff;
+  background: var(--color-primary);
+  border-color: transparent;
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.2);
+}
+
+.linkpva-auth-tabs .linkpva-tab-panel {
+  padding-top: 8px;
+}
+.linkpva-auth-tabs .linkpva-tab-panel > h2 {
+  margin-bottom: 6px;
+  font-size: 22px;
+}
+.linkpva-auth-tabs .linkpva-tab-panel > p {
+  margin-bottom: 22px;
   color: var(--color-text-muted);
   font-size: 13px;
 }
@@ -3034,14 +3049,17 @@ svg {
 }
 
 .linkpva-article-hero {
-  display: grid;
-  min-height: 460px;
-  place-items: center;
-  margin-bottom: 55px;
-  color: #fff;
-  background: linear-gradient(145deg, #60a5fa, #1d4ed8);
+  height: clamp(320px, 42vw, 560px);
+  overflow: hidden;
+  margin: 0 0 55px;
+  background: var(--color-background);
   border-radius: var(--radius-lg);
-  font-size: 90px;
+}
+.linkpva-article-hero img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .linkpva-article-layout {
@@ -3279,8 +3297,7 @@ svg {
     padding: 30px;
   }
   .linkpva-article-hero {
-    min-height: 300px;
-    font-size: 60px;
+    height: 300px;
   }
 }
 @media (max-width: 575.98px) {

@@ -351,33 +351,13 @@ svg {
 .linkpva-logo {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
     flex: 0 0 auto;
-    color: var(--color-accent);
-    font-family: var(--font-heading);
-    font-size: 23px;
-    font-weight: 800;
-    letter-spacing: -0.04em;
 
-    > span:last-child > span {
-        color: var(--color-primary);
+    img {
+        display: block;
+        width: auto;
+        height: 46px;
     }
-
-    &:hover {
-        color: var(--color-accent);
-    }
-}
-
-.linkpva-logo-mark {
-    display: grid;
-    width: 38px;
-    height: 38px;
-    place-items: center;
-    color: #fff;
-    background: linear-gradient(145deg, #3b82f6, #1d4ed8);
-    border-radius: 10px;
-    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.26);
-    font-size: 21px;
 }
 
 .linkpva-primary-nav {
@@ -387,7 +367,7 @@ svg {
         list-style: none;
     }
 
-    > ul {
+    >ul {
         display: flex;
         align-items: center;
         gap: 30px;
@@ -397,8 +377,8 @@ svg {
         position: relative;
     }
 
-    > ul > li > a,
-    > ul > li > .linkpva-nav-item-row > a {
+    >ul>li>a,
+    >ul>li>.linkpva-nav-item-row>a {
         position: relative;
         display: inline-flex;
         padding: 28px 0;
@@ -471,7 +451,7 @@ svg {
         pointer-events: none;
         @include transition;
 
-        li + li {
+        li+li {
             margin-top: 3px;
         }
 
@@ -499,8 +479,8 @@ svg {
             &:hover {
                 background: var(--color-primary-light);
 
-                > a,
-                > button {
+                >a,
+                >button {
                     color: var(--color-primary);
                 }
             }
@@ -518,9 +498,9 @@ svg {
         left: calc(100% - 2px);
     }
 
-    .linkpva-has-submenu:hover > .linkpva-submenu,
-    .linkpva-has-submenu:focus-within > .linkpva-submenu,
-    .linkpva-has-submenu.is-submenu-open > .linkpva-submenu {
+    .linkpva-has-submenu:hover>.linkpva-submenu,
+    .linkpva-has-submenu:focus-within>.linkpva-submenu,
+    .linkpva-has-submenu.is-submenu-open>.linkpva-submenu {
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
@@ -673,7 +653,7 @@ svg {
         }
     }
 
-    > p {
+    >p {
         max-width: 620px;
         margin-bottom: 30px;
         color: var(--color-text-muted);
@@ -740,7 +720,7 @@ svg {
     background: #f3f6fb;
     border-bottom: 1px solid var(--color-border);
 
-    > span {
+    >span {
         width: 8px;
         height: 8px;
         background: #cbd5e1;
@@ -787,7 +767,7 @@ svg {
         font-size: 15px;
     }
 
-    > span {
+    >span {
         padding: 5px 8px;
         color: var(--color-primary);
         background: var(--color-primary-light);
@@ -865,7 +845,7 @@ svg {
     box-shadow: var(--shadow-md);
     backdrop-filter: blur(12px);
 
-    > i {
+    >i {
         display: grid;
         width: 34px;
         height: 34px;
@@ -929,7 +909,7 @@ svg {
         border-right: 0;
     }
 
-    > i {
+    >i {
         display: grid;
         width: 42px;
         height: 42px;
@@ -1077,6 +1057,10 @@ svg {
         transform: translateY(-6px);
         box-shadow: var(--shadow-md);
 
+        .linkpva-product-visual>img {
+            transform: scale(1.045);
+        }
+
         .linkpva-product-footer a {
             color: #fff;
             background: var(--color-primary);
@@ -1095,24 +1079,11 @@ svg {
         linear-gradient(135deg, rgba(255, 255, 255, 0.5), transparent),
         #eaf2ff;
 
-    &::before,
-    &::after {
-        position: absolute;
-        width: 145px;
-        height: 145px;
-        content: "";
-        border: 1px solid rgba(37, 99, 235, 0.12);
-        border-radius: 50%;
-    }
-
-    &::before {
-        top: -70px;
-        right: -35px;
-    }
-
-    &::after {
-        bottom: -85px;
-        left: -50px;
+    >img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        @include transition;
     }
 
     &.is-purple {
@@ -1132,6 +1103,7 @@ svg {
     position: absolute;
     top: 15px;
     left: 15px;
+    z-index: 3;
     padding: 5px 9px;
     color: var(--color-primary);
     background: rgba(255, 255, 255, 0.92);
@@ -1272,7 +1244,7 @@ svg {
         transform: translateY(-4px);
     }
 
-    > span {
+    >span {
         display: grid;
         width: 48px;
         height: 48px;
@@ -1417,7 +1389,7 @@ svg {
     gap: 14px;
     margin-bottom: 25px;
 
-    > span {
+    >span {
         display: grid;
         width: 48px;
         height: 48px;
@@ -1459,7 +1431,7 @@ svg {
     border: 1px dashed #cbd5e1;
     border-radius: 12px;
 
-    > i {
+    >i {
         color: var(--color-primary);
         font-size: 25px;
     }
@@ -1500,7 +1472,7 @@ svg {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 
-    > div {
+    >div {
         display: grid;
         min-height: 145px;
         place-items: center;
@@ -1588,7 +1560,7 @@ svg {
     border: 1px solid var(--color-border);
     border-radius: 13px;
 
-    > i {
+    >i {
         display: grid;
         width: 44px;
         height: 44px;
@@ -1662,7 +1634,7 @@ svg {
         }
     }
 
-    > div {
+    >div {
         padding: 0 24px 22px;
 
         p {
@@ -1703,6 +1675,10 @@ svg {
     &:hover {
         transform: translateY(-6px);
         box-shadow: var(--shadow-md);
+
+        .linkpva-blog-visual>img {
+            transform: scale(1.045);
+        }
     }
 }
 
@@ -1715,35 +1691,20 @@ svg {
     color: #fff;
     background: linear-gradient(145deg, #60a5fa, #1d4ed8);
 
-    &::before,
-    &::after {
-        position: absolute;
-        content: "";
-        border: 1px solid rgba(255, 255, 255, 0.25);
-        border-radius: 50%;
+    >img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        @include transition;
     }
 
-    &::before {
-        top: -80px;
-        right: -45px;
-        width: 190px;
-        height: 190px;
-    }
-
-    &::after {
-        bottom: -80px;
-        left: -40px;
-        width: 150px;
-        height: 150px;
-    }
-
-    > i {
+    >i {
         position: relative;
         z-index: 2;
         font-size: 55px;
     }
 
-    > span {
+    >span {
         position: absolute;
         right: 16px;
         bottom: 14px;
@@ -1781,7 +1742,7 @@ svg {
         }
     }
 
-    > p {
+    >p {
         color: var(--color-text-muted);
         font-size: 13px;
     }
@@ -1834,7 +1795,7 @@ svg {
         font-size: 13px;
     }
 
-    > div:nth-child(2) > span {
+    >div:nth-child(2)>span {
         display: block;
         margin-bottom: 5px;
         color: #b9d0ff;
@@ -1872,7 +1833,7 @@ svg {
         letter-spacing: -0.04em;
     }
 
-    > p {
+    >p {
         max-width: 650px;
         margin: 0 auto 28px;
         color: var(--color-text-muted);
@@ -1915,10 +1876,9 @@ svg {
 
 .linkpva-footer-logo {
     margin-bottom: 20px;
-    color: #fff;
 
-    &:hover {
-        color: #fff;
+    img {
+        height: 44px;
     }
 }
 
@@ -1957,14 +1917,14 @@ svg {
         margin-bottom: 14px;
     }
 
-    li > span:last-child,
+    li>span:last-child,
     address {
         min-width: 0;
         margin: 0;
     }
 
     small,
-    address > span {
+    address>span {
         display: block;
     }
 
@@ -1978,7 +1938,7 @@ svg {
         text-transform: uppercase;
     }
 
-    address > span {
+    address>span {
         color: #a9b7cf;
         font-size: 11px;
         font-style: normal;
@@ -2047,7 +2007,7 @@ svg {
 }
 
 @media (max-width: 1199.98px) {
-    .linkpva-primary-nav > ul {
+    .linkpva-primary-nav>ul {
         gap: 20px;
     }
 
@@ -2127,12 +2087,12 @@ svg {
             }
         }
 
-        > ul {
+        >ul {
             display: block;
         }
 
-        > ul > li > a,
-        > ul > li > .linkpva-nav-item-row > a {
+        >ul>li>a,
+        >ul>li>.linkpva-nav-item-row>a {
             display: flex;
             flex: 1 1 auto;
             padding: 13px 0;
@@ -2144,14 +2104,14 @@ svg {
             }
         }
 
-        > ul > .linkpva-has-submenu > .linkpva-nav-item-row {
+        >ul>.linkpva-has-submenu>.linkpva-nav-item-row {
             border-bottom: 1px solid var(--color-border);
 
-            > a {
+            >a {
                 border-bottom: 0;
             }
 
-            > .linkpva-submenu-toggle {
+            >.linkpva-submenu-toggle {
                 width: 44px;
                 height: 44px;
                 flex: 0 0 auto;
@@ -2195,7 +2155,7 @@ svg {
             padding-left: 13px;
         }
 
-        .linkpva-has-submenu.is-submenu-open > .linkpva-submenu {
+        .linkpva-has-submenu.is-submenu-open>.linkpva-submenu {
             display: block;
         }
 
@@ -2226,7 +2186,7 @@ svg {
         margin: auto;
         text-align: center;
 
-        > p {
+        >p {
             margin-right: auto;
             margin-left: auto;
         }
@@ -2334,11 +2294,11 @@ svg {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .linkpva-facts-grid > div:nth-child(2) {
+    .linkpva-facts-grid>div:nth-child(2) {
         border-right: 0;
     }
 
-    .linkpva-facts-grid > div:nth-child(-n + 2) {
+    .linkpva-facts-grid>div:nth-child(-n + 2) {
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     }
 
@@ -2385,7 +2345,7 @@ svg {
         display: block;
         text-align: center;
 
-        p + p {
+        p+p {
             margin-top: 8px;
         }
     }
@@ -2409,7 +2369,7 @@ svg {
     }
 
     .linkpva-section-heading p,
-    .linkpva-final-cta-inner > p {
+    .linkpva-final-cta-inner>p {
         font-size: 15px;
     }
 
@@ -2418,16 +2378,17 @@ svg {
     }
 
     .linkpva-logo {
-        font-size: 20px;
-    }
-
-    .linkpva-logo-mark {
-        width: 35px;
-        height: 35px;
+        img {
+            height: 40px;
+        }
     }
 
     .linkpva-header-inner {
         gap: 8px;
+
+        >.ms-auto .linkpva-stock {
+            display: none;
+        }
     }
 
     .linkpva-header-actions {
@@ -2453,7 +2414,7 @@ svg {
             font-size: 2.45rem;
         }
 
-        > p {
+        >p {
             font-size: 15px;
         }
     }
@@ -2541,7 +2502,7 @@ svg {
     .linkpva-review-empty {
         display: block;
 
-        > i {
+        >i {
             display: block;
             margin-bottom: 10px;
         }
@@ -2550,7 +2511,7 @@ svg {
     .linkpva-facts-grid {
         grid-template-columns: 1fr;
 
-        > div {
+        >div {
             min-height: 120px;
             border-right: 0;
             border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
@@ -2577,7 +2538,7 @@ svg {
         font-size: 13px;
     }
 
-    .linkpva-accordion-item > div {
+    .linkpva-accordion-item>div {
         padding: 0 19px 19px;
     }
 
@@ -2898,10 +2859,10 @@ svg {
     border: 1px solid var(--color-border);
     border-radius: var(--radius-lg);
 
-    .linkpva-profile-preview {
-        width: 150px;
-        height: 150px;
-        font-size: 44px;
+    >img {
+        width: 100%;
+        min-height: inherit;
+        object-fit: cover;
     }
 }
 
@@ -2912,6 +2873,7 @@ svg {
     margin-top: 12px;
 
     button {
+        overflow: hidden;
         min-height: 82px;
         color: var(--color-primary);
         background: var(--color-background);
@@ -2919,6 +2881,12 @@ svg {
         border-radius: 10px;
         cursor: pointer;
         font-size: 22px;
+
+        img {
+            width: 100%;
+            height: 80px;
+            object-fit: cover;
+        }
 
         &.is-active,
         &:hover {
@@ -3139,7 +3107,7 @@ svg {
     padding: 55px;
     text-align: center;
 
-    > i {
+    >i {
         display: grid;
         width: 84px;
         height: 84px;
@@ -3169,7 +3137,7 @@ svg {
     border: 1px solid var(--color-border);
     border-radius: var(--radius-md);
 
-    > i {
+    >i {
         display: grid;
         width: 48px;
         height: 48px;
@@ -3205,7 +3173,7 @@ svg {
         font-size: 26px;
     }
 
-    > p {
+    >p {
         color: #aebbd3;
     }
 
@@ -3233,10 +3201,15 @@ svg {
     place-items: center;
     padding: 80px 0;
     background: var(--color-background);
+
+    .container {
+        display: grid;
+        place-items: center;
+    }
 }
 
 .linkpva-auth-card {
-    width: min(100%, 480px);
+    width: min(100%, 560px);
     padding: 38px;
 
     .linkpva-logo {
@@ -3247,7 +3220,52 @@ svg {
         font-size: 28px;
     }
 
-    > p {
+    >p {
+        color: var(--color-text-muted);
+        font-size: 13px;
+    }
+}
+
+.linkpva-auth-tabs {
+    margin-top: 26px;
+}
+
+.linkpva-auth-tab-nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+    padding: 5px;
+    background: var(--color-background);
+    border: 1px solid var(--color-border);
+    border-radius: 11px;
+
+    button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+        border: 0;
+        border-radius: 8px;
+
+        &.is-active {
+            color: #fff;
+            background: var(--color-primary);
+            border-color: transparent;
+            box-shadow: 0 8px 18px rgba(37, 99, 235, 0.2);
+        }
+    }
+}
+
+.linkpva-auth-tabs .linkpva-tab-panel {
+    padding-top: 8px;
+
+    >h2 {
+        margin-bottom: 6px;
+        font-size: 22px;
+    }
+
+    >p {
+        margin-bottom: 22px;
         color: var(--color-text-muted);
         font-size: 13px;
     }
@@ -3258,7 +3276,7 @@ svg {
     grid-template-columns: 240px 1fr;
     gap: 28px;
 
-    > * {
+    >* {
         min-width: 0;
     }
 }
@@ -3293,7 +3311,7 @@ svg {
     gap: 16px;
     margin-bottom: 22px;
 
-    > div {
+    >div {
         padding: 22px;
         background: #fff;
         border: 1px solid var(--color-border);
@@ -3425,14 +3443,18 @@ svg {
 }
 
 .linkpva-article-hero {
-    display: grid;
-    min-height: 460px;
-    place-items: center;
-    margin-bottom: 55px;
-    color: #fff;
-    background: linear-gradient(145deg, #60a5fa, #1d4ed8);
+    height: clamp(320px, 42vw, 560px);
+    overflow: hidden;
+    margin: 0 0 55px;
+    background: var(--color-background);
     border-radius: var(--radius-lg);
-    font-size: 90px;
+
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 
 .linkpva-article-layout {
@@ -3504,7 +3526,7 @@ svg {
     background: var(--color-background);
     border-radius: 13px;
 
-    > span {
+    >span {
         display: grid;
         width: 58px;
         height: 58px;
@@ -3616,6 +3638,7 @@ svg {
 }
 
 @media (max-width: 991.98px) {
+
     .linkpva-product-gallery,
     .linkpva-order-summary,
     .linkpva-filter-card,
@@ -3713,12 +3736,12 @@ svg {
     }
 
     .linkpva-article-hero {
-        min-height: 300px;
-        font-size: 60px;
+        height: 300px;
     }
 }
 
 @media (max-width: 575.98px) {
+
     .linkpva-content-card,
     .linkpva-auth-card {
         padding: 22px;
