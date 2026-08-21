@@ -76,6 +76,54 @@
         });
     });
 
+    document.querySelectorAll("[data-quantity-minus], [data-quantity-plus]").forEach(function (button) {
+        button.addEventListener("click", function () {
+            const quantity = button.closest(".linkpva-quantity");
+            const input = quantity.querySelector("[data-quantity-input]");
+            const minimum = Number(input.min) || 1;
+            const maximum = Number(input.max) || 999;
+            const direction = button.hasAttribute("data-quantity-plus") ? 1 : -1;
+            input.value = Math.min(maximum, Math.max(minimum, Number(input.value || minimum) + direction));
+            input.dispatchEvent(new Event("change", { bubbles: true }));
+        });
+    });
+
+    document.querySelectorAll("[data-tabs]").forEach(function (tabs) {
+        const buttons = tabs.querySelectorAll("[data-tab-target]");
+
+        buttons.forEach(function (button) {
+            button.addEventListener("click", function () {
+                buttons.forEach(function (currentButton) {
+                    const panel = document.getElementById(currentButton.dataset.tabTarget);
+                    const isActive = currentButton === button;
+                    currentButton.classList.toggle("is-active", isActive);
+                    currentButton.setAttribute("aria-selected", String(isActive));
+                    panel.hidden = !isActive;
+                });
+            });
+        });
+    });
+
+    document.querySelectorAll("[data-demo-form]").forEach(function (form) {
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+            const status = form.querySelector("[data-form-status]");
+
+            if (status) {
+                status.classList.add("is-visible");
+                status.focus({ preventScroll: true });
+            }
+        });
+    });
+
+    document.querySelectorAll(".linkpva-product-thumbnails button").forEach(function (button) {
+        button.addEventListener("click", function () {
+            button.parentElement.querySelectorAll("button").forEach(function (currentButton) {
+                currentButton.classList.toggle("is-active", currentButton === button);
+            });
+        });
+    });
+
     document.querySelectorAll("[data-accordion] button").forEach(function (button) {
         button.addEventListener("click", function () {
             const accordion = button.closest("[data-accordion]");
