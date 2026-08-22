@@ -105,6 +105,11 @@ svg {
   outline-offset: 3px;
 }
 
+::-moz-selection {
+  color: #fff;
+  background: var(--color-primary);
+}
+
 ::selection {
   color: #fff;
   background: var(--color-primary);
@@ -352,8 +357,7 @@ svg {
 .linkpva-primary-nav li {
   position: relative;
 }
-.linkpva-primary-nav > ul > li > a,
-.linkpva-primary-nav > ul > li > .linkpva-nav-item-row > a {
+.linkpva-primary-nav > ul > li > a {
   position: relative;
   display: inline-flex;
   padding: 28px 0;
@@ -361,8 +365,7 @@ svg {
   font-size: 14px;
   font-weight: 700;
 }
-.linkpva-primary-nav > ul > li > a::after,
-.linkpva-primary-nav > ul > li > .linkpva-nav-item-row > a::after {
+.linkpva-primary-nav > ul > li > a::after {
   position: absolute;
   right: 50%;
   bottom: 20px;
@@ -373,39 +376,28 @@ svg {
   border-radius: 3px;
   transition: all 0.25s ease;
 }
-.linkpva-primary-nav > ul > li > a:hover, .linkpva-primary-nav > ul > li > a.is-active,
-.linkpva-primary-nav > ul > li > .linkpva-nav-item-row > a:hover,
-.linkpva-primary-nav > ul > li > .linkpva-nav-item-row > a.is-active {
+.linkpva-primary-nav > ul > li > a:hover, .linkpva-primary-nav > ul > li > a.is-active {
   color: var(--color-primary);
 }
-.linkpva-primary-nav > ul > li > a:hover::after, .linkpva-primary-nav > ul > li > a.is-active::after,
-.linkpva-primary-nav > ul > li > .linkpva-nav-item-row > a:hover::after,
-.linkpva-primary-nav > ul > li > .linkpva-nav-item-row > a.is-active::after {
+.linkpva-primary-nav > ul > li > a:hover::after, .linkpva-primary-nav > ul > li > a.is-active::after {
   right: 0;
   left: 0;
 }
-.linkpva-primary-nav .linkpva-nav-item-row {
-  display: flex;
-  align-items: center;
+.linkpva-primary-nav .menu-item-has-children > a {
+  position: relative;
+  padding-right: 17px;
 }
-.linkpva-primary-nav .linkpva-submenu-toggle {
-  display: grid;
-  width: 24px;
-  height: 36px;
-  place-items: center;
-  padding: 0;
-  color: #69758b;
-  background: transparent;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 10px;
-  transition: all 0.25s ease;
+.linkpva-primary-nav .menu-item-has-children > a::before {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  content: "\f282";
+  font-family: "bootstrap-icons";
+  font-size: 9px;
+  transform: translateY(-50%);
+  transition: transform 0.25s ease;
 }
-.linkpva-primary-nav .linkpva-submenu-toggle:hover {
-  color: var(--color-primary);
-  background: var(--color-primary-light);
-}
-.linkpva-primary-nav .linkpva-submenu {
+.linkpva-primary-nav .sub-menu {
   position: absolute;
   top: calc(100% - 10px);
   left: 0;
@@ -423,10 +415,10 @@ svg {
   pointer-events: none;
   transition: all 0.25s ease;
 }
-.linkpva-primary-nav .linkpva-submenu li + li {
+.linkpva-primary-nav .sub-menu li + li {
   margin-top: 3px;
 }
-.linkpva-primary-nav .linkpva-submenu a {
+.linkpva-primary-nav .sub-menu a {
   display: flex;
   min-height: 42px;
   align-items: center;
@@ -437,32 +429,20 @@ svg {
   font-size: 12px;
   font-weight: 650;
 }
-.linkpva-primary-nav .linkpva-submenu a:hover, .linkpva-primary-nav .linkpva-submenu a:focus-visible {
+.linkpva-primary-nav .sub-menu a:hover, .linkpva-primary-nav .sub-menu a:focus-visible {
   color: var(--color-primary);
   background: var(--color-primary-light);
 }
-.linkpva-primary-nav .linkpva-submenu .linkpva-nav-item-row {
-  border-radius: 8px;
+.linkpva-primary-nav .sub-menu .menu-item-has-children > a::before {
+  content: "\f285";
 }
-.linkpva-primary-nav .linkpva-submenu .linkpva-nav-item-row:hover {
-  background: var(--color-primary-light);
-}
-.linkpva-primary-nav .linkpva-submenu .linkpva-nav-item-row:hover > a,
-.linkpva-primary-nav .linkpva-submenu .linkpva-nav-item-row:hover > button {
-  color: var(--color-primary);
-}
-.linkpva-primary-nav .linkpva-submenu .linkpva-submenu-toggle {
-  width: 34px;
-  height: 42px;
-  flex: 0 0 auto;
-}
-.linkpva-primary-nav .linkpva-submenu-level-3 {
+.linkpva-primary-nav .sub-menu .sub-menu {
   top: -10px;
   left: calc(100% - 2px);
 }
-.linkpva-primary-nav .linkpva-has-submenu:hover > .linkpva-submenu,
-.linkpva-primary-nav .linkpva-has-submenu:focus-within > .linkpva-submenu,
-.linkpva-primary-nav .linkpva-has-submenu.is-submenu-open > .linkpva-submenu {
+.linkpva-primary-nav .menu-item-has-children:hover > .sub-menu,
+.linkpva-primary-nav .menu-item-has-children:focus-within > .sub-menu,
+.linkpva-primary-nav .menu-item-has-children.is-submenu-open > .sub-menu {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
@@ -1000,7 +980,8 @@ svg {
 .linkpva-product-visual > img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   transition: all 0.25s ease;
 }
 .linkpva-product-visual.is-purple {
@@ -1129,6 +1110,9 @@ svg {
 
 .linkpva-why {
   background: #fff;
+}
+.linkpva-why .linkpva-section-heading {
+  margin-bottom: 25px;
 }
 
 .linkpva-benefit-card {
@@ -1405,7 +1389,7 @@ svg {
 .linkpva-article-copy p {
   margin-bottom: 20px;
   color: #536078;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.9;
 }
 .linkpva-article-copy strong {
@@ -1537,7 +1521,7 @@ svg {
 .linkpva-blog-visual {
   position: relative;
   display: grid;
-  height: 210px;
+  height: 250px;
   place-items: center;
   overflow: hidden;
   color: #fff;
@@ -1546,7 +1530,8 @@ svg {
 .linkpva-blog-visual > img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   transition: all 0.25s ease;
 }
 .linkpva-blog-visual > i {
@@ -1884,16 +1869,16 @@ svg {
     overflow-y: auto;
     background: #fff;
     box-shadow: -20px 0 50px rgba(15, 32, 67, 0.14);
+    clip-path: inset(0 0 0 100%);
     opacity: 0;
     visibility: hidden;
-    transform: translateX(110%);
     pointer-events: none;
-    transition: transform 0.25s ease;
+    transition: clip-path 0.3s ease, opacity 0.2s ease, visibility 0.3s ease;
   }
   .linkpva-primary-nav.is-open {
+    clip-path: inset(0);
     opacity: 1;
     visibility: visible;
-    transform: translateX(0);
     pointer-events: auto;
   }
   .linkpva-primary-nav .linkpva-mobile-nav-header {
@@ -1933,31 +1918,17 @@ svg {
     display: block;
     padding-top: 18px;
   }
-  .linkpva-primary-nav > ul > li > a,
-  .linkpva-primary-nav > ul > li > .linkpva-nav-item-row > a {
+  .linkpva-primary-nav > ul > li > a {
     display: flex;
     flex: 1 1 auto;
     padding: 13px 0;
     border-bottom: 1px solid var(--color-border);
     font-size: 15px;
   }
-  .linkpva-primary-nav > ul > li > a::after,
-  .linkpva-primary-nav > ul > li > .linkpva-nav-item-row > a::after {
+  .linkpva-primary-nav > ul > li > a::after {
     display: none;
   }
-  .linkpva-primary-nav > ul > .linkpva-has-submenu > .linkpva-nav-item-row {
-    border-bottom: 1px solid var(--color-border);
-  }
-  .linkpva-primary-nav > ul > .linkpva-has-submenu > .linkpva-nav-item-row > a {
-    border-bottom: 0;
-  }
-  .linkpva-primary-nav > ul > .linkpva-has-submenu > .linkpva-nav-item-row > .linkpva-submenu-toggle {
-    width: 44px;
-    height: 44px;
-    flex: 0 0 auto;
-    font-size: 12px;
-  }
-  .linkpva-primary-nav .linkpva-submenu {
+  .linkpva-primary-nav .sub-menu {
     position: static;
     display: none;
     width: 100%;
@@ -1971,31 +1942,25 @@ svg {
     transform: none;
     pointer-events: auto;
   }
-  .linkpva-primary-nav .linkpva-submenu a {
+  .linkpva-primary-nav .sub-menu a {
     min-height: 40px;
-    padding: 8px 10px;
+    padding: 8px 30px 8px 10px;
     border-left: 1px solid var(--color-border);
     border-radius: 0;
     font-size: 13px;
   }
-  .linkpva-primary-nav .linkpva-submenu .linkpva-nav-item-row {
-    align-items: stretch;
+  .linkpva-primary-nav .sub-menu .menu-item-has-children > a::before {
+    right: 10px;
+    content: "\f282";
   }
-  .linkpva-primary-nav .linkpva-submenu .linkpva-submenu-toggle {
-    height: 40px;
-    border-left: 1px solid var(--color-border);
-  }
-  .linkpva-primary-nav .linkpva-submenu-level-3 {
+  .linkpva-primary-nav .sub-menu .sub-menu {
     padding-left: 13px;
   }
-  .linkpva-primary-nav .linkpva-has-submenu.is-submenu-open > .linkpva-submenu {
+  .linkpva-primary-nav .menu-item-has-children.is-submenu-open > .sub-menu {
     display: block;
   }
-  .linkpva-primary-nav .linkpva-submenu-toggle[aria-expanded=true] i {
-    transform: rotate(180deg);
-  }
-  .linkpva-primary-nav .linkpva-submenu .linkpva-submenu-toggle[aria-expanded=true] i {
-    transform: rotate(90deg);
+  .linkpva-primary-nav .menu-item-has-children.is-submenu-open > a::before {
+    transform: translateY(-50%) rotate(180deg);
   }
   .linkpva-menu-toggle {
     position: relative;
@@ -2571,7 +2536,8 @@ svg {
 .linkpva-product-main-visual > img {
   width: 100%;
   min-height: inherit;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .linkpva-product-thumbnails {
@@ -2593,7 +2559,8 @@ svg {
 .linkpva-product-thumbnails button img {
   width: 100%;
   height: 80px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .linkpva-product-thumbnails button.is-active, .linkpva-product-thumbnails button:hover {
   border-color: var(--color-primary);
@@ -2996,6 +2963,210 @@ svg {
   font-size: 11px;
 }
 
+.linkpva-pricing-preview {
+  background: var(--color-background);
+}
+
+.linkpva-pricing-table-wrap {
+  overflow-x: auto;
+  overflow-y: hidden;
+  background: #fff;
+  border: 1px solid #d9e2ef;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  scrollbar-width: thin;
+  scrollbar-color: #b8c6da transparent;
+}
+
+.linkpva-pricing-table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+}
+
+.linkpva-pricing-table th,
+.linkpva-pricing-table td {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--color-border);
+  text-align: left;
+  vertical-align: middle;
+}
+
+.linkpva-pricing-table thead th {
+  color: var(--color-text-muted);
+  background: #f9fbff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.linkpva-pricing-table tbody tr:last-child th,
+.linkpva-pricing-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.linkpva-pricing-table tbody th {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: var(--color-accent);
+  font-family: var(--font-heading);
+}
+
+.linkpva-pricing-table small {
+  display: block;
+  color: var(--color-text-muted);
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.linkpva-pricing-table td > strong {
+  display: block;
+  color: var(--color-accent);
+  font-family: var(--font-heading);
+  font-size: 22px;
+}
+
+.linkpva-pricing-table td:last-child {
+  text-align: right;
+}
+
+.linkpva-pricing-table td:last-child a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.linkpva-price-icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  color: var(--color-cyan);
+  background: #ecfeff;
+  border-radius: 12px;
+  place-items: center;
+}
+
+.linkpva-price-icon.is-purple {
+  color: var(--color-secondary);
+  background: #f3f0ff;
+}
+
+.linkpva-price-icon.is-blue {
+  color: var(--color-primary);
+  background: var(--color-primary-light);
+}
+
+.linkpva-price-icon.is-green {
+  color: var(--color-success);
+  background: #ecfdf3;
+}
+
+.linkpva-pricing-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 18px 0 0;
+  color: var(--color-text-muted);
+  font-size: 12px;
+  text-align: center;
+}
+
+.linkpva-pricing-plan {
+  position: relative;
+  height: 100%;
+  padding: 32px;
+  background: #fff;
+  border: 1px solid #d9e2ef;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.linkpva-pricing-plan.is-featured {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 1px var(--color-primary), var(--shadow-md);
+}
+
+.linkpva-pricing-plan-badge {
+  position: absolute;
+  top: 0;
+  right: 24px;
+  padding: 6px 12px;
+  color: #fff;
+  background: var(--color-primary);
+  border-radius: 0 0 9px 9px;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.linkpva-pricing-plan > .linkpva-price-icon {
+  margin-bottom: 22px;
+}
+
+.linkpva-pricing-plan h2 {
+  margin-bottom: 8px;
+  font-size: 22px;
+}
+
+.linkpva-pricing-plan > p {
+  min-height: 54px;
+  color: var(--color-text-muted);
+  font-size: 13px;
+}
+
+.linkpva-plan-price {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+  margin: 22px 0;
+  color: var(--color-accent);
+  font-family: var(--font-heading);
+  font-size: 42px;
+  font-weight: 800;
+}
+
+.linkpva-plan-price small {
+  color: var(--color-text-muted);
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.linkpva-pricing-plan ul {
+  display: grid;
+  gap: 11px;
+  margin: 0 0 26px;
+  list-style: none;
+}
+
+.linkpva-pricing-plan li {
+  display: flex;
+  gap: 9px;
+  font-size: 13px;
+}
+
+.linkpva-pricing-plan li i {
+  margin-top: 5px;
+  color: var(--color-success);
+}
+
+.linkpva-pricing-plan .linkpva-button {
+  width: 100%;
+}
+
+.linkpva-pricing-comparison {
+  background: var(--color-background);
+}
+
+
 .linkpva-blog-featured {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
@@ -3057,16 +3228,17 @@ svg {
   flex-wrap: wrap;
   gap: 7px;
 }
-.linkpva-category-pills a {
+.linkpva-category-pills button {
   padding: 7px 11px;
   color: var(--color-text);
   background: #fff;
   border: 1px solid var(--color-border);
   border-radius: 20px;
+  cursor: pointer;
   font-size: 10px;
   font-weight: 700;
 }
-.linkpva-category-pills a.is-active, .linkpva-category-pills a:hover {
+.linkpva-category-pills button.is-active, .linkpva-category-pills button:hover, .linkpva-category-pills button:focus-visible {
   color: #fff;
   background: var(--color-primary);
   border-color: var(--color-primary);
@@ -3103,7 +3275,8 @@ svg {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .linkpva-article-layout {
@@ -3299,6 +3472,86 @@ svg {
   }
 }
 @media (max-width: 767.98px) {
+  .linkpva-pricing-table-wrap {
+    overflow: visible;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .linkpva-pricing-table {
+    display: block;
+    min-width: 0;
+  }
+  .linkpva-pricing-table thead {
+    display: none;
+  }
+  .linkpva-pricing-table tbody {
+    display: grid;
+    gap: 14px;
+  }
+  .linkpva-pricing-table tbody tr {
+    display: grid;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #d9e2ef;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+  }
+  .linkpva-pricing-table tbody th,
+  .linkpva-pricing-table tbody td {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--color-border);
+    text-align: right;
+  }
+  .linkpva-pricing-table tbody th {
+    justify-content: flex-start;
+    padding: 16px;
+    text-align: left;
+  }
+  .linkpva-pricing-table tbody td::before {
+    flex: 1 1 auto;
+    color: var(--color-text-muted);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-align: left;
+    text-transform: uppercase;
+  }
+  .linkpva-pricing-table tbody td:nth-of-type(1)::before {
+    content: "Starting price";
+  }
+  .linkpva-pricing-table tbody td:nth-of-type(2)::before {
+    content: "Best for";
+  }
+  .linkpva-pricing-table tbody td:nth-of-type(3)::before {
+    content: "Details";
+  }
+  .linkpva-pricing-table tbody td:last-child {
+    border-bottom: 0;
+    text-align: right;
+  }
+  .linkpva-pricing-table tbody td > strong {
+    margin-left: auto;
+    font-size: 19px;
+  }
+  .linkpva-pricing-table.is-detailed tbody td:nth-of-type(1)::before {
+    content: "Category";
+  }
+  .linkpva-pricing-table.is-detailed tbody td:nth-of-type(2)::before {
+    content: "Primary detail";
+  }
+  .linkpva-pricing-table.is-detailed tbody td:nth-of-type(3)::before {
+    content: "Starting price";
+  }
+  .linkpva-pricing-table.is-detailed tbody td:nth-of-type(4)::before {
+    content: "Details";
+  }
   .linkpva-inner-section {
     padding: 70px 0;
   }
@@ -3370,6 +3623,4 @@ svg {
   .linkpva-article-content {
     font-size: 15px;
   }
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

@@ -66,63 +66,44 @@
                         </button>
                     </div>
                     <ul>
-                        <li><a class="is-active" href="index.html" aria-current="page">Home</a></li>
-                        <li class="linkpva-has-submenu">
-                            <div class="linkpva-nav-item-row">
-                                <a href="shop.html">Shop</a>
-                                <button class="linkpva-submenu-toggle" type="button" aria-expanded="false"
-                                    aria-controls="shop-submenu" aria-label="Open Shop submenu" data-submenu-toggle><i
-                                        class="bi bi-chevron-down" aria-hidden="true"></i></button>
-                            </div>
-                            <ul class="linkpva-submenu linkpva-submenu-level-2" id="shop-submenu">
-                                <li class="linkpva-has-submenu">
-                                    <div class="linkpva-nav-item-row">
-                                        <a href="shop.html">Verified Accounts</a>
-                                        <button class="linkpva-submenu-toggle" type="button" aria-expanded="false"
-                                            aria-controls="verified-submenu" aria-label="Open Verified Accounts submenu"
-                                            data-submenu-toggle><i class="bi bi-chevron-right"
-                                                aria-hidden="true"></i></button>
-                                    </div>
-                                    <ul class="linkpva-submenu linkpva-submenu-level-3" id="verified-submenu">
-                                        <li><a href="shop.html">US Verified Accounts</a></li>
-                                        <li><a href="shop.html">UK Verified Accounts</a></li>
-                                        <li><a href="shop.html">EU Verified Accounts</a></li>
+                        <li class="menu-item"><a class="is-active" href="index.html" aria-current="page">Home</a></li>
+                        <li class="menu-item menu-item-has-children">
+                            <a href="shop.html" aria-haspopup="true" aria-expanded="false">Shop</a>
+                            <ul class="sub-menu">
+                                <li class="menu-item"><a href="shop.html">All Products</a></li>
+                                <li class="menu-item menu-item-has-children">
+                                    <a href="shop.html" aria-haspopup="true" aria-expanded="false">Verified Accounts</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item"><a href="shop.html">US Verified Accounts</a></li>
+                                        <li class="menu-item"><a href="shop.html">UK Verified Accounts</a></li>
+                                        <li class="menu-item"><a href="shop.html">EU Verified Accounts</a></li>
                                     </ul>
                                 </li>
-                                <li class="linkpva-has-submenu">
-                                    <div class="linkpva-nav-item-row">
-                                        <a href="shop.html">Old Accounts</a>
-                                        <button class="linkpva-submenu-toggle" type="button" aria-expanded="false"
-                                            aria-controls="old-account-submenu" aria-label="Open Old Accounts submenu"
-                                            data-submenu-toggle><i class="bi bi-chevron-right"
-                                                aria-hidden="true"></i></button>
-                                    </div>
-                                    <ul class="linkpva-submenu linkpva-submenu-level-3" id="old-account-submenu">
-                                        <li><a href="shop.html">1–3 Years Old</a></li>
-                                        <li><a href="shop.html">3–5 Years Old</a></li>
-                                        <li><a href="shop.html">5+ Years Old</a></li>
+                                <li class="menu-item menu-item-has-children">
+                                    <a href="shop.html" aria-haspopup="true" aria-expanded="false">Old Accounts</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item"><a href="shop.html">1–3 Years Old</a></li>
+                                        <li class="menu-item"><a href="shop.html">3–5 Years Old</a></li>
+                                        <li class="menu-item"><a href="shop.html">5+ Years Old</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="shop.html">PVA Accounts</a></li>
-                                <li><a href="shop.html">Accounts With Followers</a></li>
+                                <li class="menu-item"><a href="shop.html">PVA Accounts</a></li>
+                                <li class="menu-item"><a href="shop.html">Accounts With Followers</a></li>
                             </ul>
                         </li>
-                        <li><a href="index.html#account-types">Categories</a></li>
-                        <li class="linkpva-has-submenu">
-                            <div class="linkpva-nav-item-row">
-                                <a href="blog.html">Blog</a>
-                                <button class="linkpva-submenu-toggle" type="button" aria-expanded="false"
-                                    aria-controls="blog-submenu" aria-label="Open Blog submenu" data-submenu-toggle><i
-                                        class="bi bi-chevron-down" aria-hidden="true"></i></button>
-                            </div>
-                            <ul class="linkpva-submenu linkpva-submenu-level-2" id="blog-submenu">
-                                <li><a href="blog.html">Buyer Guides</a></li>
-                                <li><a href="blog.html">Account Types</a></li>
-                                <li><a href="blog.html">Order Help</a></li>
+                        <li class="menu-item"><a href="index.html#account-types">Categories</a></li>
+                        <li class="menu-item"><a href="pricing.html">Pricing</a></li>
+                        <li class="menu-item menu-item-has-children">
+                            <a href="blog.html" aria-haspopup="true" aria-expanded="false">Blog</a>
+                            <ul class="sub-menu">
+                                <li class="menu-item"><a href="blog.html">All Articles</a></li>
+                                <li class="menu-item"><a href="blog.html">Buyer Guides</a></li>
+                                <li class="menu-item"><a href="blog.html">Account Types</a></li>
+                                <li class="menu-item"><a href="blog.html">Order Help</a></li>
                             </ul>
                         </li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li class="menu-item"><a href="faq.html">FAQ</a></li>
+                        <li class="menu-item"><a href="contact.html">Contact</a></li>
                     </ul>
                 </nav>
 
@@ -411,6 +392,33 @@
             </div>
         </section>
         <!-- Featured Products End -->
+
+        <!-- Pricing Start -->
+        <section class="linkpva-section linkpva-pricing-preview" id="pricing" aria-labelledby="pricing-heading">
+            <div class="container">
+                <div class="linkpva-heading-row">
+                    <div class="linkpva-section-heading">
+                        <span class="linkpva-section-tag">Simple Pricing</span>
+                        <h2 id="pricing-heading">Compare Account Pricing</h2>
+                        <p>See starting prices for the most popular account categories before reviewing a full listing.</p>
+                    </div>
+                    <a class="linkpva-text-link" href="pricing.html">View full pricing <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                </div>
+                <div class="linkpva-pricing-table-wrap">
+                    <table class="linkpva-pricing-table">
+                        <thead><tr><th scope="col">Account type</th><th scope="col">Starting price</th><th scope="col">Best for</th><th scope="col"><span class="visually-hidden">Action</span></th></tr></thead>
+                        <tbody>
+                            <tr><th scope="row"><span class="linkpva-price-icon"><i class="bi bi-phone" aria-hidden="true"></i></span><span>PVA Account<small>Phone-verified options</small></span></th><td><strong>$29</strong><small>per account</small></td><td>Flexible account requirements</td><td><a href="product-details.html">View listing <i class="bi bi-arrow-right" aria-hidden="true"></i></a></td></tr>
+                            <tr><th scope="row"><span class="linkpva-price-icon is-purple"><i class="bi bi-clock-history" aria-hidden="true"></i></span><span>Aged Account<small>3+ year options</small></span></th><td><strong>$34</strong><small>per account</small></td><td>Established account history</td><td><a href="product-details.html">View listing <i class="bi bi-arrow-right" aria-hidden="true"></i></a></td></tr>
+                            <tr><th scope="row"><span class="linkpva-price-icon is-blue"><i class="bi bi-patch-check" aria-hidden="true"></i></span><span>Verified Account<small>Verification details included</small></span></th><td><strong>$49</strong><small>per account</small></td><td>Clear verification information</td><td><a href="product-details.html">View listing <i class="bi bi-arrow-right" aria-hidden="true"></i></a></td></tr>
+                            <tr><th scope="row"><span class="linkpva-price-icon is-green"><i class="bi bi-people" aria-hidden="true"></i></span><span>Followers Account<small>1K+ follower range</small></span></th><td><strong>$79</strong><small>per account</small></td><td>Audience-based requirements</td><td><a href="product-details.html">View listing <i class="bi bi-arrow-right" aria-hidden="true"></i></a></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="linkpva-pricing-note"><i class="bi bi-info-circle" aria-hidden="true"></i> Final pricing may vary by region, age, profile details, quantity, and availability.</p>
+            </div>
+        </section>
+        <!-- Pricing End -->
 
         <!-- Why Choose Start -->
         <section class="linkpva-section linkpva-why" aria-labelledby="why-heading">
@@ -819,6 +827,7 @@
                     <h2>Company</h2>
                     <ul>
                         <li><a href="about.html">About Us</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
                         <li><a href="blog.html">Blog</a></li>
                         <li><a href="bulk-order.html">Bulk Orders</a></li>
                         <li><a href="contact.html">Contact</a></li>

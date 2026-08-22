@@ -377,8 +377,7 @@ svg {
         position: relative;
     }
 
-    >ul>li>a,
-    >ul>li>.linkpva-nav-item-row>a {
+    >ul>li>a {
         position: relative;
         display: inline-flex;
         padding: 28px 0;
@@ -409,31 +408,23 @@ svg {
         }
     }
 
-    .linkpva-nav-item-row {
-        display: flex;
-        align-items: center;
-    }
+    .menu-item-has-children>a {
+        position: relative;
+        padding-right: 17px;
 
-    .linkpva-submenu-toggle {
-        display: grid;
-        width: 24px;
-        height: 36px;
-        place-items: center;
-        padding: 0;
-        color: #69758b;
-        background: transparent;
-        border-radius: 6px;
-        cursor: pointer;
-        font-size: 10px;
-        @include transition;
-
-        &:hover {
-            color: var(--color-primary);
-            background: var(--color-primary-light);
+        &::before {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            content: "\f282";
+            font-family: "bootstrap-icons";
+            font-size: 9px;
+            transform: translateY(-50%);
+            @include transition(transform);
         }
     }
 
-    .linkpva-submenu {
+    .sub-menu {
         position: absolute;
         top: calc(100% - 10px);
         left: 0;
@@ -473,34 +464,21 @@ svg {
             }
         }
 
-        .linkpva-nav-item-row {
-            border-radius: 8px;
-
-            &:hover {
-                background: var(--color-primary-light);
-
-                >a,
-                >button {
-                    color: var(--color-primary);
-                }
+        .menu-item-has-children>a {
+            &::before {
+                content: "\f285";
             }
-        }
-
-        .linkpva-submenu-toggle {
-            width: 34px;
-            height: 42px;
-            flex: 0 0 auto;
         }
     }
 
-    .linkpva-submenu-level-3 {
+    .sub-menu .sub-menu {
         top: -10px;
         left: calc(100% - 2px);
     }
 
-    .linkpva-has-submenu:hover>.linkpva-submenu,
-    .linkpva-has-submenu:focus-within>.linkpva-submenu,
-    .linkpva-has-submenu.is-submenu-open>.linkpva-submenu {
+    .menu-item-has-children:hover>.sub-menu,
+    .menu-item-has-children:focus-within>.sub-menu,
+    .menu-item-has-children.is-submenu-open>.sub-menu {
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
@@ -1233,6 +1211,10 @@ svg {
 
 .linkpva-why {
     background: #fff;
+
+    .linkpva-section-heading {
+        margin-bottom: 25px;
+    }
 }
 
 .linkpva-benefit-card {
@@ -1541,7 +1523,7 @@ svg {
     p {
         margin-bottom: 20px;
         color: #536078;
-        font-size: 16px;
+        font-size: 15px;
         line-height: 1.9;
     }
 
@@ -1691,7 +1673,7 @@ svg {
 .linkpva-blog-visual {
     position: relative;
     display: grid;
-    height: 210px;
+    height: 250px;
     place-items: center;
     overflow: hidden;
     color: #fff;
@@ -2084,16 +2066,16 @@ svg {
         overflow-y: auto;
         background: #fff;
         box-shadow: -20px 0 50px rgba(15, 32, 67, 0.14);
+        clip-path: inset(0 0 0 100%);
         opacity: 0;
         visibility: hidden;
-        transform: translateX(110%);
         pointer-events: none;
-        @include transition(transform);
+        transition: clip-path 0.3s ease, opacity 0.2s ease, visibility 0.3s ease;
 
         &.is-open {
+            clip-path: inset(0);
             opacity: 1;
             visibility: visible;
-            transform: translateX(0);
             pointer-events: auto;
         }
 
@@ -2140,8 +2122,7 @@ svg {
             padding-top: 18px;
         }
 
-        >ul>li>a,
-        >ul>li>.linkpva-nav-item-row>a {
+        >ul>li>a {
             display: flex;
             flex: 1 1 auto;
             padding: 13px 0;
@@ -2153,22 +2134,7 @@ svg {
             }
         }
 
-        >ul>.linkpva-has-submenu>.linkpva-nav-item-row {
-            border-bottom: 1px solid var(--color-border);
-
-            >a {
-                border-bottom: 0;
-            }
-
-            >.linkpva-submenu-toggle {
-                width: 44px;
-                height: 44px;
-                flex: 0 0 auto;
-                font-size: 12px;
-            }
-        }
-
-        .linkpva-submenu {
+        .sub-menu {
             position: static;
             display: none;
             width: 100%;
@@ -2184,36 +2150,28 @@ svg {
 
             a {
                 min-height: 40px;
-                padding: 8px 10px;
+                padding: 8px 30px 8px 10px;
                 border-left: 1px solid var(--color-border);
                 border-radius: 0;
                 font-size: 13px;
             }
 
-            .linkpva-nav-item-row {
-                align-items: stretch;
-            }
-
-            .linkpva-submenu-toggle {
-                height: 40px;
-                border-left: 1px solid var(--color-border);
+            .menu-item-has-children>a::before {
+                right: 10px;
+                content: "\f282";
             }
         }
 
-        .linkpva-submenu-level-3 {
+        .sub-menu .sub-menu {
             padding-left: 13px;
         }
 
-        .linkpva-has-submenu.is-submenu-open>.linkpva-submenu {
+        .menu-item-has-children.is-submenu-open>.sub-menu {
             display: block;
         }
 
-        .linkpva-submenu-toggle[aria-expanded="true"] i {
-            transform: rotate(180deg);
-        }
-
-        .linkpva-submenu .linkpva-submenu-toggle[aria-expanded="true"] i {
-            transform: rotate(90deg);
+        .menu-item-has-children.is-submenu-open>a::before {
+            transform: translateY(-50%) rotate(180deg);
         }
     }
 
@@ -3384,6 +3342,210 @@ svg {
     }
 }
 
+.linkpva-pricing-preview {
+  background: var(--color-background);
+}
+
+.linkpva-pricing-table-wrap {
+  overflow-x: auto;
+  overflow-y: hidden;
+  background: #fff;
+  border: 1px solid #d9e2ef;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  scrollbar-width: thin;
+  scrollbar-color: #b8c6da transparent;
+}
+
+.linkpva-pricing-table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+}
+
+.linkpva-pricing-table th,
+.linkpva-pricing-table td {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--color-border);
+  text-align: left;
+  vertical-align: middle;
+}
+
+.linkpva-pricing-table thead th {
+  color: var(--color-text-muted);
+  background: #f9fbff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.linkpva-pricing-table tbody tr:last-child th,
+.linkpva-pricing-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.linkpva-pricing-table tbody th {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: var(--color-accent);
+  font-family: var(--font-heading);
+}
+
+.linkpva-pricing-table small {
+  display: block;
+  color: var(--color-text-muted);
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.linkpva-pricing-table td > strong {
+  display: block;
+  color: var(--color-accent);
+  font-family: var(--font-heading);
+  font-size: 22px;
+}
+
+.linkpva-pricing-table td:last-child {
+  text-align: right;
+}
+
+.linkpva-pricing-table td:last-child a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.linkpva-price-icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  color: var(--color-cyan);
+  background: #ecfeff;
+  border-radius: 12px;
+  place-items: center;
+}
+
+.linkpva-price-icon.is-purple {
+  color: var(--color-secondary);
+  background: #f3f0ff;
+}
+
+.linkpva-price-icon.is-blue {
+  color: var(--color-primary);
+  background: var(--color-primary-light);
+}
+
+.linkpva-price-icon.is-green {
+  color: var(--color-success);
+  background: #ecfdf3;
+}
+
+.linkpva-pricing-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 18px 0 0;
+  color: var(--color-text-muted);
+  font-size: 12px;
+  text-align: center;
+}
+
+.linkpva-pricing-plan {
+  position: relative;
+  height: 100%;
+  padding: 32px;
+  background: #fff;
+  border: 1px solid #d9e2ef;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.linkpva-pricing-plan.is-featured {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 1px var(--color-primary), var(--shadow-md);
+}
+
+.linkpva-pricing-plan-badge {
+  position: absolute;
+  top: 0;
+  right: 24px;
+  padding: 6px 12px;
+  color: #fff;
+  background: var(--color-primary);
+  border-radius: 0 0 9px 9px;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.linkpva-pricing-plan > .linkpva-price-icon {
+  margin-bottom: 22px;
+}
+
+.linkpva-pricing-plan h2 {
+  margin-bottom: 8px;
+  font-size: 22px;
+}
+
+.linkpva-pricing-plan > p {
+  min-height: 54px;
+  color: var(--color-text-muted);
+  font-size: 13px;
+}
+
+.linkpva-plan-price {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+  margin: 22px 0;
+  color: var(--color-accent);
+  font-family: var(--font-heading);
+  font-size: 42px;
+  font-weight: 800;
+}
+
+.linkpva-plan-price small {
+  color: var(--color-text-muted);
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.linkpva-pricing-plan ul {
+  display: grid;
+  gap: 11px;
+  margin: 0 0 26px;
+  list-style: none;
+}
+
+.linkpva-pricing-plan li {
+  display: flex;
+  gap: 9px;
+  font-size: 13px;
+}
+
+.linkpva-pricing-plan li i {
+  margin-top: 5px;
+  color: var(--color-success);
+}
+
+.linkpva-pricing-plan .linkpva-button {
+  width: 100%;
+}
+
+.linkpva-pricing-comparison {
+  background: var(--color-background);
+}
+
+
 .linkpva-blog-featured {
     display: grid;
     grid-template-columns: 1.1fr 1fr;
@@ -3452,17 +3614,19 @@ svg {
     flex-wrap: wrap;
     gap: 7px;
 
-    a {
+    button {
         padding: 7px 11px;
         color: var(--color-text);
         background: #fff;
         border: 1px solid var(--color-border);
         border-radius: 20px;
+        cursor: pointer;
         font-size: 10px;
         font-weight: 700;
 
         &.is-active,
-        &:hover {
+        &:hover,
+        &:focus-visible {
             color: #fff;
             background: var(--color-primary);
             border-color: var(--color-primary);
@@ -3731,6 +3895,103 @@ svg {
 }
 
 @media (max-width: 767.98px) {
+    .linkpva-pricing-table-wrap {
+        overflow: visible;
+        background: transparent;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .linkpva-pricing-table {
+        display: block;
+        min-width: 0;
+
+        thead {
+            display: none;
+        }
+
+        tbody {
+            display: grid;
+            gap: 14px;
+        }
+
+        tbody tr {
+            display: grid;
+            overflow: hidden;
+            background: #fff;
+            border: 1px solid #d9e2ef;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+        }
+
+        tbody th,
+        tbody td {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            padding: 13px 16px;
+            border-bottom: 1px solid var(--color-border);
+            text-align: right;
+        }
+
+        tbody th {
+            justify-content: flex-start;
+            padding: 16px;
+            text-align: left;
+        }
+
+        tbody td::before {
+            flex: 1 1 auto;
+            color: var(--color-text-muted);
+            font-size: 10px;
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            text-align: left;
+            text-transform: uppercase;
+        }
+
+        tbody td:nth-of-type(1)::before {
+            content: "Starting price";
+        }
+
+        tbody td:nth-of-type(2)::before {
+            content: "Best for";
+        }
+
+        tbody td:nth-of-type(3)::before {
+            content: "Details";
+        }
+
+        tbody td:last-child {
+            border-bottom: 0;
+            text-align: right;
+        }
+
+        tbody td>strong {
+            margin-left: auto;
+            font-size: 19px;
+        }
+
+        &.is-detailed tbody td:nth-of-type(1)::before {
+            content: "Category";
+        }
+
+        &.is-detailed tbody td:nth-of-type(2)::before {
+            content: "Primary detail";
+        }
+
+        &.is-detailed tbody td:nth-of-type(3)::before {
+            content: "Starting price";
+        }
+
+        &.is-detailed tbody td:nth-of-type(4)::before {
+            content: "Details";
+        }
+    }
+
     .linkpva-inner-section {
         padding: 70px 0;
     }

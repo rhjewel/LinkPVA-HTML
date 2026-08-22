@@ -11,19 +11,19 @@
     const searchForm = document.querySelector("[data-search-form]");
     const backToTop = document.querySelector("[data-back-to-top]");
     const currentYear = document.querySelector("[data-current-year]");
-    const submenuToggles = document.querySelectorAll("[data-submenu-toggle]");
+    const parentMenuLinks = document.querySelectorAll(".linkpva-primary-nav .menu-item-has-children > a");
 
     function closeSubmenus(scope) {
         const container = scope || document;
-        const openItems = Array.from(container.querySelectorAll(".linkpva-has-submenu.is-submenu-open"));
+        const openItems = Array.from(container.querySelectorAll(".menu-item-has-children.is-submenu-open"));
 
-        if (container.matches && container.matches(".linkpva-has-submenu.is-submenu-open")) {
+        if (container.matches && container.matches(".menu-item-has-children.is-submenu-open")) {
             openItems.unshift(container);
         }
 
         openItems.forEach(function (item) {
             item.classList.remove("is-submenu-open");
-            item.querySelector(":scope > .linkpva-nav-item-row > [data-submenu-toggle]").setAttribute("aria-expanded", "false");
+            item.querySelector(":scope > a")?.setAttribute("aria-expanded", "false");
         });
     }
 
@@ -46,7 +46,9 @@
         });
 
         mobileMenu.addEventListener("click", function (event) {
-            if (event.target.closest("a")) {
+            const link = event.target.closest("a");
+
+            if (link && !link.parentElement.classList.contains("menu-item-has-children")) {
                 setMenuState(false);
             }
         });
@@ -85,18 +87,21 @@
         });
     }
 
-    submenuToggles.forEach(function (toggle) {
-        toggle.addEventListener("click", function () {
-            const item = toggle.closest(".linkpva-has-submenu");
-            const willOpen = toggle.getAttribute("aria-expanded") !== "true";
+    parentMenuLinks.forEach(function (link) {
+        link.addEventListener("click", function (event) {
+            if (window.innerWidth >= 992) return;
+
+            event.preventDefault();
+            const item = link.parentElement;
+            const willOpen = link.getAttribute("aria-expanded") !== "true";
             const parentList = item.parentElement;
 
-            parentList.querySelectorAll(":scope > .linkpva-has-submenu.is-submenu-open").forEach(function (sibling) {
+            parentList.querySelectorAll(":scope > .menu-item-has-children.is-submenu-open").forEach(function (sibling) {
                 if (sibling !== item) closeSubmenus(sibling);
             });
 
             item.classList.toggle("is-submenu-open", willOpen);
-            toggle.setAttribute("aria-expanded", String(willOpen));
+            link.setAttribute("aria-expanded", String(willOpen));
         });
     });
 
@@ -128,6 +133,45 @@
                 });
             });
         });
+    });
+
+    document.querySelectorAll("[data-blog-listing]").forEach(function (listing) {
+        const filterButtons = listing.querySelectorAll("[data-blog-filter]");
+        const blogItems = listing.querySelectorAll("[data-blog-item]");
+        const searchForm = listing.querySelector("[data-blog-search-form]");
+        const searchInput = listing.querySelector("[data-blog-search]");
+        let activeCategory = "all";
+
+        function filterArticles() {
+            const query = searchInput ? searchInput.value.trim().toLowerCase() : "";
+
+            blogItems.forEach(function (item) {
+                const matchesCategory = activeCategory === "all" || item.dataset.category === activeCategory;
+                const matchesSearch = !query || item.textContent.toLowerCase().includes(query);
+                item.hidden = !(matchesCategory && matchesSearch);
+            });
+        }
+
+        filterButtons.forEach(function (button) {
+            button.addEventListener("click", function () {
+                activeCategory = button.dataset.blogFilter;
+
+                filterButtons.forEach(function (currentButton) {
+                    const isActive = currentButton === button;
+                    currentButton.classList.toggle("is-active", isActive);
+                    currentButton.setAttribute("aria-pressed", String(isActive));
+                });
+
+                filterArticles();
+            });
+        });
+
+        searchForm?.addEventListener("submit", function (event) {
+            event.preventDefault();
+            filterArticles();
+        });
+
+        searchInput?.addEventListener("input", filterArticles);
     });
 
     document.querySelectorAll("[data-demo-form]").forEach(function (form) {
