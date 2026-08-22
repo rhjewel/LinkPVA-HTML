@@ -559,6 +559,12 @@ svg {
     font-size: 22px;
 }
 
+.linkpva-mobile-nav-header,
+.linkpva-mobile-menu-backdrop,
+.linkpva-mobile-menu-close {
+    display: none;
+}
+
 .linkpva-search-form {
     display: flex;
     align-items: center;
@@ -2045,50 +2051,93 @@ svg {
         min-height: 72px;
     }
 
+    .linkpva-mobile-menu-backdrop {
+        position: fixed;
+        inset: 0;
+        z-index: 1001;
+        display: block;
+        background: rgba(11, 21, 51, 0.52);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        @include transition(opacity);
+
+        &.is-visible {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+    }
+
     .linkpva-primary-nav {
         position: fixed;
         top: 0;
         right: 0;
         bottom: 0;
-        z-index: 1001;
-        display: none;
-        width: min(330px, 86vw);
+        z-index: 1003;
+        display: flex;
+        width: min(360px, 90vw);
+        flex-direction: column;
         margin: 0;
-        padding: 92px 26px 30px;
+        padding: 0 26px 30px;
         overflow-x: hidden;
         overflow-y: auto;
         background: #fff;
         box-shadow: -20px 0 50px rgba(15, 32, 67, 0.14);
+        opacity: 0;
         visibility: hidden;
         transform: translateX(110%);
+        pointer-events: none;
         @include transition(transform);
 
-        &::before {
-            position: absolute;
-            top: 0;
-            right: 100%;
-            width: 100vw;
-            height: 100%;
-            content: "";
-            background: rgba(11, 21, 51, 0.45);
-            opacity: 0;
-            pointer-events: none;
-            @include transition(opacity);
-        }
-
         &.is-open {
-            display: block;
+            opacity: 1;
             visibility: visible;
             transform: translateX(0);
+            pointer-events: auto;
+        }
 
-            &::before {
-                opacity: 1;
-                pointer-events: auto;
+        .linkpva-mobile-nav-header {
+            position: sticky;
+            top: 0;
+            z-index: 4;
+            display: flex;
+            min-height: 82px;
+            align-items: center;
+            justify-content: space-between;
+            flex: 0 0 auto;
+            margin: 0 -26px;
+            padding: 0 26px;
+            background: #fff;
+            border-bottom: 1px solid var(--color-border);
+
+            .linkpva-logo img {
+                height: 40px;
+            }
+        }
+
+        .linkpva-mobile-menu-close {
+            display: grid;
+            width: 42px;
+            height: 42px;
+            place-items: center;
+            color: var(--color-accent);
+            background: #fff;
+            border: 1px solid var(--color-border);
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 18px;
+
+            &:hover,
+            &:focus-visible {
+                color: var(--color-primary);
+                background: var(--color-primary-light);
             }
         }
 
         >ul {
             display: block;
+            padding-top: 18px;
         }
 
         >ul>li>a,
@@ -2170,7 +2219,7 @@ svg {
 
     .linkpva-menu-toggle {
         position: relative;
-        z-index: 1002;
+        z-index: 1000;
     }
 
     .linkpva-header-actions .linkpva-icon-button:first-child {

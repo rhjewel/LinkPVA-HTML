@@ -5,6 +5,8 @@
     const header = document.querySelector("[data-header]");
     const menuToggle = document.querySelector("[data-menu-toggle]");
     const mobileMenu = document.querySelector("[data-mobile-menu]");
+    const menuClose = document.querySelector("[data-menu-close]");
+    const menuBackdrop = document.querySelector("[data-menu-backdrop]");
     const searchToggle = document.querySelector("[data-search-toggle]");
     const searchForm = document.querySelector("[data-search-form]");
     const backToTop = document.querySelector("[data-back-to-top]");
@@ -30,8 +32,9 @@
 
         menuToggle.setAttribute("aria-expanded", String(isOpen));
         menuToggle.querySelector(".visually-hidden").textContent = isOpen ? "Close navigation" : "Open navigation";
-        menuToggle.querySelector("i").className = isOpen ? "bi bi-x-lg" : "bi bi-list";
         mobileMenu.classList.toggle("is-open", isOpen);
+        menuBackdrop?.classList.toggle("is-visible", isOpen);
+        menuBackdrop?.setAttribute("aria-hidden", String(!isOpen));
         body.classList.toggle("is-menu-open", isOpen);
 
         if (!isOpen) closeSubmenus(mobileMenu);
@@ -43,9 +46,30 @@
         });
 
         mobileMenu.addEventListener("click", function (event) {
-            if (event.target.closest("a") || event.target === mobileMenu) {
+            if (event.target.closest("a")) {
                 setMenuState(false);
             }
+        });
+
+        menuClose?.addEventListener("click", function () {
+            setMenuState(false);
+            menuToggle.focus();
+        });
+
+        menuBackdrop?.addEventListener("click", function () {
+            setMenuState(false);
+            menuToggle.focus();
+        });
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape" && menuToggle.getAttribute("aria-expanded") === "true") {
+                setMenuState(false);
+                menuToggle.focus();
+            }
+        });
+
+        window.addEventListener("resize", function () {
+            if (window.innerWidth >= 992) setMenuState(false);
         });
     }
 
@@ -84,7 +108,9 @@
             const maximum = Number(input.max) || 999;
             const direction = button.hasAttribute("data-quantity-plus") ? 1 : -1;
             input.value = Math.min(maximum, Math.max(minimum, Number(input.value || minimum) + direction));
-            input.dispatchEvent(new Event("change", { bubbles: true }));
+            input.dispatchEvent(new Event("change", {
+                bubbles: true
+            }));
         });
     });
 
@@ -111,7 +137,9 @@
 
             if (status) {
                 status.classList.add("is-visible");
-                status.focus({ preventScroll: true });
+                status.focus({
+                    preventScroll: true
+                });
             }
         });
     });
@@ -152,12 +180,17 @@
         if (backToTop) backToTop.classList.toggle("is-visible", window.scrollY > 500);
     }
 
-    window.addEventListener("scroll", updateScrollState, { passive: true });
+    window.addEventListener("scroll", updateScrollState, {
+        passive: true
+    });
     updateScrollState();
 
     if (backToTop) {
         backToTop.addEventListener("click", function () {
-            window.scrollTo({ top: 0, behavior: "smooth" });
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
         });
     }
 
