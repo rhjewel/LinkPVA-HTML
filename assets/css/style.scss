@@ -3343,206 +3343,206 @@ svg {
 }
 
 .linkpva-pricing-preview {
-  background: var(--color-background);
+    background: var(--color-background);
 }
 
 .linkpva-pricing-table-wrap {
-  overflow-x: auto;
-  overflow-y: hidden;
-  background: #fff;
-  border: 1px solid #d9e2ef;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
-  scrollbar-width: thin;
-  scrollbar-color: #b8c6da transparent;
+    overflow-x: auto;
+    overflow-y: hidden;
+    background: #fff;
+    border: 1px solid #d9e2ef;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    scrollbar-width: thin;
+    scrollbar-color: #b8c6da transparent;
 }
 
 .linkpva-pricing-table {
-  width: 100%;
-  min-width: 760px;
-  border-collapse: collapse;
+    width: 100%;
+    min-width: 760px;
+    border-collapse: collapse;
 }
 
 .linkpva-pricing-table th,
 .linkpva-pricing-table td {
-  padding: 20px 24px;
-  border-bottom: 1px solid var(--color-border);
-  text-align: left;
-  vertical-align: middle;
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--color-border);
+    text-align: left;
+    vertical-align: middle;
 }
 
 .linkpva-pricing-table thead th {
-  color: var(--color-text-muted);
-  background: #f9fbff;
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+    color: var(--color-text-muted);
+    background: #f9fbff;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 
 .linkpva-pricing-table tbody tr:last-child th,
 .linkpva-pricing-table tbody tr:last-child td {
-  border-bottom: 0;
+    border-bottom: 0;
 }
 
 .linkpva-pricing-table tbody th {
-  display: flex;
-  align-items: center;
-  gap: 13px;
-  color: var(--color-accent);
-  font-family: var(--font-heading);
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    color: var(--color-accent);
+    font-family: var(--font-heading);
 }
 
 .linkpva-pricing-table small {
-  display: block;
-  color: var(--color-text-muted);
-  font-family: var(--font-body);
-  font-size: 11px;
-  font-weight: 500;
+    display: block;
+    color: var(--color-text-muted);
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 500;
 }
 
-.linkpva-pricing-table td > strong {
-  display: block;
-  color: var(--color-accent);
-  font-family: var(--font-heading);
-  font-size: 22px;
+.linkpva-pricing-table td>strong {
+    display: block;
+    color: var(--color-accent);
+    font-family: var(--font-heading);
+    font-size: 22px;
 }
 
 .linkpva-pricing-table td:last-child {
-  text-align: right;
+    text-align: right;
 }
 
 .linkpva-pricing-table td:last-child a {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  font-size: 12px;
-  font-weight: 800;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 12px;
+    font-weight: 800;
 }
 
 .linkpva-price-icon {
-  display: grid;
-  width: 42px;
-  height: 42px;
-  flex: 0 0 42px;
-  color: var(--color-cyan);
-  background: #ecfeff;
-  border-radius: 12px;
-  place-items: center;
+    display: grid;
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+    color: var(--color-cyan);
+    background: #ecfeff;
+    border-radius: 12px;
+    place-items: center;
 }
 
 .linkpva-price-icon.is-purple {
-  color: var(--color-secondary);
-  background: #f3f0ff;
+    color: var(--color-secondary);
+    background: #f3f0ff;
 }
 
 .linkpva-price-icon.is-blue {
-  color: var(--color-primary);
-  background: var(--color-primary-light);
+    color: var(--color-primary);
+    background: var(--color-primary-light);
 }
 
 .linkpva-price-icon.is-green {
-  color: var(--color-success);
-  background: #ecfdf3;
+    color: var(--color-success);
+    background: #ecfdf3;
 }
 
 .linkpva-pricing-note {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  margin: 18px 0 0;
-  color: var(--color-text-muted);
-  font-size: 12px;
-  text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 18px 0 0;
+    color: var(--color-text-muted);
+    font-size: 12px;
+    text-align: center;
 }
 
 .linkpva-pricing-plan {
-  position: relative;
-  height: 100%;
-  padding: 32px;
-  background: #fff;
-  border: 1px solid #d9e2ef;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
+    position: relative;
+    height: 100%;
+    padding: 32px;
+    background: #fff;
+    border: 1px solid #d9e2ef;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
 }
 
 .linkpva-pricing-plan.is-featured {
-  border-color: var(--color-primary);
-  box-shadow: 0 0 0 1px var(--color-primary), var(--shadow-md);
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 1px var(--color-primary), var(--shadow-md);
 }
 
 .linkpva-pricing-plan-badge {
-  position: absolute;
-  top: 0;
-  right: 24px;
-  padding: 6px 12px;
-  color: #fff;
-  background: var(--color-primary);
-  border-radius: 0 0 9px 9px;
-  font-size: 9px;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+    position: absolute;
+    top: 0;
+    right: 24px;
+    padding: 6px 12px;
+    color: #fff;
+    background: var(--color-primary);
+    border-radius: 0 0 9px 9px;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
 }
 
-.linkpva-pricing-plan > .linkpva-price-icon {
-  margin-bottom: 22px;
+.linkpva-pricing-plan>.linkpva-price-icon {
+    margin-bottom: 22px;
 }
 
 .linkpva-pricing-plan h2 {
-  margin-bottom: 8px;
-  font-size: 22px;
+    margin-bottom: 8px;
+    font-size: 22px;
 }
 
-.linkpva-pricing-plan > p {
-  min-height: 54px;
-  color: var(--color-text-muted);
-  font-size: 13px;
+.linkpva-pricing-plan>p {
+    min-height: 54px;
+    color: var(--color-text-muted);
+    font-size: 13px;
 }
 
 .linkpva-plan-price {
-  display: flex;
-  align-items: baseline;
-  gap: 5px;
-  margin: 22px 0;
-  color: var(--color-accent);
-  font-family: var(--font-heading);
-  font-size: 42px;
-  font-weight: 800;
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+    margin: 22px 0;
+    color: var(--color-accent);
+    font-family: var(--font-heading);
+    font-size: 42px;
+    font-weight: 800;
 }
 
 .linkpva-plan-price small {
-  color: var(--color-text-muted);
-  font-family: var(--font-body);
-  font-size: 11px;
-  font-weight: 500;
+    color: var(--color-text-muted);
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 500;
 }
 
 .linkpva-pricing-plan ul {
-  display: grid;
-  gap: 11px;
-  margin: 0 0 26px;
-  list-style: none;
+    display: grid;
+    gap: 11px;
+    margin: 0 0 26px;
+    list-style: none;
 }
 
 .linkpva-pricing-plan li {
-  display: flex;
-  gap: 9px;
-  font-size: 13px;
+    display: flex;
+    gap: 9px;
+    font-size: 13px;
 }
 
 .linkpva-pricing-plan li i {
-  margin-top: 5px;
-  color: var(--color-success);
+    margin-top: 5px;
+    color: var(--color-success);
 }
 
 .linkpva-pricing-plan .linkpva-button {
-  width: 100%;
+    width: 100%;
 }
 
 .linkpva-pricing-comparison {
-  background: var(--color-background);
+    background: var(--color-background);
 }
 
 

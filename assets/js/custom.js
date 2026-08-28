@@ -1,5 +1,5 @@
 (function () {
-    "use strict";
+    "use strict"
 
     const body = document.body;
     const header = document.querySelector("[data-header]");
@@ -23,7 +23,7 @@
 
         openItems.forEach(function (item) {
             item.classList.remove("is-submenu-open");
-            item.querySelector(":scope > a")?.setAttribute("aria-expanded", "false");
+            item.querySelector(":scope > a") ?.setAttribute("aria-expanded", "false");
         });
     }
 
@@ -33,8 +33,8 @@
         menuToggle.setAttribute("aria-expanded", String(isOpen));
         menuToggle.querySelector(".visually-hidden").textContent = isOpen ? "Close navigation" : "Open navigation";
         mobileMenu.classList.toggle("is-open", isOpen);
-        menuBackdrop?.classList.toggle("is-visible", isOpen);
-        menuBackdrop?.setAttribute("aria-hidden", String(!isOpen));
+        menuBackdrop ?.classList.toggle("is-visible", isOpen);
+        menuBackdrop ?.setAttribute("aria-hidden", String(!isOpen));
         body.classList.toggle("is-menu-open", isOpen);
 
         if (!isOpen) closeSubmenus(mobileMenu);
@@ -53,12 +53,12 @@
             }
         });
 
-        menuClose?.addEventListener("click", function () {
+        menuClose ?.addEventListener("click", function () {
             setMenuState(false);
             menuToggle.focus();
         });
 
-        menuBackdrop?.addEventListener("click", function () {
+        menuBackdrop ?.addEventListener("click", function () {
             setMenuState(false);
             menuToggle.focus();
         });
@@ -166,12 +166,12 @@
             });
         });
 
-        searchForm?.addEventListener("submit", function (event) {
+        searchForm ?.addEventListener("submit", function (event) {
             event.preventDefault();
             filterArticles();
         });
 
-        searchInput?.addEventListener("input", filterArticles);
+        searchInput ?.addEventListener("input", filterArticles);
     });
 
     document.querySelectorAll("[data-demo-form]").forEach(function (form) {
@@ -256,4 +256,5 @@
     });
 
     if (currentYear) currentYear.textContent = new Date().getFullYear();
+
 }());
