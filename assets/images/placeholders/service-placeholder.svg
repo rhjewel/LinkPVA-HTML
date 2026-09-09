@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" role="img" aria-labelledby="title desc">
+  <title id="title">Service image placeholder</title>
+  <desc id="desc">Abstract blue digital marketing service placeholder</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#0b1533"/>
+      <stop offset="1" stop-color="#2563eb"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop stop-color="#ffffff" stop-opacity=".32"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="750" rx="28" fill="url(#bg)"/>
+  <circle cx="980" cy="110" r="360" fill="url(#glow)"/>
+  <circle cx="160" cy="680" r="300" fill="url(#glow)"/>
+  <rect x="170" y="175" width="860" height="400" rx="32" fill="#fff" fill-opacity=".1" stroke="#fff" stroke-opacity=".2"/>
+  <path d="M300 465l145-135 115 94 185-190 155 150" fill="none" stroke="#93c5fd" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="445" cy="330" r="24" fill="#fff"/><circle cx="560" cy="424" r="24" fill="#fff"/><circle cx="745" cy="234" r="24" fill="#fff"/>
+  <text x="600" y="650" fill="#fff" font-family="Arial, sans-serif" font-size="38" font-weight="700" text-anchor="middle">Replace With Your Service Image</text>
+</svg>

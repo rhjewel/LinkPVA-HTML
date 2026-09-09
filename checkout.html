@@ -1,137 +1,466 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Static LinkPVA checkout interface demonstration."><title>Checkout | LinkPVA</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"><link href="assets/css/bootstrap.min.css" rel="stylesheet"><link href="assets/css/bootstrap-icons.min.css" rel="stylesheet"><link href="assets/css/style.css" rel="stylesheet"></head><body><a class="linkpva-skip-link" href="#main-content">Skip to main content</a>
-
-    <!-- Utility Bar Start -->
-    <div class="linkpva-utility-bar">
-        <div class="container">
-            <div class="linkpva-utility-inner">
-                <p><i class="bi bi-headset" aria-hidden="true"></i> Need help with an order? <a
-                        href="contact.html">Contact support</a></p>
-                <nav aria-label="Utility navigation">
-                    <a href="delivery-policy.html">Delivery policy</a>
-                    <a href="faq.html">Help center</a>
-                </nav>
-            </div>
-        </div>
-    </div>
-    <!-- Utility Bar End -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml" />
+    <meta
+      name="description"
+      content="Static LinkSMM checkout interface demonstration."
+    />
+    <title>Checkout | LinkSMM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <a class="linksmm-skip-link" href="#main-content">Skip to main content</a>
 
     <!-- Header Start -->
-    <header class="linkpva-header" data-header>
-        <div class="container">
-            <div class="linkpva-header-inner">
-                <a class="linkpva-logo" href="index.html" aria-label="LinkPVA home">
-                    <img src="assets/images/logo.svg" width="190" height="46" alt="LinkPVA">
-                </a>
-
-                <button class="linkpva-menu-toggle" type="button" aria-expanded="false"
-                    aria-controls="primary-navigation" data-menu-toggle>
-                    <span class="visually-hidden">Open navigation</span>
-                    <i class="bi bi-list" aria-hidden="true"></i>
-                </button>
-
-                <div class="linkpva-mobile-menu-backdrop" aria-hidden="true" data-menu-backdrop></div>
-
-                <nav class="linkpva-primary-nav" id="primary-navigation" aria-label="Primary navigation" data-mobile-menu>
-                    <div class="linkpva-mobile-nav-header">
-                        <a class="linkpva-logo" href="index.html" aria-label="LinkPVA home">
-                            <img src="assets/images/logo.svg" width="190" height="46" alt="LinkPVA">
-                        </a>
-                        <button class="linkpva-mobile-menu-close" type="button" aria-label="Close navigation" data-menu-close>
-                            <i class="bi bi-x-lg" aria-hidden="true"></i>
-                        </button>
-                    </div>
-                    <ul>
-                        <li class="menu-item"><a href="index.html">Home</a></li>
-                        <li class="menu-item menu-item-has-children">
-                            <a class="is-active" href="shop.html" aria-current="page" aria-haspopup="true" aria-expanded="false">Shop</a>
-                            <ul class="sub-menu">
-                                <li class="menu-item"><a href="shop.html">All Products</a></li>
-                                <li class="menu-item menu-item-has-children">
-                                    <a href="shop.html" aria-haspopup="true" aria-expanded="false">Verified Accounts</a>
-                                    <ul class="sub-menu">
-                                        <li class="menu-item"><a href="shop.html">US Verified Accounts</a></li>
-                                        <li class="menu-item"><a href="shop.html">UK Verified Accounts</a></li>
-                                        <li class="menu-item"><a href="shop.html">EU Verified Accounts</a></li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item menu-item-has-children">
-                                    <a href="shop.html" aria-haspopup="true" aria-expanded="false">Old Accounts</a>
-                                    <ul class="sub-menu">
-                                        <li class="menu-item"><a href="shop.html">1–3 Years Old</a></li>
-                                        <li class="menu-item"><a href="shop.html">3–5 Years Old</a></li>
-                                        <li class="menu-item"><a href="shop.html">5+ Years Old</a></li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item"><a href="shop.html">PVA Accounts</a></li>
-                                <li class="menu-item"><a href="shop.html">Accounts With Followers</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-item"><a href="index.html#account-types">Categories</a></li>
-                        <li class="menu-item"><a href="pricing.html">Pricing</a></li>
-                        <li class="menu-item menu-item-has-children">
-                            <a href="blog.html" aria-haspopup="true" aria-expanded="false">Blog</a>
-                            <ul class="sub-menu">
-                                <li class="menu-item"><a href="blog.html">All Articles</a></li>
-                                <li class="menu-item"><a href="blog.html">Buyer Guides</a></li>
-                                <li class="menu-item"><a href="blog.html">Account Types</a></li>
-                                <li class="menu-item"><a href="blog.html">Order Help</a></li>
-                            </ul>
-                        </li>
-                        <li class="menu-item"><a href="faq.html">FAQ</a></li>
-                        <li class="menu-item"><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
-
-                <div class="linkpva-header-actions">
-                    <button class="linkpva-icon-button" type="button" aria-label="Search products" data-search-toggle>
-                        <i class="bi bi-search" aria-hidden="true"></i>
-                    </button>
-                    <a class="linkpva-icon-button" href="login.html" aria-label="My account">
-                        <i class="bi bi-person" aria-hidden="true"></i>
-                    </a>
-                    <a class="linkpva-cart-button" href="cart.html" aria-label="Shopping cart with 0 items">
-                        <i class="bi bi-bag" aria-hidden="true"></i>
-                        <span class="linkpva-cart-count">0</span>
-                    </a>
-                </div>
-            </div>
-
-            <form class="linkpva-search-form" action="shop.html" role="search" hidden data-search-form>
-                <label class="visually-hidden" for="site-search">Search account listings</label>
-                <i class="bi bi-search" aria-hidden="true"></i>
-                <input id="site-search" name="s" type="search" placeholder="Search account listings...">
-                <button type="submit">Search</button>
-            </form>
+    <div class="linksmm-utility-bar">
+      <div class="container">
+        <div class="linksmm-utility-inner">
+          <p>
+            <i class="bi bi-stars"></i> Flexible digital marketing solutions for
+            modern brands
+          </p>
+          <ul>
+            <li><a href="faq.html">Help Center</a></li>
+            <li><a href="bulk-order.html">Request a Quote</a></li>
+            <li>
+              <a href="mailto:support@linksmm.example"
+                >support@linksmm.example</a
+              >
+            </li>
+          </ul>
         </div>
+      </div>
+    </div>
+    <header class="linksmm-header" data-header>
+      <div class="container">
+        <div class="linksmm-header-inner">
+          <a class="linksmm-logo" href="index.html">
+            <img
+              src="assets/images/logo.svg"
+              width="190"
+              height="46"
+              alt="LinkSMM"
+            />
+          </a>
+          <button
+            class="linksmm-menu-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="primary-navigation"
+            data-menu-toggle
+          >
+            <i class="bi bi-list"></i
+            ><span class="visually-hidden">Open navigation</span>
+          </button>
+          <div class="linksmm-mobile-menu-backdrop" data-menu-backdrop></div>
+          <nav
+            class="linksmm-primary-nav"
+            id="primary-navigation"
+            aria-label="Primary navigation"
+            data-mobile-menu
+          >
+            <div class="linksmm-mobile-nav-header">
+              <a class="linksmm-logo" href="index.html">
+                <img
+                  src="assets/images/logo.svg"
+                  width="190"
+                  height="46"
+                  alt="LinkSMM"
+                />
+              </a>
+              <button
+                class="linksmm-mobile-menu-close"
+                type="button"
+                aria-label="Close navigation"
+                data-menu-close
+              >
+                <i class="bi bi-x-lg"></i>
+              </button>
+            </div>
+            <ul>
+              <li class="menu-item menu-item-has-children">
+                            <a href="index.html" aria-haspopup="true" aria-expanded="false">Home</a>
+                            <ul class="sub-menu">
+                                <li class="menu-item"><a href="index.html">Home Version One</a></li>
+                                <li class="menu-item"><a href="index-2.html">Home Version Two</a></li>
+                            </ul>
+                        </li>
+              <li class="menu-item menu-item-has-children">
+                <a href="shop.html" aria-haspopup="true" aria-expanded="false"
+                  >Services</a
+                >
+                <ul class="sub-menu">
+                  <li class="menu-item menu-item-has-children">
+                    <a
+                      href="shop.html"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                      >Social Media</a
+                    >
+                    <ul class="sub-menu">
+                      <li class="menu-item">
+                        <a href="product-details.html"
+                          >Social Media Management</a
+                        >
+                      </li>
+                      <li class="menu-item">
+                        <a href="product-details.html">Content Marketing</a>
+                      </li>
+                      <li class="menu-item">
+                        <a href="product-details.html">Community Management</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="menu-item menu-item-has-children">
+                    <a
+                      href="shop.html"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                      >Professional Growth</a
+                    >
+                    <ul class="sub-menu">
+                      <li class="menu-item">
+                        <a href="product-details.html">Profile Optimization</a>
+                      </li>
+                      <li class="menu-item">
+                        <a href="product-details.html">Personal Branding</a>
+                      </li>
+                      <li class="menu-item">
+                        <a href="product-details.html">Profile Audit</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="menu-item menu-item-has-children">
+                    <a
+                      href="shop.html"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                      >Campaigns</a
+                    >
+                    <ul class="sub-menu">
+                      <li class="menu-item">
+                        <a href="product-details.html">Lead Generation</a>
+                      </li>
+                      <li class="menu-item">
+                        <a href="product-details.html">Outreach Campaigns</a>
+                      </li>
+                      <li class="menu-item">
+                        <a href="pricing.html">Marketing Packages</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-item">
+                <a href="index.html#service-types">Categories</a>
+              </li>
+              <li class="menu-item"><a href="pricing.html">Pricing</a></li>
+              <li class="menu-item menu-item-has-children">
+                <a href="blog.html" aria-haspopup="true" aria-expanded="false"
+                  >Resources</a
+                >
+                <ul class="sub-menu">
+                  <li class="menu-item"><a href="blog.html">Blog</a></li>
+                  <li class="menu-item">
+                    <a href="blog-details.html">Marketing Guides</a>
+                  </li>
+                  <li class="menu-item"><a href="faq.html">FAQ</a></li>
+                </ul>
+              </li>
+              <li class="menu-item"><a href="about.html">About</a></li>
+              <li class="menu-item"><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="linksmm-header-actions">
+            <button
+              class="linksmm-icon-button"
+              type="button"
+              aria-label="Search services"
+              data-search-toggle
+            >
+              <i class="bi bi-search"></i>
+            </button>
+            <a
+              class="linksmm-icon-button"
+              href="login.html"
+              aria-label="My account"
+              ><i class="bi bi-person"></i
+            ></a>
+            <a
+              class="linksmm-cart-button"
+              href="cart.html"
+              aria-label="Shopping cart with 0 items"
+              ><i class="bi bi-bag"></i
+              ><span class="linksmm-cart-count">0</span></a
+            >
+          </div>
+        </div>
+        <form
+          class="linksmm-search-form"
+          action="shop.html"
+          role="search"
+          hidden
+          data-search-form
+        >
+          <label class="visually-hidden" for="site-search"
+            >Search services</label
+          >
+          <input
+            id="site-search"
+            name="s"
+            type="search"
+            placeholder="Search digital services..."
+          />
+          <button type="submit">Search</button>
+        </form>
+      </div>
     </header>
     <!-- Header End -->
 
-    <main id="main-content"><!-- Checkout Start --><section class="linkpva-inner-section"><div class="container"><div class="linkpva-section-heading mb-4"><span class="linkpva-section-tag">Secure Order Interface</span><h1>Checkout</h1><p>Enter sample billing information and review the order. No data or payment is processed.</p></div><form data-demo-form><div class="row g-4"><div class="col-lg-7"><div class="linkpva-content-card"><h2 class="fs-5">Billing details</h2><div class="linkpva-form-grid"><div class="linkpva-form-field"><label for="first-name">First name</label><input id="first-name" name="first_name" required></div><div class="linkpva-form-field"><label for="last-name">Last name</label><input id="last-name" name="last_name" required></div><div class="linkpva-form-field is-full"><label for="email">Email address</label><input id="email" name="email" type="email" required><small>Order notices would be sent to this address in the final system.</small></div><div class="linkpva-form-field"><label for="country">Country/region</label><select id="country" name="country"><option>Select country</option><option>United States</option><option>United Kingdom</option><option>Bangladesh</option></select></div><div class="linkpva-form-field"><label for="phone">Phone (optional)</label><input id="phone" name="phone" type="tel"></div><div class="linkpva-form-field is-full"><label for="notes">Order notes (optional)</label><textarea id="notes" name="notes" placeholder="Only include information needed to process the order."></textarea></div></div></div><div class="linkpva-content-card mt-4"><h2 class="fs-5">Payment method</h2><label class="linkpva-checkbox"><input type="radio" name="payment" checked><span><strong class="d-block text-dark">Payment gateway placeholder</strong>Approved payment methods will be connected during WooCommerce integration.</span></label></div></div><div class="col-lg-5"><aside class="linkpva-content-card linkpva-order-summary"><h2>Your Order</h2><div class="linkpva-summary-row"><span>Verified Account × 1</span><strong>$49.00</strong></div><div class="linkpva-summary-row"><span>Delivery</span><strong>Digital</strong></div><div class="linkpva-summary-row is-total"><span>Total</span><strong>$49.00</strong></div><label class="linkpva-checkbox mt-3"><input type="checkbox" required><span>I have read and agree to the <a href="terms.html">terms</a>, <a href="delivery-policy.html">delivery policy</a>, and <a href="refund-policy.html">refund policy</a>.</span></label><button class="linkpva-button linkpva-button-primary linkpva-summary-button" type="submit">Place Demo Order <i class="bi bi-arrow-right"></i></button><p class="linkpva-form-status" role="status" data-form-status>Demo form validated. No order or payment was submitted.</p></aside></div></div></form></div></section><!-- Checkout End --></main>
-<!-- Footer Start -->
-    <footer class="linkpva-footer">
+    <main id="main-content">
+      <!-- Checkout Start -->
+      <section class="linksmm-inner-section">
         <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-4">
-                    <a class="linkpva-logo linkpva-footer-logo" href="index.html" aria-label="LinkPVA home"><img src="assets/images/logo-white.svg" width="190" height="46" alt="LinkPVA"></a>
-                    <p class="linkpva-footer-about">A marketplace interface for comparing LinkedIn account listings with clear specifications and a straightforward ordering experience.</p>
-                    <div class="linkpva-social-links"><a href="#" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a><a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a><a href="#" aria-label="Telegram"><i class="bi bi-telegram" aria-hidden="true"></i></a></div>
+          <div class="linksmm-section-heading mb-4">
+            <span class="linksmm-section-tag">Secure Order Interface</span>
+            <h1>Checkout</h1>
+            <p>
+              Enter billing details, select a payment option, and review the
+              service order.
+            </p>
+          </div>
+          <form data-demo-form>
+            <div class="row g-4">
+              <div class="col-lg-7">
+                <div class="linksmm-content-card">
+                  <h2 class="fs-5">Billing details</h2>
+                  <div class="linksmm-form-grid">
+                    <div class="linksmm-form-field">
+                      <label for="first-name">First name</label
+                      ><input
+                        type="text"
+                        id="first-name"
+                        name="first_name"
+                        required
+                      />
+                    </div>
+                    <div class="linksmm-form-field">
+                      <label for="last-name">Last name</label
+                      ><input
+                        type="text"
+                        id="last-name"
+                        name="last_name"
+                        required
+                      />
+                    </div>
+                    <div class="linksmm-form-field is-full">
+                      <label for="email">Email address</label
+                      ><input
+                        id="email"
+                        name="email"
+                        type="email"
+                        required
+                      /><small
+                        >Order notices will be sent to this address.</small
+                      >
+                    </div>
+                    <div class="linksmm-form-field">
+                      <label for="country">Country/region</label
+                      ><select id="country" name="country">
+                        <option>Select country</option>
+                        <option>United States</option>
+                        <option>United Kingdom</option>
+                        <option>Bangladesh</option>
+                      </select>
+                    </div>
+                    <div class="linksmm-form-field">
+                      <label for="phone">Phone (optional)</label
+                      ><input id="phone" name="phone" type="tel" />
+                    </div>
+                    <div class="linksmm-form-field is-full">
+                      <label for="notes">Order notes (optional)</label
+                      ><textarea
+                        id="notes"
+                        name="notes"
+                        placeholder="Only include information needed to process the order."
+                      ></textarea>
+                    </div>
+                  </div>
                 </div>
-                <div class="col-6 col-lg-2"><h2>Marketplace</h2><ul><li><a href="shop.html">All Products</a></li><li><a href="shop.html">Verified Accounts</a></li><li><a href="shop.html">Aged Accounts</a></li><li><a href="shop.html">PVA Accounts</a></li><li><a href="shop.html">Followers Accounts</a></li></ul></div>
-                <div class="col-6 col-lg-2"><h2>Company</h2><ul><li><a href="about.html">About Us</a></li><li><a href="blog.html">Blog</a></li><li><a href="bulk-order.html">Bulk Orders</a></li><li><a href="contact.html">Contact</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
-                <div class="col-sm-6 col-lg-2"><h2>Policies</h2><ul><li><a href="delivery-policy.html">Delivery Policy</a></li><li><a href="refund-policy.html">Refund Policy</a></li><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Service</a></li></ul></div>
-                <div class="col-sm-6 col-lg-2">
-                    <h2>Support</h2>
-                    <ul class="linkpva-contact-list">
-                        <li><span class="linkpva-footer-contact-icon"><i class="bi bi-envelope" aria-hidden="true"></i></span><span><small>Email us</small><a href="mailto:support@linkpva.com">support@linkpva.com</a></span></li>
-                        <li><span class="linkpva-footer-contact-icon"><i class="bi bi-chat-dots" aria-hidden="true"></i></span><span><small>Need help?</small><a href="contact.html">Contact Support</a></span></li>
-                        <li><span class="linkpva-footer-contact-icon"><i class="bi bi-geo-alt" aria-hidden="true"></i></span><address><small>Our location</small><span>Dhaka, Bangladesh</span></address></li>
-                    </ul>
+                <div class="linksmm-content-card mt-4">
+                  <h2 class="fs-5">Payment method</h2>
+                  <label class="linksmm-checkbox"
+                    ><input type="radio" name="payment" checked /><span
+                      ><strong class="d-block text-dark"
+                        >Secure card payment</strong
+                      >Choose this option to continue with card payment.</span
+                    ></label
+                  >
                 </div>
+              </div>
+              <div class="col-lg-5">
+                <aside class="linksmm-content-card linksmm-order-summary">
+                  <h2>Your Order</h2>
+                  <div class="linksmm-summary-row">
+                    <span>Social Media Management Plan × 1</span
+                    ><strong>$49.00</strong>
+                  </div>
+                  <div class="linksmm-summary-row">
+                    <span>Delivery</span><strong>Digital</strong>
+                  </div>
+                  <div class="linksmm-summary-row is-total">
+                    <span>Total</span><strong>$49.00</strong>
+                  </div>
+                  <label class="linksmm-checkbox mt-3"
+                    ><input type="checkbox" required /><span
+                      >I have read and agree to the
+                      <a href="terms.html">terms</a>,
+                      <a href="delivery-policy.html">delivery policy</a>, and
+                      <a href="refund-policy.html">refund policy</a>.</span
+                    ></label
+                  ><button
+                    class="linksmm-button linksmm-button-primary linksmm-summary-button"
+                    type="submit"
+                  >
+                    Place Order <i class="bi bi-arrow-right"></i>
+                  </button>
+                  <p class="linksmm-form-status" role="status" data-form-status>
+                    Order form validated. Connect a payment gateway to process
+                    transactions.
+                  </p>
+                </aside>
+              </div>
             </div>
-            <div class="linkpva-footer-bottom">
-                <p>&copy; <span data-current-year>2026</span> LinkPVA. All rights reserved.</p>
-                <p>LinkPVA is an independent marketplace and is not affiliated with or endorsed by LinkedIn.</p>
-            </div>
+          </form>
         </div>
+      </section>
+      <!-- Checkout End -->
+    </main>
+    <!-- Footer Start -->
+    <footer class="linksmm-footer">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-3">
+            <a class="linksmm-logo linksmm-footer-logo" href="index.html"
+              ><img
+                src="assets/images/logo-white.svg"
+                width="190"
+                height="46"
+                alt="LinkSMM"
+            /></a>
+            <p class="linksmm-footer-about">
+              A flexible marketplace template for presenting social media
+              marketing, branding, lead generation, and digital growth services.
+            </p>
+            <div class="linksmm-social-links">
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener"
+                aria-label="Facebook"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/"
+                target="_blank"
+                rel="noopener"
+                aria-label="LinkedIn"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener"
+                aria-label="Instagram"
+                ><i class="bi bi-instagram"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <h2>Services</h2>
+            <ul>
+              <li><a href="shop.html">All Services</a></li>
+              <li>
+                <a href="product-details.html">Social Media Management</a>
+              </li>
+              <li><a href="product-details.html">Profile Optimization</a></li>
+              <li><a href="product-details.html">Lead Generation</a></li>
+              <li><a href="pricing.html">Marketing Packages</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <h2>Company</h2>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="pricing.html">Pricing</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="bulk-order.html">Request a Quote</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-4 col-lg-2">
+            <h2>Support</h2>
+            <ul class="linksmm-footer-policy-links">
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="delivery-policy.html">Delivery Policy</a></li>
+              <li><a href="refund-policy.html">Refund Policy</a></li>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="terms.html">Terms of Service</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-lg-3">
+            <h2>Get in Touch</h2>
+            <ul class="linksmm-contact-list">
+              <li>
+                <span class="linksmm-footer-contact-icon"
+                  ><i class="bi bi-envelope"></i></span
+                ><span
+                  ><small>Email us</small
+                  ><a href="mailto:support@linksmm.example"
+                    >support@linksmm.example</a
+                  ></span
+                >
+              </li>
+              <li>
+                <span class="linksmm-footer-contact-icon"
+                  ><i class="bi bi-chat-dots"></i></span
+                ><span
+                  ><small>Need help?</small
+                  ><a href="contact.html">Contact Support</a></span
+                >
+              </li>
+              <li>
+                <span class="linksmm-footer-contact-icon"
+                  ><i class="bi bi-geo-alt"></i
+                ></span>
+                <address>
+                  <small>Our location</small><span>Dhaka, Bangladesh</span>
+                </address>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="linksmm-footer-bottom">
+          <p>
+            &copy; <span data-current-year>2026</span> LinkSMM. All rights
+            reserved.
+          </p>
+          <p>SMM &amp; digital services marketplace HTML template.</p>
+        </div>
+      </div>
     </footer>
-    <!-- Footer End --><script src="assets/js/custom.js"></script></body></html>
+    <!-- Footer End -->
+    <script src="assets/js/custom.js"></script>
+  </body>
+</html>

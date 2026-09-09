@@ -1,0 +1,37 @@
+LinkSMM Credits and Licenses
+============================
+
+Template code
+-------------
+The original LinkSMM HTML, SCSS, CSS, and JavaScript are provided under the license granted with the marketplace purchase. They may be used by the purchaser according to that license and may not be redistributed as a competing template.
+
+Third-party dependencies
+------------------------
+
+1. Bootstrap 5.3.8
+   Website: https://getbootstrap.com/
+   License: MIT
+   License text: https://github.com/twbs/bootstrap/blob/main/LICENSE
+   Included file: assets/css/bootstrap.min.css
+
+2. Bootstrap Icons
+   Website: https://icons.getbootstrap.com/
+   License: MIT
+   License text: https://github.com/twbs/icons/blob/main/LICENSE
+   Included files: assets/css/bootstrap-icons.min.css and assets/fonts/bootstrap-icons.*
+
+3. Google Fonts — Inter and Manrope
+   Website: https://fonts.google.com/
+   Fonts are loaded from Google Fonts in the HTML demo. Review Google Fonts terms and privacy requirements before production deployment. Properly licensed font files may be self-hosted instead.
+
+Preview images
+--------------
+The product and blog imagery used in the hosted preview is AI-generated preview content. It is not licensed for inclusion in an Envato download package and must not be distributed with the submitted item. The customer ZIP should contain redistribution-safe placeholder imagery instead.
+
+Brand and social icons
+----------------------
+Social platform names and icons demonstrate interface placement. LinkSMM is a fictional template brand and is not affiliated with or endorsed by any social platform.
+
+Buyer responsibility
+--------------------
+Replace demo contact details, policy text, prices, testimonials, links, and business claims before launching a production website. Policy page copy is a layout example and is not legal advice.

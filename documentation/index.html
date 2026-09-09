@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LinkSMM Documentation</title>
+    <link rel="stylesheet" href="assets/docs.css" />
+  </head>
+  <body>
+    <div class="docs-layout">
+      <nav class="docs-nav" aria-label="Documentation navigation">
+        <strong>LinkSMM 1.0.0</strong>
+        <a href="#start">Getting started</a>
+        <a href="#structure">File structure</a>
+        <a href="#pages">Included pages</a>
+        <a href="#customize">Customization</a>
+        <a href="#javascript">JavaScript</a>
+        <a href="#forms">Forms and commerce</a>
+        <a href="#images">Images</a>
+        <a href="#credits">Credits</a>
+        <a href="#support">Support</a>
+      </nav>
+      <main class="docs-content">
+        <section id="start">
+          <p>Thank you for choosing LinkSMM.</p>
+          <h1>SMM &amp; Digital Services Marketplace HTML Template</h1>
+          <p>
+            LinkSMM is a front-end template for digital agencies, social media
+            teams, consultants, and service marketplaces. It uses semantic HTML,
+            Bootstrap's grid and utilities, custom SCSS, and dependency-free
+            JavaScript.
+          </p>
+          <div class="note">
+            <strong>Front-end only:</strong> WordPress, WooCommerce,
+            authentication, payments, email delivery, and databases are not
+            included.
+          </div>
+          <h2>Getting started</h2>
+          <p>
+            Extract the ZIP and open <code>index.html</code>. A local server is
+            recommended while editing:
+          </p>
+          <pre>python3 -m http.server 4173</pre>
+        </section>
+
+        <section id="structure">
+          <h2>File structure</h2>
+          <pre>
+linksmm/
+├── *.html
+├── assets/
+│   ├── css/
+│   ├── fonts/
+│   ├── images/
+│   └── js/
+├── documentation/
+├── licensing/
+├── changelog.txt
+└── README.md</pre
+          >
+          <p>
+            Edit <code>assets/css/style.scss</code> for source styles. The
+            browser loads the compiled <code>assets/css/style.css</code>.
+          </p>
+        </section>
+
+        <section id="pages">
+          <h2>Included pages</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Page</th>
+                <th>Purpose</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>index.html</td>
+                <td>Homepage and service overview</td>
+              </tr>
+              <tr>
+                <td>shop.html / product-details.html</td>
+                <td>Service catalogue and details</td>
+              </tr>
+              <tr>
+                <td>pricing.html</td>
+                <td>Packages and comparison table</td>
+              </tr>
+              <tr>
+                <td>cart.html / checkout.html / order-success.html</td>
+                <td>Commerce interface states</td>
+              </tr>
+              <tr>
+                <td>blog.html / blog-details.html</td>
+                <td>Blog listing and article</td>
+              </tr>
+              <tr>
+                <td>login.html / dashboard.html</td>
+                <td>Customer account interfaces</td>
+              </tr>
+              <tr>
+                <td>about.html / contact.html / faq.html</td>
+                <td>Company and support pages</td>
+              </tr>
+              <tr>
+                <td>bulk-order.html</td>
+                <td>Custom quote request</td>
+              </tr>
+              <tr>
+                <td>
+                  delivery-policy.html / refund-policy.html / privacy.html /
+                  terms.html
+                </td>
+                <td>Policy layouts</td>
+              </tr>
+              <tr>
+                <td>404.html</td>
+                <td>Not-found page</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section id="customize">
+          <h2>Customization</h2>
+          <h3>Brand</h3>
+          <p>
+            Replace <code>assets/images/logo.svg</code> and
+            <code>logo-white.svg</code>. Keep equivalent dimensions or update
+            their width and height attributes.
+          </p>
+          <h3>Colors and fonts</h3>
+          <p>
+            Core design tokens are at the top of <code>style.scss</code> under
+            <code>:root</code>. Update primary, accent, text, background,
+            radius, shadow, and font variables there.
+          </p>
+          <h3>Navigation</h3>
+          <p>
+            The menu uses WordPress-friendly
+            <code>menu-item-has-children</code> and
+            <code>sub-menu</code> classes through three levels. Preserve the
+            nested <code>ul &gt; li &gt; a + ul</code> structure when editing.
+          </p>
+          <h3>Compile SCSS</h3>
+          <pre>
+npx sass assets/css/style.scss assets/css/style.css --style=expanded</pre
+          >
+        </section>
+
+        <section id="javascript">
+          <h2>JavaScript features</h2>
+          <p>
+            <code>assets/js/custom.js</code> controls the responsive menu and
+            backdrop, submenu toggles, header search, back-to-top button,
+            accordions, tabs, quantity controls, product gallery, blog filtering
+            and search, and front-end form validation messages.
+          </p>
+          <p>
+            Interactive controls retain required ARIA state attributes.
+            Decorative or redundant section relationships have been omitted to
+            keep markup readable.
+          </p>
+        </section>
+
+        <section id="forms">
+          <h2>Forms and commerce</h2>
+          <p>
+            Forms validate in the browser but do not transmit data. Connect
+            forms to your own PHP handler, API, CRM, or WordPress integration.
+            Cart, checkout, login, registration, dashboard, and order
+            confirmation are interface templates and require backend
+            development.
+          </p>
+          <p>
+            Never collect passwords or payment information until the site is
+            connected to an appropriately secured production system.
+          </p>
+        </section>
+
+        <section id="images">
+          <h2>Images</h2>
+          <div class="note">
+            <strong>Envato packaging:</strong> AI-generated product and blog
+            images are for the hosted preview only. Do not include them in the
+            downloadable ZIP. Replace them with redistribution-safe placeholders
+            or properly licensed assets and disclose that preview images are not
+            included.
+          </div>
+          <p>
+            Maintain the existing 1200 × 750 aspect ratio for product and blog
+            images to avoid layout shifts.
+          </p>
+        </section>
+
+        <section id="credits">
+          <h2>Credits and licenses</h2>
+          <p>
+            The template uses Bootstrap 5.3.8, Bootstrap Icons, Inter, and
+            Manrope. Full links and license notes are in
+            <code>../licensing/credits-and-licenses.txt</code>.
+          </p>
+        </section>
+
+        <section id="support">
+          <h2>Support and production checklist</h2>
+          <ul>
+            <li>
+              Replace logo, contact details, social links, testimonials, prices,
+              and legal copy.
+            </li>
+            <li>Connect forms, authentication, cart, and payment workflows.</li>
+            <li>Use only licensed downloadable assets.</li>
+            <li>
+              Test the customized site in current Chrome, Firefox, Edge, and
+              Safari.
+            </li>
+            <li>
+              Validate privacy, tax, refund, and service terms for the target
+              business and jurisdiction.
+            </li>
+          </ul>
+          <p>
+            Template support:
+            <a href="mailto:support@linksmm.example">support@linksmm.example</a>
+          </p>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
