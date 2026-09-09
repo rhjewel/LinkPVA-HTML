@@ -107,6 +107,11 @@ svg {
   outline-offset: 3px;
 }
 
+::-moz-selection {
+  color: #fff;
+  background: var(--color-primary);
+}
+
 ::selection {
   color: #fff;
   background: var(--color-primary);
@@ -637,7 +642,9 @@ svg {
   z-index: 1;
   display: block;
   width: 100%;
-  height: auto;
+  max-height: 650px;
+  -o-object-fit: contain;
+     object-fit: contain;
   -webkit-mask-image: radial-gradient(ellipse 65% 68% at 50% 50%, #000 55%, transparent 100%);
   mask-image: radial-gradient(ellipse 65% 68% at 50% 50%, #000 55%, transparent 100%);
   mix-blend-mode: multiply;
@@ -778,8 +785,10 @@ svg {
 .linksmm-home-two-visual img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center 46%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center 46%;
+     object-position: center 46%;
 }
 
 .linksmm-hero-stat-grid {
@@ -1243,7 +1252,8 @@ svg {
 .linksmm-product-visual > img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   transition: all 0.25s ease;
 }
 .linksmm-product-visual.is-purple {
@@ -1589,7 +1599,8 @@ svg {
   display: grid;
   grid-template-columns: 72px 1fr;
   align-items: center;
-  column-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
   padding: 22px;
   background: var(--color-background);
   border: 1px solid var(--color-border);
@@ -2032,7 +2043,8 @@ svg {
 .linksmm-blog-visual > img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   transition: all 0.25s ease;
 }
 .linksmm-blog-visual > i {
@@ -3165,7 +3177,8 @@ svg {
 .linksmm-product-main-visual > img {
   width: 100%;
   min-height: inherit;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .linksmm-product-thumbnails {
@@ -3187,7 +3200,8 @@ svg {
 .linksmm-product-thumbnails button img {
   width: 100%;
   height: 80px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .linksmm-product-thumbnails button.is-active, .linksmm-product-thumbnails button:hover {
   border-color: var(--color-primary);
@@ -3915,7 +3929,8 @@ svg {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .linksmm-article-layout {
@@ -3944,8 +3959,8 @@ svg {
 
 .linksmm-article-content {
   color: #4d5a72;
-  font-size: 16px;
-  line-height: 1.9;
+  font-size: 14px;
+  line-height: 1.8;
 }
 .linksmm-article-content h2 {
   margin: 42px 0 15px;
@@ -4003,6 +4018,174 @@ svg {
   font-size: 11px;
 }
 
+/* Blog Details Page - Comments */
+.linksmm-comments {
+  margin-top: 58px;
+  padding-top: 50px;
+  border-top: 1px solid var(--color-border);
+}
+
+.linksmm-comments-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+.linksmm-comments-heading .linksmm-section-tag {
+  margin-bottom: 6px;
+}
+.linksmm-comments-heading h2 {
+  margin: 0;
+  font-size: 28px;
+}
+.linksmm-comments-heading > a {
+  color: var(--color-primary);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.linksmm-comment-list,
+.linksmm-comment-list .children {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.linksmm-comment-list > li + li {
+  margin-top: 22px;
+}
+.linksmm-comment-list .children {
+  margin: 20px 0 0 72px;
+}
+
+.linksmm-comment {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr);
+  align-items: start;
+  gap: 16px;
+}
+
+.linksmm-comment-avatar {
+  display: grid;
+  width: 52px;
+  height: 52px;
+  place-items: center;
+  color: var(--color-primary);
+  background: var(--color-primary-light);
+  border: 1px solid #d7e5ff;
+  border-radius: 50%;
+  font-family: var(--font-heading);
+  font-size: 12px;
+  font-weight: 800;
+}
+.linksmm-comment-avatar.is-author {
+  color: #fff;
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.linksmm-comment-body {
+  padding: 22px 24px;
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: 0 var(--radius-md) var(--radius-md) var(--radius-md);
+}
+.linksmm-comment-body header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 12px;
+}
+.linksmm-comment-body h3 {
+  margin: 0 0 2px;
+  font-size: 14px;
+}
+.linksmm-comment-body h3 small {
+  display: inline-block;
+  margin-left: 5px;
+  padding: 2px 6px;
+  color: #fff;
+  background: var(--color-primary);
+  border-radius: 10px;
+  font-family: var(--font-body);
+  font-size: 8px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  vertical-align: 2px;
+}
+.linksmm-comment-body time {
+  display: block;
+  color: var(--color-text-muted);
+  font-size: 10px;
+  line-height: 1.5;
+}
+.linksmm-comment-body header > a {
+  color: var(--color-primary);
+  font-size: 11px;
+  font-weight: 800;
+}
+.linksmm-comment-body p {
+  margin: 0;
+  color: #59667d;
+  font-size: 13px;
+  line-height: 1.75;
+}
+
+/* Blog Details Page - Comment Form */
+.linksmm-comment-form {
+  margin-top: 55px;
+  padding: 34px;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+.linksmm-comment-form .linksmm-section-tag {
+  margin-bottom: 7px;
+}
+.linksmm-comment-form h2 {
+  margin: 0 0 8px;
+  font-size: 28px;
+}
+.linksmm-comment-form > p {
+  margin: 0 0 26px;
+  color: var(--color-text-muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+.linksmm-comment-form .linksmm-comment-consent {
+  grid-column: 1/-1;
+}
+.linksmm-comment-form .linksmm-button {
+  margin-top: 25px;
+}
+
+@media (max-width: 575.98px) {
+  .linksmm-comments-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .linksmm-comment-list .children {
+    margin-left: 18px;
+  }
+  .linksmm-comment {
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 10px;
+  }
+  .linksmm-comment-avatar {
+    width: 42px;
+    height: 42px;
+    font-size: 10px;
+  }
+  .linksmm-comment-body {
+    padding: 18px;
+  }
+  .linksmm-comment-form {
+    padding: 24px;
+  }
+}
 /* 34. Policy and Legal Pages */
 .linksmm-policy-layout {
   display: grid;
@@ -4437,7 +4620,8 @@ svg {
   }
   .linksmm-home-two-process .linksmm-process-grid li {
     grid-template-columns: 56px 1fr;
-    column-gap: 15px;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
     padding: 18px;
   }
   .linksmm-home-two-process .linksmm-process-icon {
@@ -4445,4 +4629,4 @@ svg {
     height: 52px;
     font-size: 19px;
   }
-}
+}/*# sourceMappingURL=style.css.map */
