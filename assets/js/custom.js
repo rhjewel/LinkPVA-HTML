@@ -30,7 +30,6 @@
 
     openItems.forEach(function (item) {
       item.classList.remove("is-submenu-open");
-      item.querySelector(":scope > a")?.setAttribute("aria-expanded", "false");
     });
   }
 
@@ -94,7 +93,7 @@
 
       event.preventDefault();
       const item = link.parentElement;
-      const willOpen = link.getAttribute("aria-expanded") !== "true";
+      const willOpen = !item.classList.contains("is-submenu-open");
       const parentList = item.parentElement;
 
       parentList
@@ -104,7 +103,6 @@
         });
 
       item.classList.toggle("is-submenu-open", willOpen);
-      link.setAttribute("aria-expanded", String(willOpen));
     });
   });
 
