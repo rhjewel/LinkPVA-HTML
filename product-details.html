@@ -220,21 +220,49 @@
           </ol>
           <div class="row g-5 align-items-start">
             <div class="col-lg-6">
-              <div class="linksmm-product-gallery">
-                <div class="linksmm-product-main-visual">
-                  <img
-                    src="assets/images/products/service-management.webp"
-                    width="1200"
-                    height="750"
-                    alt="Social media management service preview"
-                    decoding="async"
-                  />
+              <div
+                class="woocommerce-product-gallery woocommerce-product-gallery--with-images woocommerce-product-gallery--columns-3 images linksmm-product-gallery"
+                data-columns="3"
+              >
+                <div
+                  class="woocommerce-product-gallery__wrapper linksmm-product-gallery-frame"
+                >
+                  <div
+                    class="woocommerce-product-gallery__image linksmm-product-main-visual"
+                    data-thumb="assets/images/products/service-management.webp"
+                  >
+                    <a
+                      href="assets/images/products/service-management.webp"
+                      data-product-gallery-link
+                    >
+                      <img
+                        class="wp-post-image"
+                        src="assets/images/products/service-management.webp"
+                        width="1200"
+                        height="750"
+                        alt="Social media management service preview"
+                        data-product-main-image
+                        data-large_image="assets/images/products/service-management.webp"
+                        data-large_image_width="1200"
+                        data-large_image_height="750"
+                        decoding="async"
+                      />
+                    </a>
+                    <span class="linksmm-gallery-badge">Managed Service</span>
+                    <span class="linksmm-gallery-zoom">
+                      <i class="bi bi-arrows-fullscreen" aria-hidden="true"></i>
+                      View full image
+                    </span>
+                  </div>
                 </div>
                 <div class="linksmm-product-thumbnails">
                   <button
                     class="is-active"
                     type="button"
                     aria-label="Service preview"
+                    aria-pressed="true"
+                    data-gallery-image="assets/images/products/service-management.webp"
+                    data-gallery-alt="Social media management service preview"
                   >
                     <img
                       src="assets/images/products/service-management.webp"
@@ -243,7 +271,13 @@
                       alt=""
                     />
                   </button>
-                  <button type="button" aria-label="Campaign option preview">
+                  <button
+                    type="button"
+                    aria-label="Campaign option preview"
+                    aria-pressed="false"
+                    data-gallery-image="assets/images/products/service-outreach.webp"
+                    data-gallery-alt="Outreach campaign service preview"
+                  >
                     <img
                       src="assets/images/products/service-outreach.webp"
                       width="1200"
@@ -251,7 +285,13 @@
                       alt=""
                     />
                   </button>
-                  <button type="button" aria-label="Reporting preview">
+                  <button
+                    type="button"
+                    aria-label="Reporting preview"
+                    aria-pressed="false"
+                    data-gallery-image="assets/images/products/service-lead-generation.webp"
+                    data-gallery-alt="Lead generation reporting service preview"
+                  >
                     <img
                       src="assets/images/products/service-lead-generation.webp"
                       width="1200"
@@ -387,6 +427,35 @@
                   This service page presents a clear scope, available options,
                   client requirements, delivery timing, and support information.
                 </p>
+                <p>
+                  After checkout, share your brand details, preferred audience,
+                  and campaign priorities. The final workflow and publishing
+                  schedule are confirmed before the service begins.
+                </p>
+                <h3>What this plan includes</h3>
+                <ul class="linksmm-tab-feature-list">
+                  <li>
+                    <i class="bi bi-calendar-check" aria-hidden="true"></i>
+                    <span
+                      ><strong>Content planning</strong>Organized around your
+                      goals and audience.</span
+                    >
+                  </li>
+                  <li>
+                    <i class="bi bi-send-check" aria-hidden="true"></i>
+                    <span
+                      ><strong>Publishing workflow</strong>A clear process for
+                      scheduled content.</span
+                    >
+                  </li>
+                  <li>
+                    <i class="bi bi-bar-chart-line" aria-hidden="true"></i>
+                    <span
+                      ><strong>Performance update</strong>A practical monthly
+                      activity summary.</span
+                    >
+                  </li>
+                </ul>
               </div>
               <div
                 class="linksmm-tab-panel"

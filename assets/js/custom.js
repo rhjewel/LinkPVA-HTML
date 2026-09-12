@@ -74,20 +74,6 @@
       setMenuState(false);
       menuToggle.focus();
     });
-
-    document.addEventListener("keydown", function (event) {
-      if (
-        event.key === "Escape" &&
-        menuToggle.getAttribute("aria-expanded") === "true"
-      ) {
-        setMenuState(false);
-        menuToggle.focus();
-      }
-    });
-
-    window.addEventListener("resize", function () {
-      if (window.innerWidth >= 992) setMenuState(false);
-    });
   }
 
   if (searchToggle && searchForm) {
@@ -104,7 +90,7 @@
 
   parentMenuLinks.forEach(function (link) {
     link.addEventListener("click", function (event) {
-      if (window.innerWidth >= 992) return;
+      if (window.innerWidth > 1024) return;
 
       event.preventDefault();
       const item = link.parentElement;
@@ -251,17 +237,30 @@
   });
 
   document
-    .querySelectorAll(".linksmm-product-thumbnails button")
-    .forEach(function (button) {
-      button.addEventListener("click", function () {
-        button.parentElement
-          .querySelectorAll("button")
-          .forEach(function (currentButton) {
-            currentButton.classList.toggle(
-              "is-active",
-              currentButton === button,
-            );
+    .querySelectorAll(".linksmm-product-gallery")
+    .forEach(function (gallery) {
+      const mainImage = gallery.querySelector("[data-product-main-image]");
+      const mainLink = gallery.querySelector("[data-product-gallery-link]");
+      const buttons = gallery.querySelectorAll("[data-gallery-image]");
+
+      buttons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          const imageSource = button.dataset.galleryImage;
+
+          if (mainImage && imageSource) {
+            mainImage.src = imageSource;
+            mainImage.alt = button.dataset.galleryAlt || "Service preview";
+            mainImage.setAttribute("data-large_image", imageSource);
+          }
+
+          if (mainLink && imageSource) mainLink.href = imageSource;
+
+          buttons.forEach(function (currentButton) {
+            const isActive = currentButton === button;
+            currentButton.classList.toggle("is-active", isActive);
+            currentButton.setAttribute("aria-pressed", String(isActive));
           });
+        });
       });
     });
 
@@ -318,8 +317,13 @@
 
   document.addEventListener("keydown", function (event) {
     if (event.key === "Escape") {
+      const menuWasOpen =
+        menuToggle?.getAttribute("aria-expanded") === "true";
+
       closeSubmenus();
       setMenuState(false);
+
+      if (menuWasOpen) menuToggle.focus();
 
       if (searchForm && !searchForm.hidden) {
         searchForm.hidden = true;
@@ -329,9 +333,11 @@
     }
   });
 
-  window.addEventListener("resize", function () {
-    if (window.innerWidth >= 992) setMenuState(false);
-  });
+  if (menuToggle && mobileMenu) {
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 1024) setMenuState(false);
+    });
+  }
 
   if (currentYear) currentYear.textContent = new Date().getFullYear();
 })();
