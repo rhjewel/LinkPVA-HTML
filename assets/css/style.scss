@@ -1,7 +1,55 @@
 /*-----------------------------------------------------------------------------------
     Template Name: LinkSMM - SMM Business HTML Template
     Author: RHJ Themes
+    Author URI: https://rh-jewel.com/
+    Support: https://support.ezzlal.com/
     Version: 1.0.0
+    ===================================
+    CSS INDEX
+    ===================================
+    01. Variables and Mixins
+    02. Reset and Base Styles
+    03. Shared Layout and Components
+    04. Global Header and Navigation
+    05. Homepage One - Hero
+    06. Homepage Two - Header
+    07. Homepage Two - Hero
+    08. Homepage - Trust Strip
+        - Homepage Two - Trust Benefits
+    09. Homepage - Service Categories
+        - Homepage Two - Category Layout
+    10. Homepage - Product Cards
+    11. Homepage - Why Choose Us
+        - Homepage Two - Benefits Panel
+    12. Homepage - Working Process
+        - Homepage Two - Vertical Process
+    13. Homepage - Testimonial Slider
+    14. Homepage - Service Facts
+    15. Homepage - SEO Content
+    16. Homepage - FAQ
+    17. Homepage and Blog - Article Cards
+    18. Homepage - Custom Quote
+    19. Homepage - Final CTA
+    20. Global Footer
+    21. Homepage Two - Footer
+    22. Back to Top
+    23. Global Responsive Styles
+    24. Inner Pages - Shared Hero, Breadcrumb and Content
+    25. Shop Page
+    26. Product Details Page
+    27. Cart, Checkout and Order Success Pages
+    28. About and Contact Pages
+    29. Login and Register Page
+    30. Customer Dashboard Page
+    31. Pricing Page
+    32. Blog Listing Page
+    33. Blog Details Page
+        - Comments
+        - Comment Form
+    34. Policy and Legal Pages
+    35. Error Page
+    36. Homepage Two - Responsive Styles
+
 -----------------------------------------------------------------------------------*/
 
 /* 01. Variables and Mixins */
@@ -2686,7 +2734,7 @@ svg {
         color: var(--color-accent);
 
         &:hover {
-            color: #fff;
+            color: var(--color-primary);
         }
     }
 }
@@ -4533,8 +4581,12 @@ svg {
 
     h1 {
         margin: 15px 0 20px;
-        font-size: 69px;
+        font-size: 65px;
         letter-spacing: -3.5px;
+    }
+
+    span.linksmm-section-tag {
+        font-size: 10px;
     }
 }
 
