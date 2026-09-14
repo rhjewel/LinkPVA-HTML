@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkSMM Long Description Source</title>
+  <style>
+    :root { --navy: #0b1533; --navy-soft: #142347; --blue: #2563eb; --violet: #6d5dfc; --ink: #142347; --muted: #6b7890; --line: #dbe4f1; --light: #f7f9fd; }
+    * { box-sizing: border-box; }
+    html, body { width: 1230px; height: 6400px; margin: 0; overflow: hidden; }
+    body { color: var(--ink); background: #ffffff; font-family: Arial, Helvetica, sans-serif; }
+    h1, h2, h3, p { margin-top: 0; }
+    h2 { margin-bottom: 20px; font-size: 54px; line-height: 1.08; letter-spacing: -2.2px; }
+    .section-label { margin-bottom: 16px; color: var(--blue); font-size: 14px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; }
+    .section-intro { max-width: 720px; margin-bottom: 44px; color: var(--muted); font-size: 21px; line-height: 1.65; }
+    .hero {
+      position: relative;
+      height: 880px;
+      overflow: hidden;
+      color: #ffffff;
+      background: var(--navy);
+    }
+    .hero::before {
+      position: absolute;
+      inset: 0 0 0 43%;
+      content: "";
+      background: url("generated-long-description-source.png") center 12% / cover no-repeat;
+      opacity: 0.92;
+    }
+    .hero::after {
+      position: absolute;
+      inset: 0;
+      content: "";
+      background: linear-gradient(90deg, #0b1533 0%, #0b1533 43%, rgba(11, 21, 51, 0.82) 57%, rgba(11, 21, 51, 0.08) 100%);
+    }
+    .hero-copy { position: relative; z-index: 2; width: 675px; padding: 88px 0 0 82px; }
+    .hero-logo { width: 205px; height: auto; margin-bottom: 94px; }
+    .hero .section-label { color: #93c5fd; }
+    .hero h1 { margin-bottom: 30px; font-size: 78px; line-height: 1.02; letter-spacing: -4px; }
+    .hero h1 span { color: #60a5fa; }
+    .hero-copy > p:not(.section-label) { width: 590px; margin-bottom: 40px; color: #cbd8f4; font-size: 23px; line-height: 1.65; }
+    .hero-tags { display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero-tags span { padding: 13px 17px; border: 1px solid rgba(255, 255, 255, 0.22); border-radius: 30px; background: rgba(255, 255, 255, 0.08); font-size: 14px; font-weight: 700; }
+    .metrics { display: grid; height: 220px; grid-template-columns: repeat(4, 1fr); padding: 0 70px; background: #ffffff; }
+    .metric { display: grid; align-content: center; text-align: center; border-right: 1px solid var(--line); }
+    .metric:last-child { border-right: 0; }
+    .metric strong { color: var(--blue); font-size: 44px; line-height: 1; }
+    .metric span { margin-top: 12px; color: var(--muted); font-size: 15px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; }
+    .homes { height: 1100px; padding: 94px 70px; background: var(--light); text-align: center; }
+    .homes .section-intro { margin-right: auto; margin-left: auto; }
+    .home-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 34px; text-align: left; }
+    .screen-card { overflow: hidden; border: 1px solid var(--line); border-radius: 22px; background: #ffffff; box-shadow: 0 28px 80px rgba(20, 35, 71, 0.12); }
+    .screen-card img { display: block; width: 100%; height: 600px; object-fit: cover; object-position: top; }
+    .screen-card div { padding: 25px 28px; }
+    .screen-card h3 { display: block; margin-bottom: 8px; color: var(--ink); font-size: 22px; }
+    .screen-card span { color: var(--muted); font-size: 15px; line-height: 1.55; }
+    .market { display: grid; height: 950px; grid-template-columns: 360px 1fr; gap: 62px; align-items: center; padding: 90px 70px; background: #edf4ff; }
+    .market h2 { font-size: 50px; }
+    .feature-points { display: grid; gap: 18px; margin-top: 34px; }
+    .feature-points span { display: flex; align-items: center; gap: 13px; color: var(--ink); font-size: 17px; font-weight: 700; }
+    .feature-points i { display: grid; width: 32px; height: 32px; place-items: center; color: #ffffff; border-radius: 50%; background: var(--blue); font-style: normal; }
+    .market-frame { padding: 12px; overflow: hidden; border: 1px solid #cbd9ee; border-radius: 24px; background: #ffffff; box-shadow: 0 34px 90px rgba(25, 62, 130, 0.16); }
+    .market-frame img { display: block; width: 100%; height: 660px; object-fit: cover; object-position: top; border-radius: 15px; }
+    .responsive { display: grid; height: 950px; grid-template-columns: 480px 1fr; gap: 90px; align-items: center; padding: 75px 95px; overflow: hidden; color: #ffffff; background: var(--navy); }
+    .phone { justify-self: center; width: 342px; height: 760px; padding: 18px; overflow: hidden; border: 5px solid #29456d; border-radius: 48px; background: #03070d; box-shadow: 0 38px 100px rgba(0, 0, 0, 0.42); }
+    .phone img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; border-radius: 28px; }
+    .responsive .section-label { color: #75e3c3; }
+    .responsive h2 { max-width: 500px; font-size: 60px; }
+    .responsive .section-intro { color: #cbd8f4; }
+    .responsive-list { display: grid; gap: 18px; }
+    .responsive-list span { font-size: 20px; }
+    .responsive-list span::before { display: inline-grid; width: 31px; height: 31px; margin-right: 14px; place-items: center; content: "✓"; color: var(--navy); border-radius: 50%; background: #75e3c3; font-weight: 800; }
+    .inner-pages { height: 1050px; padding: 82px 70px; background: #ffffff; text-align: center; }
+    .inner-pages .section-intro { margin-right: auto; margin-left: auto; }
+    .page-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 26px; text-align: left; }
+    .page-card { position: relative; height: 350px; padding: 9px; overflow: hidden; border: 1px solid var(--line); border-radius: 20px; background: var(--light); box-shadow: 0 18px 55px rgba(20, 35, 71, 0.1); }
+    .page-card img { width: 100%; height: 100%; object-fit: cover; object-position: top; border-radius: 13px; }
+    .page-card span { position: absolute; bottom: 24px; left: 25px; padding: 10px 15px; color: #ffffff; border-radius: 8px; background: rgba(11, 21, 51, 0.9); font-size: 14px; font-weight: 700; }
+    .features { height: 850px; padding: 88px 70px; background: var(--light); text-align: center; }
+    .features .section-intro { margin-right: auto; margin-left: auto; }
+    .feature-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; text-align: left; }
+    .feature { min-height: 220px; padding: 30px 25px; border: 1px solid var(--line); border-radius: 18px; background: #ffffff; }
+    .feature b { display: grid; width: 48px; height: 48px; margin-bottom: 28px; place-items: center; color: #ffffff; border-radius: 13px; background: linear-gradient(135deg, var(--blue), var(--violet)); font-size: 19px; }
+    .feature h3 { display: block; margin-bottom: 10px; font-size: 18px; }
+    .feature span { color: var(--muted); font-size: 14px; line-height: 1.55; }
+    .final { position: relative; display: grid; height: 400px; place-items: center; overflow: hidden; color: #ffffff; background: var(--navy); text-align: center; }
+    .final::before { position: absolute; inset: 0; content: ""; background: url("generated-theme-preview-source.png") center / cover no-repeat; opacity: 0.32; }
+    .final::after { position: absolute; inset: 0; content: ""; background: rgba(11, 21, 51, 0.7); }
+    .final-content { position: relative; z-index: 2; }
+    .final img { width: 190px; margin: 0 auto 30px; }
+    .final h2 { margin-bottom: 14px; font-size: 48px; }
+    .final p { margin-bottom: 0; color: #cbd8f4; font-size: 19px; }
+  </style>
+</head>
+
+<body>
+  <section class="hero">
+    <div class="hero-copy">
+      <img class="hero-logo" src="../assets/images/logo-white.svg" alt="LinkSMM">
+      <p class="section-label">SMM &amp; Digital Services Marketplace</p>
+      <h1>Build a Stronger <span>Digital Service</span> Business</h1>
+      <p>A polished multi-page HTML template for agencies, consultants, marketers, and service marketplaces.</p>
+      <div class="hero-tags"><span>Responsive HTML5</span><span>Bootstrap 5</span><span>SCSS Included</span></div>
+    </div>
+  </section>
+
+  <div class="metrics">
+    <div class="metric"><strong>21</strong><span>HTML Pages</span></div>
+    <div class="metric"><strong>02</strong><span>Homepages</span></div>
+    <div class="metric"><strong>03</strong><span>Menu Levels</span></div>
+    <div class="metric"><strong>100%</strong><span>Responsive</span></div>
+  </div>
+
+  <section class="homes">
+    <p class="section-label">Flexible First Impressions</p>
+    <h2>Two Distinct Homepage Experiences</h2>
+    <p class="section-intro">Choose a clean marketplace landing page or an alternate premium presentation while keeping a consistent service journey.</p>
+    <div class="home-grid">
+      <article class="screen-card"><img src="showcase-home-one.png" alt="Homepage one"><div><h3>Homepage One</h3><span>Clean marketplace hero, service categories, products, testimonials, articles, and conversion sections.</span></div></article>
+      <article class="screen-card"><img src="showcase-home-two.png" alt="Homepage two"><div><h3>Homepage Two</h3><span>Alternate header, hero, benefit panels, vertical process, and enhanced footer call-to-action.</span></div></article>
+    </div>
+  </section>
+
+  <section class="market">
+    <div>
+      <p class="section-label">Marketplace Ready</p>
+      <h2>Present Services With Clear Detail</h2>
+      <p class="section-intro">Organized catalogue and product layouts help visitors compare service scope, options, pricing, and delivery information.</p>
+      <div class="feature-points"><span><i>✓</i>Filter-ready shop layout</span><span><i>✓</i>WooCommerce-inspired gallery</span><span><i>✓</i>Cart and checkout screens</span><span><i>✓</i>Pricing and custom quote pages</span></div>
+    </div>
+    <div class="market-frame"><img src="showcase-shop.png" alt="Shop page"></div>
+  </section>
+
+  <section class="responsive">
+    <div class="phone"><img src="showcase-mobile.png" alt="Mobile homepage"></div>
+    <div>
+      <p class="section-label">Responsive Experience</p>
+      <h2>Designed for Every Screen</h2>
+      <p class="section-intro">A responsive layout and touch-friendly controls keep the service journey clear from desktop to mobile.</p>
+      <div class="responsive-list"><span>Off-canvas mobile navigation</span><span>Three-level submenu support</span><span>Touch-friendly controls</span><span>1024px navigation breakpoint</span></div>
+    </div>
+  </section>
+
+  <section class="inner-pages">
+    <p class="section-label">Complete Customer Journey</p>
+    <h2>Purpose-Built Inner Pages</h2>
+    <p class="section-intro">From service discovery to account screens and content marketing, LinkSMM covers the core pages of a digital service business.</p>
+    <div class="page-grid">
+      <div class="page-card"><img src="showcase-product-details.png" alt="Product details"><span>Product Details</span></div>
+      <div class="page-card"><img src="showcase-blog.png" alt="Blog listing"><span>Blog &amp; Resources</span></div>
+      <div class="page-card"><img src="showcase-dashboard.png" alt="Customer dashboard"><span>Customer Dashboard</span></div>
+      <div class="page-card"><img src="showcase-shop.png" alt="Service catalogue"><span>Service Catalogue</span></div>
+    </div>
+  </section>
+
+  <section class="features">
+    <p class="section-label">Developer Friendly</p>
+    <h2>Built for Practical Customization</h2>
+    <p class="section-intro">Organized source files and reusable components make LinkSMM a solid starting point for static websites and later CMS conversion.</p>
+    <div class="feature-grid">
+      <article class="feature"><b>21</b><h3>Complete Pages</h3><span>Home, shop, product, account, blog, policy, and support layouts.</span></article>
+      <article class="feature"><b>02</b><h3>Unique Homepages</h3><span>Two polished directions for different marketing presentations.</span></article>
+      <article class="feature"><b>WP</b><h3>WordPress-Ready Menu</h3><span>Standard menu-item and sub-menu structure through three levels.</span></article>
+      <article class="feature"><b>BS</b><h3>Bootstrap 5</h3><span>Responsive grid and utility foundation for faster customization.</span></article>
+      <article class="feature"><b>SC</b><h3>SCSS Source</h3><span>Numbered sections, reusable variables, and compiled CSS included.</span></article>
+      <article class="feature"><b>SW</b><h3>Swiper Slider</h3><span>Responsive, touch-friendly testimonial carousel integration.</span></article>
+      <article class="feature"><b>W3</b><h3>W3C Valid HTML</h3><span>All 21 customer-facing pages pass the W3C Nu HTML Checker.</span></article>
+      <article class="feature"><b>DOC</b><h3>Documentation</h3><span>Setup, customization, assets, forms, and conversion notes included.</span></article>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="final-content"><img src="../assets/images/logo-white.svg" alt="LinkSMM"><h2>Launch Your Digital Services Presence</h2><p>Modern design · Clear service journeys · Flexible front-end source</p></div>
+  </section>
+</body>
+
+</html>
