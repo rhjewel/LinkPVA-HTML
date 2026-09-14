@@ -1,231 +1,369 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LinkSMM Documentation</title>
-    <link rel="stylesheet" href="assets/docs.css" />
-  </head>
-  <body>
-    <div class="docs-layout">
-      <nav class="docs-nav" aria-label="Documentation navigation">
-        <strong>LinkSMM 1.0.0</strong>
-        <a href="#start">Getting started</a>
-        <a href="#structure">File structure</a>
-        <a href="#pages">Included pages</a>
-        <a href="#customize">Customization</a>
-        <a href="#javascript">JavaScript</a>
-        <a href="#forms">Forms and commerce</a>
-        <a href="#images">Images</a>
-        <a href="#credits">Credits</a>
-        <a href="#support">Support</a>
-      </nav>
-      <main class="docs-content">
-        <section id="start">
-          <p>Thank you for choosing LinkSMM.</p>
-          <h1>SMM &amp; Digital Services Marketplace HTML Template</h1>
-          <p>
-            LinkSMM is a front-end template for digital agencies, social media
-            teams, consultants, and service marketplaces. It uses semantic HTML,
-            Bootstrap's grid and utilities, custom SCSS, and dependency-free
-            JavaScript.
-          </p>
-          <div class="note">
-            <strong>Front-end only:</strong> WordPress, WooCommerce,
-            authentication, payments, email delivery, and databases are not
-            included.
-          </div>
-          <h2>Getting started</h2>
-          <p>
-            Extract the ZIP and open <code>index.html</code>. A local server is
-            recommended while editing:
-          </p>
-          <pre>python3 -m http.server 4173</pre>
-        </section>
 
-        <section id="structure">
-          <h2>File structure</h2>
-          <pre>
-linksmm/
-├── *.html
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="LinkSMM HTML template installation, customization, page, asset, and source documentation.">
+    <title>LinkSMM HTML Template Documentation</title>
+    <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/css/documentation.css">
+</head>
+
+<body>
+    <div class="docs-layout">
+        <aside class="docs-sidebar">
+            <a class="docs-brand" href="#introduction">LinkSMM</a>
+            <nav aria-label="Documentation sections">
+                <a href="#introduction">Introduction</a>
+                <a href="#installation">Installation</a>
+                <a href="#structure">Package structure</a>
+                <a href="#pages">Included pages</a>
+                <a href="#html">HTML customization</a>
+                <a href="#scss">SCSS and colors</a>
+                <a href="#javascript">JavaScript features</a>
+                <a href="#quality">Code quality</a>
+                <a href="#forms">Forms and commerce</a>
+                <a href="#images">Images</a>
+                <a href="#credits">Credits and licenses</a>
+                <a href="#support">Support</a>
+            </nav>
+        </aside>
+
+        <main class="docs-content">
+            <header class="docs-hero" id="introduction">
+                <span class="docs-kicker">Version 1.0.0 · HTML template</span>
+                <h1>LinkSMM Documentation</h1>
+                <p>Thank you for choosing LinkSMM. This guide explains how to install, customize, and extend the
+                    multi-page SMM and digital marketing services marketplace template.</p>
+                <p class="docs-meta"><strong>Template scope:</strong> LinkSMM is a static front-end template built
+                    with semantic HTML, Bootstrap, custom SCSS, and JavaScript. WordPress, WooCommerce, databases,
+                    authentication, email delivery, and payment processing are not included.</p>
+            </header>
+
+            <section class="docs-section" id="installation">
+                <h2>Installation</h2>
+                <ol>
+                    <li>Extract the downloaded archive.</li>
+                    <li>Upload the HTML files and the complete <code>assets</code> directory to the same web root.</li>
+                    <li>Use <code>index.html</code> or <code>index-2.html</code> as the homepage.</li>
+                    <li>Replace demo branding, service information, prices, contact details, policies, and images.</li>
+                </ol>
+                <h3>Local preview</h3>
+                <pre><code>python3 -m http.server 4173</code></pre>
+                <p>Open <code>http://localhost:4173/</code> in a browser. A local server is recommended because some
+                    browser behavior may be restricted when HTML files are opened directly from disk.</p>
+                <p>The template is designed for current versions of Chrome, Firefox, Edge, and Safari. Test your
+                    customized content on desktop, tablet, and mobile devices before publishing.</p>
+            </section>
+
+            <section class="docs-section" id="structure">
+                <h2>Package structure</h2>
+                <pre><code>LinkSMM/
+├── index.html
+├── index-2.html
+├── [19 additional HTML pages]
 ├── assets/
 │   ├── css/
+│   │   ├── bootstrap.min.css
+│   │   ├── bootstrap-icons.min.css
+│   │   ├── swiper-bundle.min.css
+│   │   ├── style.scss
+│   │   ├── style.css
+│   │   └── style.css.map
 │   ├── fonts/
 │   ├── images/
+│   │   ├── blog/
+│   │   ├── placeholders/
+│   │   └── products/
 │   └── js/
+│       ├── jquery-3.7.1.min.js
+│       ├── popper.min.js
+│       ├── bootstrap.min.js
+│       ├── swiper-bundle.min.js
+│       └── custom.js
 ├── documentation/
 ├── licensing/
-├── changelog.txt
-└── README.md</pre
-          >
-          <p>
-            Edit <code>assets/css/style.scss</code> for source styles. The
-            browser loads the compiled <code>assets/css/style.css</code>.
-          </p>
-        </section>
+└── README.md</code></pre>
+                <p>Edit <code>assets/css/style.scss</code> for source styles and compile it to
+                    <code>assets/css/style.css</code>. Project interactions are maintained in
+                    <code>assets/js/custom.js</code>.</p>
+            </section>
 
-        <section id="pages">
-          <h2>Included pages</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Page</th>
-                <th>Purpose</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>index.html</td>
-                <td>Homepage and service overview</td>
-              </tr>
-              <tr>
-                <td>shop.html / product-details.html</td>
-                <td>Service catalogue and details</td>
-              </tr>
-              <tr>
-                <td>pricing.html</td>
-                <td>Packages and comparison table</td>
-              </tr>
-              <tr>
-                <td>cart.html / checkout.html / order-success.html</td>
-                <td>Commerce interface states</td>
-              </tr>
-              <tr>
-                <td>blog.html / blog-details.html</td>
-                <td>Blog listing and article</td>
-              </tr>
-              <tr>
-                <td>login.html / dashboard.html</td>
-                <td>Customer account interfaces</td>
-              </tr>
-              <tr>
-                <td>about.html / contact.html / faq.html</td>
-                <td>Company and support pages</td>
-              </tr>
-              <tr>
-                <td>bulk-order.html</td>
-                <td>Custom quote request</td>
-              </tr>
-              <tr>
-                <td>
-                  delivery-policy.html / refund-policy.html / privacy.html /
-                  terms.html
-                </td>
-                <td>Policy layouts</td>
-              </tr>
-              <tr>
-                <td>404.html</td>
-                <td>Not-found page</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
+            <section class="docs-section" id="pages">
+                <h2>Included pages</h2>
+                <div class="docs-grid">
+                    <ul>
+                        <li><code>index.html</code> — homepage one</li>
+                        <li><code>index-2.html</code> — homepage two</li>
+                        <li><code>about.html</code> — company overview</li>
+                        <li><code>shop.html</code> — service catalogue</li>
+                        <li><code>product-details.html</code> — service details</li>
+                        <li><code>pricing.html</code> — pricing packages</li>
+                        <li><code>bulk-order.html</code> — custom quote form</li>
+                        <li><code>cart.html</code> — shopping cart</li>
+                        <li><code>checkout.html</code> — checkout interface</li>
+                        <li><code>order-success.html</code> — order confirmation</li>
+                        <li><code>login.html</code> — sign-in and registration</li>
+                    </ul>
+                    <ul>
+                        <li><code>dashboard.html</code> — customer dashboard</li>
+                        <li><code>blog.html</code> — blog listing</li>
+                        <li><code>blog-details.html</code> — article and comments</li>
+                        <li><code>contact.html</code> — contact and support</li>
+                        <li><code>faq.html</code> — frequently asked questions</li>
+                        <li><code>delivery-policy.html</code> — delivery policy</li>
+                        <li><code>refund-policy.html</code> — refund policy</li>
+                        <li><code>privacy.html</code> — privacy policy</li>
+                        <li><code>terms.html</code> — terms of service</li>
+                        <li><code>404.html</code> — page not found</li>
+                    </ul>
+                </div>
+            </section>
 
-        <section id="customize">
-          <h2>Customization</h2>
-          <h3>Brand</h3>
-          <p>
-            Replace <code>assets/images/logo.svg</code> and
-            <code>logo-white.svg</code>. Keep equivalent dimensions or update
-            their width and height attributes.
-          </p>
-          <h3>Colors and fonts</h3>
-          <p>
-            Core design tokens are at the top of <code>style.scss</code> under
-            <code>:root</code>. Update primary, accent, text, background,
-            radius, shadow, and font variables there.
-          </p>
-          <h3>Navigation</h3>
-          <p>
-            The menu uses WordPress-friendly
-            <code>menu-item-has-children</code> and
-            <code>sub-menu</code> classes through three levels. Preserve the
-            nested <code>ul &gt; li &gt; a + ul</code> structure when editing.
-          </p>
-          <h3>Compile SCSS</h3>
-          <pre>
-npx sass assets/css/style.scss assets/css/style.css --style=expanded</pre
-          >
-        </section>
+            <section class="docs-section" id="html">
+                <h2>HTML customization</h2>
+                <p>Major page areas use Start/End comments. Keep the existing Bootstrap <code>container</code>,
+                    <code>row</code>, and column structure intact when replacing content.</p>
 
-        <section id="javascript">
-          <h2>JavaScript features</h2>
-          <p>
-            <code>assets/js/custom.js</code> controls the responsive menu and
-            backdrop, submenu toggles, header search, back-to-top button,
-            accordions, tabs, quantity controls, product gallery, blog filtering
-            and search, and front-end form validation messages.
-          </p>
-          <p>
-            Interactive controls retain required ARIA state attributes.
-            Decorative or redundant section relationships have been omitted to
-            keep markup readable.
-          </p>
-        </section>
+                <h3>Logo and brand images</h3>
+                <p>LinkSMM uses image logos in the header, mobile navigation, and footer:</p>
+                <ul>
+                    <li><code>assets/images/logo.svg</code> — standard logo for light backgrounds.</li>
+                    <li><code>assets/images/logo-white.svg</code> — light logo for dark backgrounds.</li>
+                    <li><code>assets/images/favicon.svg</code> — browser favicon used by every page.</li>
+                </ul>
+                <p>The simplest method is to replace these files while keeping the filenames. When using different
+                    dimensions, update the HTML <code>width</code> and <code>height</code> values while preserving the
+                    intrinsic aspect ratio.</p>
+                <pre><code>&lt;!-- Logo on a light background --&gt;
+&lt;img src="assets/images/logo.svg" width="190" height="46" alt="Your Brand"&gt;
 
-        <section id="forms">
-          <h2>Forms and commerce</h2>
-          <p>
-            Forms validate in the browser but do not transmit data. Connect
-            forms to your own PHP handler, API, CRM, or WordPress integration.
-            Cart, checkout, login, registration, dashboard, and order
-            confirmation are interface templates and require backend
-            development.
-          </p>
-          <p>
-            Never collect passwords or payment information until the site is
-            connected to an appropriately secured production system.
-          </p>
-        </section>
+&lt;!-- Logo on a dark background --&gt;
+&lt;img src="assets/images/logo-white.svg" width="190" height="46" alt="Your Brand"&gt;</code></pre>
+                <p class="docs-note"><strong>Brand checklist:</strong> also update page titles, descriptions, logo
+                    alternative text, footer copyright, email addresses, physical address, social links, and every
+                    visible occurrence of “LinkSMM”.</p>
 
-        <section id="images">
-          <h2>Images</h2>
-          <div class="note">
-            <strong>Envato packaging:</strong> AI-generated product and blog
-            images are for the hosted preview only. Do not include them in the
-            downloadable ZIP. Replace them with redistribution-safe placeholders
-            or properly licensed assets and disclose that preview images are not
-            included.
-          </div>
-          <p>
-            Maintain the existing 1200 × 750 aspect ratio for product and blog
-            images to avoid layout shifts.
-          </p>
-        </section>
+                <h3>Headers and menus</h3>
+                <p>Most pages use <code>.linksmm-header</code>. Homepage two adds
+                    <code>.linksmm-home-two-header</code> for its alternate desktop appearance. Both versions share the
+                    same responsive off-canvas navigation at widths of 1024px and below.</p>
+                <p>Dropdowns use WordPress-compatible classes and support up to three levels. Keep direct
+                    <code>ul &gt; li &gt; a + ul</code> nesting, do not place buttons or wrapper elements inside menu
+                    items, and do not add extra classes or IDs to <code>.sub-menu</code>.</p>
+                <pre><code>&lt;li class="menu-item menu-item-has-children"&gt;
+    &lt;a href="shop.html"&gt;Services&lt;/a&gt;
+    &lt;ul class="sub-menu"&gt;
+        &lt;li class="menu-item"&gt;
+            &lt;a href="product-details.html"&gt;Service Details&lt;/a&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/li&gt;</code></pre>
+                <p>Header markup is repeated across the static HTML files. After editing navigation, copy the matching
+                    header version to every page that uses it. The mobile menu logo, close control, backdrop, and
+                    three-level submenu behavior depend on the existing data attributes and class names.</p>
 
-        <section id="credits">
-          <h2>Credits and licenses</h2>
-          <p>
-            The template uses Bootstrap 5.3.8, Bootstrap Icons, Inter, and
-            Manrope. Full links and license notes are in
-            <code>../licensing/credits-and-licenses.txt</code>.
-          </p>
-        </section>
+                <h3>Footer content</h3>
+                <p>All pages use <code>.linksmm-footer</code>. Homepage two also uses
+                    <code>.linksmm-home-two-footer</code> for its alternate call-to-action and presentation. Update the
+                    correct version without removing its structural classes.</p>
+                <ol>
+                    <li>Replace the footer logo and company description.</li>
+                    <li>Update product, company, support, policy, and account links.</li>
+                    <li>Replace demo email, phone, address, and social destinations.</li>
+                    <li>Keep the <code>data-current-year</code> attribute for the automatic copyright year.</li>
+                </ol>
+                <pre><code>&lt;footer class="linksmm-footer"&gt;
+    &lt;a class="linksmm-logo linksmm-footer-logo" href="index.html"&gt;
+        &lt;img src="assets/images/logo-white.svg" width="190" height="46" alt="Your Brand"&gt;
+    &lt;/a&gt;
+    &lt;p&gt;Replace this text with a concise business description.&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
 
-        <section id="support">
-          <h2>Support and production checklist</h2>
-          <ul>
-            <li>
-              Replace logo, contact details, social links, testimonials, prices,
-              and legal copy.
-            </li>
-            <li>Connect forms, authentication, cart, and payment workflows.</li>
-            <li>Use only licensed downloadable assets.</li>
-            <li>
-              Test the customized site in current Chrome, Firefox, Edge, and
-              Safari.
-            </li>
-            <li>
-              Validate privacy, tax, refund, and service terms for the target
-              business and jurisdiction.
-            </li>
-          </ul>
-          <p>
-            Template support:
-            <a href="mailto:support@linksmm.example">support@linksmm.example</a>
-          </p>
-        </section>
-      </main>
+                <h3>Editing content, links, and images</h3>
+                <ul>
+                    <li>Keep existing section and component classes when replacing headings or paragraphs.</li>
+                    <li>Use relative links such as <code>about.html</code> for included pages and complete HTTPS URLs
+                        for external destinations.</li>
+                    <li>Keep descriptive <code>alt</code> text for meaningful images and empty alternative text only
+                        for decorative images.</li>
+                    <li>Preserve image <code>width</code> and <code>height</code> attributes to reduce layout shift.</li>
+                    <li>Use <code>loading="lazy"</code> on below-the-fold images, not the main hero image.</li>
+                    <li>Use anchors for navigation and buttons for interactive actions.</li>
+                </ul>
+
+                <h3>WordPress and WooCommerce conversion</h3>
+                <p>The HTML is prepared for later theme development, but it is not a WordPress theme. Navigation uses
+                    <code>menu-item</code>, <code>menu-item-has-children</code>, and <code>sub-menu</code>. Product
+                    gallery markup also includes familiar WooCommerce classes. During conversion, replace repeated
+                    headers, footers, loops, product data, cart data, and forms with WordPress or WooCommerce template
+                    functions rather than treating the static examples as backend functionality.</p>
+
+                <h3>Multi-page update checklist</h3>
+                <ol>
+                    <li>Choose <code>index.html</code> or <code>index-2.html</code> as the primary homepage.</li>
+                    <li>Update matching headers, menus, footers, logos, and account links across all pages.</li>
+                    <li>Replace service descriptions, prices, testimonials, statistics, contact details, and policies.
+                    </li>
+                    <li>Search for <code>LinkSMM</code>, <code>.example</code>, and placeholder destinations before
+                        publishing.</li>
+                    <li>Test menus, forms, filters, tabs, accordions, sliders, product gallery, cart controls, and links
+                        through a local server.</li>
+                </ol>
+            </section>
+
+            <section class="docs-section" id="scss">
+                <h2>SCSS, typography, and colors</h2>
+                <p>Edit <code>assets/css/style.scss</code>. Its numbered CSS index matches the section order, while
+                    reusable colors, fonts, shadows, and radii are defined near the top under <code>:root</code>.</p>
+                <pre><code>:root {
+    --color-primary: #2563eb;
+    --color-primary-hover: #1d4ed8;
+    --color-secondary: #6d5dfc;
+    --color-accent: #0b1533;
+    --color-text: #46536a;
+    --color-background: #f7f9fd;
+    --color-surface: #ffffff;
+    --font-heading: "Manrope", sans-serif;
+    --font-body: "Inter", sans-serif;
+}</code></pre>
+                <p>Project-owned SCSS uses pixel values for spacing, typography, dimensions, and breakpoints. Keep
+                    that convention when extending the stylesheet.</p>
+                <h3>Compile SCSS</h3>
+                <pre><code>npx sass assets/css/style.scss assets/css/style.css --style=expanded --source-map</code></pre>
+                <p>Do not edit <code>style.css</code> directly if you plan to compile the SCSS again. Always include
+                    the compiled CSS when delivering customized HTML files.</p>
+            </section>
+
+            <section class="docs-section" id="javascript">
+                <h2>JavaScript features</h2>
+                <p>Project-specific behavior is organized in <code>assets/js/custom.js</code>. It includes:</p>
+                <ul>
+                    <li>sticky headers and responsive off-canvas navigation;</li>
+                    <li>WordPress-style nested mobile submenu controls;</li>
+                    <li>header search and Escape-key closing behavior;</li>
+                    <li>quantity controls, product gallery switching, and product tabs;</li>
+                    <li>blog category filtering and keyword search;</li>
+                    <li>FAQ accordions and login/register tabs;</li>
+                    <li>Swiper testimonial sliders;</li>
+                    <li>demo form status messages, current year, and back-to-top control.</li>
+                </ul>
+                <p class="docs-note"><strong>Load order:</strong> keep jQuery, Popper, Bootstrap, and Swiper before
+                    <code>custom.js</code>. The included vendor files are retained for template components and future
+                    customization; update vendor libraries from their official releases instead of editing minified
+                    files manually.</p>
+                <p>Submenu state uses the <code>is-submenu-open</code> class so menu anchors remain compatible with the
+                    intended WordPress markup. Interactive buttons retain the state attributes required by their
+                    associated controls.</p>
+            </section>
+
+            <section class="docs-section" id="quality">
+                <h2>Code validation and quality</h2>
+                <p>All 21 customer-facing HTML pages were checked with the W3C Nu HTML Checker. After any content or
+                    structural edit, validate the affected pages again—especially navigation, forms, tabs, accordions,
+                    labels, and unique IDs.</p>
+                <ul>
+                    <li>Validate HTML at <a href="https://validator.w3.org/nu/">validator.w3.org/nu</a>.</li>
+                    <li>Preserve the existing heading hierarchy and semantic landmark elements.</li>
+                    <li>Keep each <code>id</code> unique and every control relationship valid.</li>
+                    <li>Run a JavaScript syntax check after editing <code>custom.js</code>.</li>
+                    <li>Compile SCSS and test affected pages above and below the 1024px navigation breakpoint.</li>
+                </ul>
+                <pre><code>node --check assets/js/custom.js
+npx sass assets/css/style.scss assets/css/style.css --style=expanded --source-map</code></pre>
+            </section>
+
+            <section class="docs-section" id="forms">
+                <h2>Forms and commerce</h2>
+                <p>LinkSMM is a static HTML template. Contact, custom quote, comment, coupon, login, registration, cart,
+                    checkout, dashboard, and order-confirmation screens are front-end demonstrations and do not send
+                    data or process orders.</p>
+                <p>Demo forms marked with <code>data-demo-form</code> prevent normal submission and show an example
+                    status message. Replace that behavior when connecting a PHP handler, API, CRM, WordPress form
+                    plugin, or another backend.</p>
+                <p>Cart quantities and product options are interface examples only. Use WooCommerce or another secure
+                    commerce platform for product data, sessions, taxes, order storage, authentication, and payment.
+                    Never collect real payment credentials without a suitable PCI-compliant provider.</p>
+            </section>
+
+            <section class="docs-section" id="images">
+                <h2>Images</h2>
+                <p>Logos, hero graphics, service images, blog images, and placeholders are stored in
+                    <code>assets/images</code>. Replace an image while keeping its filename to preserve all references,
+                    or update each related HTML <code>src</code> and SCSS <code>url()</code>.</p>
+                <ul>
+                    <li><code>assets/images/products</code> contains service thumbnails.</li>
+                    <li><code>assets/images/blog</code> contains article thumbnails.</li>
+                    <li><code>assets/images/placeholders</code> contains redistribution-safe placeholder graphics.</li>
+                </ul>
+                <p>Product and blog cards use a 1200 × 750 source ratio. Keep a similar ratio to preserve the intended
+                    card layout.</p>
+                <p class="docs-note"><strong>Preview assets:</strong> AI-generated preview imagery is demonstration
+                    content. Follow the included licensing notes and replace preview-only images with properly licensed
+                    or supplied placeholder assets before redistribution or production use.</p>
+            </section>
+
+            <section class="docs-section" id="credits">
+                <h2>Credits and licenses</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Resource</th>
+                            <th>Version</th>
+                            <th>License/source</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Bootstrap</td>
+                            <td>5.3.8</td>
+                            <td><a href="https://getbootstrap.com/">MIT License</a></td>
+                        </tr>
+                        <tr>
+                            <td>Bootstrap Icons</td>
+                            <td>1.13.1</td>
+                            <td><a href="https://icons.getbootstrap.com/">MIT License</a></td>
+                        </tr>
+                        <tr>
+                            <td>jQuery</td>
+                            <td>3.7.1</td>
+                            <td><a href="https://jquery.com/">OpenJS / MIT License</a></td>
+                        </tr>
+                        <tr>
+                            <td>Popper</td>
+                            <td>2.11.8</td>
+                            <td><a href="https://popper.js.org/">MIT License</a></td>
+                        </tr>
+                        <tr>
+                            <td>Swiper</td>
+                            <td>12.0.3</td>
+                            <td><a href="https://swiperjs.com/">MIT License</a></td>
+                        </tr>
+                        <tr>
+                            <td>Inter and Manrope</td>
+                            <td>Google Fonts</td>
+                            <td><a href="https://fonts.google.com/">SIL Open Font License</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Additional project and asset conditions are recorded in
+                    <code>../licensing/credits-and-licenses.txt</code>.</p>
+            </section>
+
+            <section class="docs-section" id="support">
+                <h2>Support</h2>
+                <p>Before requesting support, confirm that the directory structure was preserved, all required assets
+                    were uploaded, and the pages are being tested through a web server.</p>
+                <p>Template support covers documented template features and original code issues. It does not include
+                    custom development, WordPress conversion, WooCommerce configuration, server setup, third-party
+                    integration, or changes made by external plugins.</p>
+                <p><strong>RHJ Themes:</strong> <a href="https://support.ezzlal.com/">Help Desk</a></p>
+                <p><strong>Template version:</strong> 1.0.0<br><strong>Documentation updated:</strong> September 2026</p>
+            </section>
+        </main>
     </div>
-  </body>
+</body>
+
 </html>
