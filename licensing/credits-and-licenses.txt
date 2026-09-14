@@ -12,7 +12,7 @@ Third-party dependencies
    Website: https://getbootstrap.com/
    License: MIT
    License text: https://github.com/twbs/bootstrap/blob/main/LICENSE
-   Included file: assets/css/bootstrap.min.css
+   Included files: assets/css/bootstrap.min.css and assets/js/bootstrap.min.js
 
 2. Bootstrap Icons
    Website: https://icons.getbootstrap.com/
@@ -20,9 +20,27 @@ Third-party dependencies
    License text: https://github.com/twbs/icons/blob/main/LICENSE
    Included files: assets/css/bootstrap-icons.min.css and assets/fonts/bootstrap-icons.*
 
-3. Google Fonts — Inter and Manrope
+3. jQuery 3.7.1
+   Website: https://jquery.com/
+   License: MIT
+   License text: https://github.com/jquery/jquery/blob/main/LICENSE.txt
+   Included file: assets/js/jquery-3.7.1.min.js
+
+4. Popper 2.11.8
+   Website: https://popper.js.org/
+   License: MIT
+   License text: https://github.com/floating-ui/floating-ui/blob/master/LICENSE
+   Included file: assets/js/popper.min.js
+
+5. Swiper 12.0.3
+   Website: https://swiperjs.com/
+   License: MIT
+   License text: https://github.com/nolimits4web/swiper/blob/master/LICENSE
+   Included files: assets/css/swiper-bundle.min.css and assets/js/swiper-bundle.min.js
+
+6. Google Fonts — Inter and Manrope
    Website: https://fonts.google.com/
-   Fonts are loaded from Google Fonts in the HTML demo. Review Google Fonts terms and privacy requirements before production deployment. Properly licensed font files may be self-hosted instead.
+   Fonts are loaded from Google Fonts through assets/css/style.css. Review Google Fonts terms and privacy requirements before production deployment. Properly licensed font files may be self-hosted instead.
 
 Preview images
 --------------

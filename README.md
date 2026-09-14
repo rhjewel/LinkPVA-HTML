@@ -4,14 +4,14 @@ LinkSMM is a responsive static HTML template for social media marketing agencies
 
 ## Included
 
-- 20 HTML pages
+- 21 HTML pages with two homepage variations
 - Responsive three-level navigation
 - Service shop, service details, pricing, cart, and checkout layouts
 - Blog listing and article layouts
 - Login/register tabs and customer dashboard
 - FAQ, contact, quote request, policy, success, and 404 pages
 - SCSS source and compiled CSS
-- Vanilla JavaScript interactions with no jQuery dependency
+- Custom JavaScript interactions with jQuery, Bootstrap, Popper, and Swiper assets included
 
 ## Quick start
 

@@ -1,0 +1,10 @@
+LinkSMM Changelog
+=================
+
+Version 1.0.0 — September 14, 2026
+----------------------------------
+- Initial release.
+- Added two homepage variations and 19 inner pages.
+- Added responsive three-level navigation.
+- Added service catalogue, product, cart, checkout, pricing, account, blog, support, and policy layouts.
+- Added SCSS source, compiled CSS, JavaScript interactions, documentation, and redistribution-safe placeholders.
