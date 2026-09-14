@@ -3839,6 +3839,7 @@ svg {
 
 .linksmm-quantity {
     display: flex;
+    justify-content: space-between;
     height: 52px;
     overflow: hidden;
     border: 1px solid var(--color-border);
@@ -4643,7 +4644,7 @@ svg {
 
 .linksmm-article-content {
     color: #4d5a72;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.8;
 
     h2 {
