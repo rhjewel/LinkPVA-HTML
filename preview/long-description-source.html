@@ -1,178 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LinkSMM Long Description Source</title>
+  <title>LinkSMM WordPress Theme Long Description</title>
   <style>
-    :root { --navy: #0b1533; --navy-soft: #142347; --blue: #2563eb; --violet: #6d5dfc; --ink: #142347; --muted: #6b7890; --line: #dbe4f1; --light: #f7f9fd; }
-    * { box-sizing: border-box; }
-    html, body { width: 1230px; height: 6400px; margin: 0; overflow: hidden; }
-    body { color: var(--ink); background: #ffffff; font-family: Arial, Helvetica, sans-serif; }
-    h1, h2, h3, p { margin-top: 0; }
-    h2 { margin-bottom: 20px; font-size: 54px; line-height: 1.08; letter-spacing: -2.2px; }
-    .section-label { margin-bottom: 16px; color: var(--blue); font-size: 14px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; }
-    .section-intro { max-width: 720px; margin-bottom: 44px; color: var(--muted); font-size: 21px; line-height: 1.65; }
-    .hero {
-      position: relative;
-      height: 880px;
-      overflow: hidden;
-      color: #ffffff;
-      background: var(--navy);
-    }
-    .hero::before {
-      position: absolute;
-      inset: 0 0 0 43%;
-      content: "";
-      background: url("generated-long-description-source.png") center 12% / cover no-repeat;
-      opacity: 0.92;
-    }
-    .hero::after {
-      position: absolute;
-      inset: 0;
-      content: "";
-      background: linear-gradient(90deg, #0b1533 0%, #0b1533 43%, rgba(11, 21, 51, 0.82) 57%, rgba(11, 21, 51, 0.08) 100%);
-    }
-    .hero-copy { position: relative; z-index: 2; width: 675px; padding: 88px 0 0 82px; }
-    .hero-logo { width: 205px; height: auto; margin-bottom: 94px; }
-    .hero .section-label { color: #93c5fd; }
-    .hero h1 { margin-bottom: 30px; font-size: 78px; line-height: 1.02; letter-spacing: -4px; }
-    .hero h1 span { color: #60a5fa; }
-    .hero-copy > p:not(.section-label) { width: 590px; margin-bottom: 40px; color: #cbd8f4; font-size: 23px; line-height: 1.65; }
-    .hero-tags { display: flex; flex-wrap: wrap; gap: 12px; }
-    .hero-tags span { padding: 13px 17px; border: 1px solid rgba(255, 255, 255, 0.22); border-radius: 30px; background: rgba(255, 255, 255, 0.08); font-size: 14px; font-weight: 700; }
-    .metrics { display: grid; height: 220px; grid-template-columns: repeat(4, 1fr); padding: 0 70px; background: #ffffff; }
-    .metric { display: grid; align-content: center; text-align: center; border-right: 1px solid var(--line); }
-    .metric:last-child { border-right: 0; }
-    .metric strong { color: var(--blue); font-size: 44px; line-height: 1; }
-    .metric span { margin-top: 12px; color: var(--muted); font-size: 15px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; }
-    .homes { height: 1100px; padding: 94px 70px; background: var(--light); text-align: center; }
-    .homes .section-intro { margin-right: auto; margin-left: auto; }
-    .home-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 34px; text-align: left; }
-    .screen-card { overflow: hidden; border: 1px solid var(--line); border-radius: 22px; background: #ffffff; box-shadow: 0 28px 80px rgba(20, 35, 71, 0.12); }
-    .screen-card img { display: block; width: 100%; height: 600px; object-fit: cover; object-position: top; }
-    .screen-card div { padding: 25px 28px; }
-    .screen-card h3 { display: block; margin-bottom: 8px; color: var(--ink); font-size: 22px; }
-    .screen-card span { color: var(--muted); font-size: 15px; line-height: 1.55; }
-    .market { display: grid; height: 950px; grid-template-columns: 360px 1fr; gap: 62px; align-items: center; padding: 90px 70px; background: #edf4ff; }
-    .market h2 { font-size: 50px; }
-    .feature-points { display: grid; gap: 18px; margin-top: 34px; }
-    .feature-points span { display: flex; align-items: center; gap: 13px; color: var(--ink); font-size: 17px; font-weight: 700; }
-    .feature-points i { display: grid; width: 32px; height: 32px; place-items: center; color: #ffffff; border-radius: 50%; background: var(--blue); font-style: normal; }
-    .market-frame { padding: 12px; overflow: hidden; border: 1px solid #cbd9ee; border-radius: 24px; background: #ffffff; box-shadow: 0 34px 90px rgba(25, 62, 130, 0.16); }
-    .market-frame img { display: block; width: 100%; height: 660px; object-fit: cover; object-position: top; border-radius: 15px; }
-    .responsive { display: grid; height: 950px; grid-template-columns: 480px 1fr; gap: 90px; align-items: center; padding: 75px 95px; overflow: hidden; color: #ffffff; background: var(--navy); }
-    .phone { justify-self: center; width: 342px; height: 760px; padding: 18px; overflow: hidden; border: 5px solid #29456d; border-radius: 48px; background: #03070d; box-shadow: 0 38px 100px rgba(0, 0, 0, 0.42); }
-    .phone img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; border-radius: 28px; }
-    .responsive .section-label { color: #75e3c3; }
-    .responsive h2 { max-width: 500px; font-size: 60px; }
-    .responsive .section-intro { color: #cbd8f4; }
-    .responsive-list { display: grid; gap: 18px; }
-    .responsive-list span { font-size: 20px; }
-    .responsive-list span::before { display: inline-grid; width: 31px; height: 31px; margin-right: 14px; place-items: center; content: "✓"; color: var(--navy); border-radius: 50%; background: #75e3c3; font-weight: 800; }
-    .inner-pages { height: 1050px; padding: 82px 70px; background: #ffffff; text-align: center; }
-    .inner-pages .section-intro { margin-right: auto; margin-left: auto; }
-    .page-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 26px; text-align: left; }
-    .page-card { position: relative; height: 350px; padding: 9px; overflow: hidden; border: 1px solid var(--line); border-radius: 20px; background: var(--light); box-shadow: 0 18px 55px rgba(20, 35, 71, 0.1); }
-    .page-card img { width: 100%; height: 100%; object-fit: cover; object-position: top; border-radius: 13px; }
-    .page-card span { position: absolute; bottom: 24px; left: 25px; padding: 10px 15px; color: #ffffff; border-radius: 8px; background: rgba(11, 21, 51, 0.9); font-size: 14px; font-weight: 700; }
-    .features { height: 850px; padding: 88px 70px; background: var(--light); text-align: center; }
-    .features .section-intro { margin-right: auto; margin-left: auto; }
-    .feature-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; text-align: left; }
-    .feature { min-height: 220px; padding: 30px 25px; border: 1px solid var(--line); border-radius: 18px; background: #ffffff; }
-    .feature b { display: grid; width: 48px; height: 48px; margin-bottom: 28px; place-items: center; color: #ffffff; border-radius: 13px; background: linear-gradient(135deg, var(--blue), var(--violet)); font-size: 19px; }
-    .feature h3 { display: block; margin-bottom: 10px; font-size: 18px; }
-    .feature span { color: var(--muted); font-size: 14px; line-height: 1.55; }
-    .final { position: relative; display: grid; height: 400px; place-items: center; overflow: hidden; color: #ffffff; background: var(--navy); text-align: center; }
-    .final::before { position: absolute; inset: 0; content: ""; background: url("generated-theme-preview-source.png") center / cover no-repeat; opacity: 0.32; }
-    .final::after { position: absolute; inset: 0; content: ""; background: rgba(11, 21, 51, 0.7); }
-    .final-content { position: relative; z-index: 2; }
-    .final img { width: 190px; margin: 0 auto 30px; }
-    .final h2 { margin-bottom: 14px; font-size: 48px; }
-    .final p { margin-bottom: 0; color: #cbd8f4; font-size: 19px; }
+    :root { --navy:#071426; --navy-2:#0b1533; --blue:#2563eb; --violet:#6d5dfc; --ink:#142347; --muted:#6b7890; --line:#dbe4f1; --light:#f6f8fc; --mint:#66e3c4; }
+    * { box-sizing:border-box; }
+    html,body { width:1230px; height:7600px; margin:0; overflow:hidden; }
+    body { color:var(--ink); background:#fff; font-family:Arial,Helvetica,sans-serif; }
+    h1,h2,h3,p { margin-top:0; }
+    h2 { margin-bottom:20px; font-size:54px; line-height:1.08; letter-spacing:-2px; }
+    .eyebrow { margin-bottom:16px; color:var(--blue); font-size:14px; font-weight:800; letter-spacing:2px; text-transform:uppercase; }
+    .lead { max-width:760px; margin-bottom:44px; color:var(--muted); font-size:21px; line-height:1.65; }
+    .check-list { display:grid; gap:17px; margin-top:30px; }
+    .check-list span { display:flex; align-items:center; gap:12px; font-size:17px; font-weight:700; }
+    .check-list span::before { display:grid; width:30px; height:30px; flex:0 0 30px; place-items:center; content:"✓"; color:#fff; border-radius:50%; background:var(--blue); font-size:15px; }
+    .hero { position:relative; height:900px; overflow:hidden; color:#fff; background:var(--navy); }
+    .hero::before { position:absolute; inset:0 0 0 41%; content:""; background:url("generated-long-description-source.png") center 20% / cover no-repeat; opacity:.9; }
+    .hero::after { position:absolute; inset:0; content:""; background:linear-gradient(90deg,#071426 0%,#071426 42%,rgba(7,20,38,.89) 54%,rgba(7,20,38,.08) 100%); }
+    .hero-copy { position:relative; z-index:2; width:720px; padding:78px 0 0 76px; }
+    .hero-logo { width:220px; height:auto; margin-bottom:88px; }
+    .hero .eyebrow { color:#93c5fd; }
+    .hero h1 { width:690px; margin-bottom:28px; font-size:74px; line-height:1.02; letter-spacing:-4px; }
+    .hero h1 span { color:#60a5fa; }
+    .hero-copy>p:not(.eyebrow) { width:600px; margin-bottom:38px; color:#cbd8f4; font-size:22px; line-height:1.6; }
+    .hero-tags { display:flex; flex-wrap:wrap; gap:12px; }
+    .hero-tags span { padding:13px 17px; border:1px solid rgba(255,255,255,.22); border-radius:30px; background:rgba(255,255,255,.08); font-size:14px; font-weight:700; }
+    .metrics { display:grid; height:220px; grid-template-columns:repeat(4,1fr); padding:0 70px; background:#fff; }
+    .metric { display:grid; align-content:center; text-align:center; border-right:1px solid var(--line); }
+    .metric:last-child { border-right:0; }
+    .metric strong { color:var(--blue); font-size:42px; line-height:1; }
+    .metric span { margin-top:12px; color:var(--muted); font-size:14px; font-weight:700; letter-spacing:1px; text-transform:uppercase; }
+    .plugins { height:400px; padding:66px 70px; color:#fff; background:linear-gradient(135deg,#0b1533,#142347); text-align:center; }
+    .plugins .eyebrow { color:#93c5fd; }
+    .plugins h2 { margin-bottom:40px; font-size:42px; }
+    .plugin-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+    .plugin { display:flex; min-height:142px; padding:22px; align-items:center; gap:16px; border:1px solid rgba(255,255,255,.13); border-radius:18px; background:rgba(255,255,255,.06); text-align:left; }
+    .plugin b { display:grid; width:54px; height:54px; flex:0 0 54px; place-items:center; border-radius:15px; background:linear-gradient(135deg,var(--blue),var(--violet)); font-size:17px; }
+    .plugin strong { display:block; margin-bottom:5px; font-size:17px; }
+    .plugin small { color:#aabbd9; font-size:12px; line-height:1.45; }
+    .homes { height:1080px; padding:88px 70px; background:var(--light); text-align:center; }
+    .homes .lead { margin-right:auto; margin-left:auto; }
+    .home-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:34px; text-align:left; }
+    .screen-card { overflow:hidden; border:1px solid var(--line); border-radius:22px; background:#fff; box-shadow:0 28px 80px rgba(20,35,71,.12); }
+    .screen-card img { display:block; width:100%; height:585px; object-fit:cover; object-position:top; }
+    .screen-card div { padding:24px 28px 28px; }
+    .screen-card h3 { margin-bottom:8px; font-size:22px; }
+    .screen-card span { color:var(--muted); font-size:15px; line-height:1.55; }
+    .screen-card .demo-button { display:inline-block; margin-top:20px; padding:11px 17px; color:#fff; border-radius:8px; background:var(--blue); font-size:13px; font-weight:700; }
+    .elementor { display:grid; height:850px; grid-template-columns:370px 1fr; gap:58px; align-items:center; padding:82px 70px; background:#fff; }
+    .editor { height:625px; overflow:hidden; border:1px solid #cfd9ea; border-radius:24px; background:#fff; box-shadow:0 32px 90px rgba(20,35,71,.16); }
+    .editor-top { display:flex; height:48px; padding:0 18px; align-items:center; justify-content:space-between; color:#fff; background:#111827; font-size:13px; font-weight:700; }
+    .editor-body { display:grid; height:577px; grid-template-columns:185px 1fr; }
+    .editor-panel { padding:18px 14px; background:#f7f8fb; border-right:1px solid #dbe4f1; }
+    .editor-panel strong { display:block; margin-bottom:16px; font-size:14px; }
+    .editor-widget { margin-bottom:10px; padding:13px 10px; border:1px solid #dbe4f1; border-radius:8px; background:#fff; color:#56637b; font-size:12px; font-weight:700; }
+    .editor-canvas { padding:14px; background:#eef2f8; }
+    .editor-canvas img { width:100%; height:100%; object-fit:cover; object-position:top; border-radius:9px; box-shadow:0 8px 24px rgba(20,35,71,.1); }
+    .elementor h2,.commerce h2 { font-size:50px; }
+    .elementor .lead,.commerce .lead { font-size:18px; }
+    .commerce { display:grid; height:920px; grid-template-columns:360px 1fr; gap:62px; align-items:center; padding:88px 70px; background:#edf4ff; }
+    .commerce-frame { padding:12px; overflow:hidden; border:1px solid #cbd9ee; border-radius:24px; background:#fff; box-shadow:0 34px 90px rgba(25,62,130,.16); }
+    .commerce-frame img { display:block; width:100%; height:650px; object-fit:cover; object-position:top; border-radius:15px; }
+    .responsive { display:grid; height:900px; grid-template-columns:470px 1fr; gap:90px; align-items:center; padding:70px 95px; overflow:hidden; color:#fff; background:var(--navy-2); }
+    .phone { justify-self:center; width:330px; height:735px; padding:17px; overflow:hidden; border:5px solid #29456d; border-radius:48px; background:#03070d; box-shadow:0 38px 100px rgba(0,0,0,.42); }
+    .phone img { display:block; width:100%; height:100%; object-fit:cover; object-position:top; border-radius:28px; }
+    .responsive .eyebrow { color:var(--mint); }
+    .responsive h2 { max-width:500px; font-size:58px; }
+    .responsive .lead { color:#cbd8f4; }
+    .responsive .check-list span::before { color:var(--navy); background:var(--mint); }
+    .inner-pages { height:1040px; padding:78px 70px; background:#fff; text-align:center; }
+    .inner-pages .lead,.features .lead { margin-right:auto; margin-left:auto; }
+    .page-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:26px; text-align:left; }
+    .page-card { position:relative; height:345px; padding:9px; overflow:hidden; border:1px solid var(--line); border-radius:20px; background:var(--light); box-shadow:0 18px 55px rgba(20,35,71,.1); }
+    .page-card img { width:100%; height:100%; object-fit:cover; object-position:top; border-radius:13px; }
+    .page-card span { position:absolute; bottom:24px; left:25px; padding:10px 15px; color:#fff; border-radius:8px; background:rgba(11,21,51,.92); font-size:14px; font-weight:700; }
+    .features { height:860px; padding:82px 70px; background:var(--light); text-align:center; }
+    .feature-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; text-align:left; }
+    .feature { min-height:214px; padding:28px 24px; border:1px solid var(--line); border-radius:18px; background:#fff; }
+    .feature b { display:grid; width:48px; height:48px; margin-bottom:25px; place-items:center; color:#fff; border-radius:13px; background:linear-gradient(135deg,var(--blue),var(--violet)); font-size:16px; }
+    .feature h3 { margin-bottom:9px; font-size:17px; }
+    .feature span { color:var(--muted); font-size:13px; line-height:1.55; }
+    .final { position:relative; display:grid; height:430px; place-items:center; overflow:hidden; color:#fff; background:var(--navy); text-align:center; }
+    .final::before { position:absolute; inset:0; content:""; background:url("generated-theme-preview-source.png") center / cover no-repeat; opacity:.34; }
+    .final::after { position:absolute; inset:0; content:""; background:rgba(7,20,38,.74); }
+    .final-content { position:relative; z-index:2; }
+    .final img { width:205px; margin:0 auto 28px; }
+    .final h2 { margin-bottom:14px; font-size:48px; }
+    .final p { margin-bottom:26px; color:#cbd8f4; font-size:18px; }
+    .final span { display:inline-block; padding:14px 24px; border-radius:30px; background:var(--blue); font-size:15px; font-weight:700; }
   </style>
 </head>
-
 <body>
-  <section class="hero">
-    <div class="hero-copy">
-      <img class="hero-logo" src="../assets/images/logo-white.svg" alt="LinkSMM">
-      <p class="section-label">SMM &amp; Digital Services Marketplace</p>
-      <h1>Build a Stronger <span>Digital Service</span> Business</h1>
-      <p>A polished multi-page HTML template for agencies, consultants, marketers, and service marketplaces.</p>
-      <div class="hero-tags"><span>Responsive HTML5</span><span>Bootstrap 5</span><span>SCSS Included</span></div>
-    </div>
-  </section>
-
-  <div class="metrics">
-    <div class="metric"><strong>21</strong><span>HTML Pages</span></div>
-    <div class="metric"><strong>02</strong><span>Homepages</span></div>
-    <div class="metric"><strong>03</strong><span>Menu Levels</span></div>
-    <div class="metric"><strong>100%</strong><span>Responsive</span></div>
-  </div>
-
-  <section class="homes">
-    <p class="section-label">Flexible First Impressions</p>
-    <h2>Two Distinct Homepage Experiences</h2>
-    <p class="section-intro">Choose a clean marketplace landing page or an alternate premium presentation while keeping a consistent service journey.</p>
-    <div class="home-grid">
-      <article class="screen-card"><img src="showcase-home-one.png" alt="Homepage one"><div><h3>Homepage One</h3><span>Clean marketplace hero, service categories, products, testimonials, articles, and conversion sections.</span></div></article>
-      <article class="screen-card"><img src="showcase-home-two.png" alt="Homepage two"><div><h3>Homepage Two</h3><span>Alternate header, hero, benefit panels, vertical process, and enhanced footer call-to-action.</span></div></article>
-    </div>
-  </section>
-
-  <section class="market">
-    <div>
-      <p class="section-label">Marketplace Ready</p>
-      <h2>Present Services With Clear Detail</h2>
-      <p class="section-intro">Organized catalogue and product layouts help visitors compare service scope, options, pricing, and delivery information.</p>
-      <div class="feature-points"><span><i>✓</i>Filter-ready shop layout</span><span><i>✓</i>WooCommerce-inspired gallery</span><span><i>✓</i>Cart and checkout screens</span><span><i>✓</i>Pricing and custom quote pages</span></div>
-    </div>
-    <div class="market-frame"><img src="showcase-shop.png" alt="Shop page"></div>
-  </section>
-
-  <section class="responsive">
-    <div class="phone"><img src="showcase-mobile.png" alt="Mobile homepage"></div>
-    <div>
-      <p class="section-label">Responsive Experience</p>
-      <h2>Designed for Every Screen</h2>
-      <p class="section-intro">A responsive layout and touch-friendly controls keep the service journey clear from desktop to mobile.</p>
-      <div class="responsive-list"><span>Off-canvas mobile navigation</span><span>Three-level submenu support</span><span>Touch-friendly controls</span><span>1024px navigation breakpoint</span></div>
-    </div>
-  </section>
-
-  <section class="inner-pages">
-    <p class="section-label">Complete Customer Journey</p>
-    <h2>Purpose-Built Inner Pages</h2>
-    <p class="section-intro">From service discovery to account screens and content marketing, LinkSMM covers the core pages of a digital service business.</p>
-    <div class="page-grid">
-      <div class="page-card"><img src="showcase-product-details.png" alt="Product details"><span>Product Details</span></div>
-      <div class="page-card"><img src="showcase-blog.png" alt="Blog listing"><span>Blog &amp; Resources</span></div>
-      <div class="page-card"><img src="showcase-dashboard.png" alt="Customer dashboard"><span>Customer Dashboard</span></div>
-      <div class="page-card"><img src="showcase-shop.png" alt="Service catalogue"><span>Service Catalogue</span></div>
-    </div>
-  </section>
-
-  <section class="features">
-    <p class="section-label">Developer Friendly</p>
-    <h2>Built for Practical Customization</h2>
-    <p class="section-intro">Organized source files and reusable components make LinkSMM a solid starting point for static websites and later CMS conversion.</p>
-    <div class="feature-grid">
-      <article class="feature"><b>21</b><h3>Complete Pages</h3><span>Home, shop, product, account, blog, policy, and support layouts.</span></article>
-      <article class="feature"><b>02</b><h3>Unique Homepages</h3><span>Two polished directions for different marketing presentations.</span></article>
-      <article class="feature"><b>WP</b><h3>WordPress-Ready Menu</h3><span>Standard menu-item and sub-menu structure through three levels.</span></article>
-      <article class="feature"><b>BS</b><h3>Bootstrap 5</h3><span>Responsive grid and utility foundation for faster customization.</span></article>
-      <article class="feature"><b>SC</b><h3>SCSS Source</h3><span>Numbered sections, reusable variables, and compiled CSS included.</span></article>
-      <article class="feature"><b>SW</b><h3>Swiper Slider</h3><span>Responsive, touch-friendly testimonial carousel integration.</span></article>
-      <article class="feature"><b>W3</b><h3>W3C Valid HTML</h3><span>All 21 customer-facing pages pass the W3C Nu HTML Checker.</span></article>
-      <article class="feature"><b>DOC</b><h3>Documentation</h3><span>Setup, customization, assets, forms, and conversion notes included.</span></article>
-    </div>
-  </section>
-
-  <section class="final">
-    <div class="final-content"><img src="../assets/images/logo-white.svg" alt="LinkSMM"><h2>Launch Your Digital Services Presence</h2><p>Modern design · Clear service journeys · Flexible front-end source</p></div>
-  </section>
+  <section class="hero"><div class="hero-copy"><img class="hero-logo" src="../assets/images/logo-white.svg" alt="LinkSMM"><p class="eyebrow">Digital Marketing &amp; SMM WordPress Theme</p><h1>Build and Sell <span>Digital Services</span> with WordPress</h1><p>LinkSMM is a modern WordPress theme for digital agencies, SMM providers, consultants, and online service marketplaces.</p><div class="hero-tags"><span>Elementor Page Builder</span><span>WooCommerce</span><span>One Click Demo Import</span></div></div></section>
+  <div class="metrics"><div class="metric"><strong>02</strong><span>Home Demos</span></div><div class="metric"><strong>Elementor</strong><span>Visual Page Builder</span></div><div class="metric"><strong>Woo</strong><span>Online Store Ready</span></div><div class="metric"><strong>100%</strong><span>Responsive Design</span></div></div>
+  <section class="plugins"><p class="eyebrow">Essential WordPress Tools</p><h2>Works with the Plugins Your Business Needs</h2><div class="plugin-grid"><article class="plugin"><b>EL</b><div><strong>Elementor</strong><small>Build and customize pages visually.</small></div></article><article class="plugin"><b>Woo</b><div><strong>WooCommerce</strong><small>Sell digital services with confidence.</small></div></article><article class="plugin"><b>CF7</b><div><strong>Contact Form 7</strong><small>Create practical enquiry forms.</small></div></article><article class="plugin"><b>1C</b><div><strong>One Click Demo Import</strong><small>Start quickly with demo content.</small></div></article></div></section>
+  <section class="homes"><p class="eyebrow">Two Complete Live Demos</p><h2>Choose the Homepage That Fits Your Brand</h2><p class="lead">Launch with a clean service marketplace or a bold agency-style presentation. Both demos share a consistent shopping and content experience.</p><div class="home-grid"><article class="screen-card"><img src="Theme Preview/02_showcase-home-one.png" alt="Homepage one"><div><h3>Homepage One — Service Marketplace</h3><span>Clean hero, service categories, featured products, testimonials, blog content, and focused calls to action.</span><br><span class="demo-button">View Live Demo 01</span></div></article><article class="screen-card"><img src="Theme Preview/03_showcase-home-two.png" alt="Homepage two"><div><h3>Homepage Two — Digital Agency</h3><span>Alternative header, premium dark hero, benefit panels, process sections, and a bold conversion journey.</span><br><span class="demo-button">View Live Demo 02</span></div></article></div></section>
+  <section class="elementor"><div><p class="eyebrow">Elementor Page Builder</p><h2>Edit Pages Visually</h2><p class="lead">Create and customize layouts through Elementor’s visual editing experience without touching theme code.</p><div class="check-list"><span>Drag-and-drop page editing</span><span>Reusable content sections</span><span>Flexible colors and typography</span><span>Responsive layout controls</span></div></div><div class="editor"><div class="editor-top"><span>LinkSMM / Edit with Elementor</span><span>Update</span></div><div class="editor-body"><div class="editor-panel"><strong>Elements</strong><div class="editor-widget">Heading</div><div class="editor-widget">Image</div><div class="editor-widget">Button</div><div class="editor-widget">Icon Box</div><div class="editor-widget">Products</div><div class="editor-widget">Testimonials</div></div><div class="editor-canvas"><img src="Theme Preview/02_showcase-home-one.png" alt="Elementor editing preview"></div></div></div></section>
+  <section class="commerce"><div><p class="eyebrow">WooCommerce Ready</p><h2>Sell Digital Services Online</h2><p class="lead">Present service packages, guide customers through product details, and support a familiar WooCommerce purchase journey.</p><div class="check-list"><span>Service catalogue and shop layouts</span><span>Product details and gallery</span><span>Cart and checkout experience</span><span>Customer account dashboard</span></div></div><div class="commerce-frame"><img src="Theme Preview/04_shop.png" alt="WooCommerce shop page"></div></section>
+  <section class="responsive"><div class="phone"><img src="showcase-mobile.png" alt="Mobile homepage"></div><div><p class="eyebrow">Responsive WordPress Experience</p><h2>Looks Sharp on Every Screen</h2><p class="lead">LinkSMM is designed to keep service discovery, shopping, and content easy to use across desktop, tablet, and mobile.</p><div class="check-list"><span>Responsive desktop and mobile layouts</span><span>Touch-friendly off-canvas navigation</span><span>Three-level WordPress menu support</span><span>Optimized shopping experience</span></div></div></section>
+  <section class="inner-pages"><p class="eyebrow">Complete Website Journey</p><h2>Purpose-Built WordPress Pages</h2><p class="lead">From browsing services to reading articles and managing orders, the theme includes layouts for the key stages of a digital-service website.</p><div class="page-grid"><div class="page-card"><img src="Theme Preview/07_showcase-product-details.png" alt="Product details"><span>WooCommerce Product Details</span></div><div class="page-card"><img src="Theme Preview/05_showcase-blog.png" alt="Blog listing"><span>WordPress Blog &amp; Resources</span></div><div class="page-card"><img src="Theme Preview/06_showcase-dashboard.png" alt="Customer dashboard"><span>Customer Account Dashboard</span></div><div class="page-card"><img src="Theme Preview/04_shop.png" alt="Service catalogue"><span>Service Catalogue &amp; Shop</span></div></div></section>
+  <section class="features"><p class="eyebrow">Everything You Need to Launch</p><h2>Built for Real WordPress Projects</h2><p class="lead">A focused feature set gives agencies and digital-service businesses a practical foundation for launching and growing their online presence.</p><div class="feature-grid"><article class="feature"><b>EL</b><h3>Elementor Builder</h3><span>Customize page content through an intuitive visual editor.</span></article><article class="feature"><b>Woo</b><h3>WooCommerce</h3><span>Product, shop, cart, checkout, and account layouts.</span></article><article class="feature"><b>CF7</b><h3>Contact Form 7</h3><span>Flexible contact and service enquiry form support.</span></article><article class="feature"><b>1C</b><h3>Demo Import</h3><span>Use One Click Demo Import to start with demo content.</span></article><article class="feature"><b>02</b><h3>Two Home Demos</h3><span>Two polished homepage directions for different brands.</span></article><article class="feature"><b>SEO</b><h3>SEO-Friendly</h3><span>Clear structure and content-focused page presentation.</span></article><article class="feature"><b>BLG</b><h3>Blog Ready</h3><span>Purpose-built listing, article, related post, and comment layouts.</span></article><article class="feature"><b>DOC</b><h3>Documentation</h3><span>Guidance for setup, import, customization, and plugins.</span></article></div></section>
+  <section class="final"><div class="final-content"><img src="../assets/images/logo-white.svg" alt="LinkSMM"><h2>Launch Your Digital Service Website</h2><p>WordPress · Elementor · WooCommerce · Two Live Home Demos</p><span>Explore the Live Demos</span></div></section>
 </body>
-
 </html>

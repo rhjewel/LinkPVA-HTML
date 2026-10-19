@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <meta name="description" content="Static LinkSMM customer sign-in and registration interface.">
+  <title>Customer Sign In | LinkSMM</title>
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="assets/css/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <a class="linksmm-skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Header Start -->
+  <div class="linksmm-utility-bar">
+    <div class="container">
+      <div class="linksmm-utility-inner">
+        <p><i class="bi bi-stars"></i> Flexible digital marketing solutions for modern brands</p>
+        <ul>
+          <li><a href="faq.html">Help Center</a></li>
+          <li><a href="bulk-order.html">Request a Quote</a></li>
+          <li><a href="mailto:support@linksmm.example">support@linksmm.example</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <header class="linksmm-header" data-header>
+    <div class="container">
+      <div class="linksmm-header-inner">
+        <a class="linksmm-logo" href="index.html">
+          <img src="assets/images/logo.svg" width="190" height="46" alt="LinkSMM">
+        </a>
+        <button class="linksmm-menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation"
+          data-menu-toggle>
+          <i class="bi bi-list"></i><span class="visually-hidden">Open navigation</span>
+        </button>
+        <div class="linksmm-mobile-menu-backdrop" data-menu-backdrop></div>
+        <nav class="linksmm-primary-nav" id="primary-navigation" aria-label="Primary navigation" data-mobile-menu>
+          <div class="linksmm-mobile-nav-header">
+            <a class="linksmm-logo" href="index.html">
+              <img src="assets/images/logo.svg" width="190" height="46" alt="LinkSMM">
+            </a>
+            <button class="linksmm-mobile-menu-close" type="button" aria-label="Close navigation" data-menu-close>
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </div>
+          <ul>
+            <li class="menu-item menu-item-has-children">
+              <a href="index.html">Home</a>
+              <ul class="sub-menu">
+                <li class="menu-item"><a href="index.html">Home Version One</a></li>
+                <li class="menu-item"><a href="index-2.html">Home Version Two</a></li>
+              </ul>
+            </li>
+            <li class="menu-item menu-item-has-children">
+              <a href="shop.html">Services</a>
+              <ul class="sub-menu">
+                <li class="menu-item menu-item-has-children">
+                  <a href="shop.html">Social Media</a>
+                  <ul class="sub-menu">
+                    <li class="menu-item"><a href="product-details.html">Social Media Management</a>
+                    </li>
+                    <li class="menu-item"><a href="product-details.html">Content Marketing</a></li>
+                    <li class="menu-item"><a href="product-details.html">Community Management</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item menu-item-has-children">
+                  <a href="shop.html">Professional
+                    Growth</a>
+                  <ul class="sub-menu">
+                    <li class="menu-item"><a href="product-details.html">Profile Optimization</a>
+                    </li>
+                    <li class="menu-item"><a href="product-details.html">Personal Branding</a></li>
+                    <li class="menu-item"><a href="product-details.html">Profile Audit</a></li>
+                  </ul>
+                </li>
+                <li class="menu-item menu-item-has-children">
+                  <a href="shop.html">Campaigns</a>
+                  <ul class="sub-menu">
+                    <li class="menu-item"><a href="product-details.html">Lead Generation</a></li>
+                    <li class="menu-item"><a href="product-details.html">Outreach Campaigns</a></li>
+                    <li class="menu-item">
+                      <a href="pricing.html">Marketing Packages</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item"><a href="shop.html">Shop</a></li>
+            <li class="menu-item"><a href="pricing.html">Pricing</a></li>
+            <li class="menu-item menu-item-has-children">
+              <a href="blog.html">Blog</a>
+              <ul class="sub-menu">
+                <li class="menu-item"><a href="blog.html">Blog Listing</a></li>
+                <li class="menu-item"><a href="blog-details.html">Blog Details</a></li>
+              </ul>
+            </li>
+            <li class="menu-item menu-item-has-children">
+              <a href="about.html">Pages</a>
+              <ul class="sub-menu">
+                <li class="menu-item menu-item-has-children">
+                  <a href="about.html">Company</a>
+                  <ul class="sub-menu">
+                    <li class="menu-item"><a href="about.html">About Us</a></li>
+                    <li class="menu-item"><a href="contact.html">Contact Us</a></li>
+                    <li class="menu-item"><a href="faq.html">FAQ</a></li>
+                  </ul>
+                </li>
+                <li class="menu-item menu-item-has-children">
+                  <a href="login.html">Customer Account</a>
+                  <ul class="sub-menu">
+                    <li class="menu-item"><a href="login.html">Login &amp; Register</a></li>
+                    <li class="menu-item"><a href="dashboard.html">Dashboard</a></li>
+                  </ul>
+                </li>
+                <li class="menu-item menu-item-has-children">
+                  <a href="cart.html">Order Pages</a>
+                  <ul class="sub-menu">
+                    <li class="menu-item"><a href="cart.html">Shopping Cart</a></li>
+                    <li class="menu-item"><a href="checkout.html">Checkout</a></li>
+                    <li class="menu-item"><a href="order-success.html">Order Success</a></li>
+                    <li class="menu-item"><a href="bulk-order.html">Custom Quote</a></li>
+                  </ul>
+                </li>
+                <li class="menu-item menu-item-has-children">
+                  <a href="delivery-policy.html">Policies</a>
+                  <ul class="sub-menu">
+                    <li class="menu-item"><a href="delivery-policy.html">Delivery Policy</a></li>
+                    <li class="menu-item"><a href="refund-policy.html">Refund Policy</a></li>
+                    <li class="menu-item"><a href="privacy.html">Privacy Policy</a></li>
+                    <li class="menu-item"><a href="terms.html">Terms of Service</a></li>
+                  </ul>
+                </li>
+                <li class="menu-item"><a href="404.html">404 Page</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="linksmm-header-actions">
+          <button class="linksmm-icon-button" type="button" aria-label="Search services" data-search-toggle>
+            <i class="bi bi-search"></i>
+          </button>
+          <a class="linksmm-icon-button" href="login.html" aria-label="My account"><i class="bi bi-person"></i></a>
+          <a class="linksmm-cart-button" href="cart.html" aria-label="Shopping cart with 0 items"><i
+              class="bi bi-bag"></i><span class="linksmm-cart-count">0</span></a>
+        </div>
+      </div>
+      <form class="linksmm-search-form" action="shop.html" role="search" hidden data-search-form>
+        <label class="visually-hidden" for="site-search">Search services</label>
+        <input id="site-search" name="s" type="search" placeholder="Search digital services...">
+        <button type="submit">Search</button>
+      </form>
+    </div>
+  </header>
+  <!-- Header End -->
+
+  <main>
+    <div class="linksmm-careers">
+      <section class="linksmm-careers-intro" aria-labelledby="career-intro-title">
+        <div class="container">
+          <div class="row g-5 align-items-center">
+            <div class="col-lg-7">
+              <span class="linksmm-section-tag">Build your next chapter</span>
+              <h2 id="career-intro-title">Good work starts with<br><span>great people.</span></h2>
+              <p>We help brands grow through thoughtful strategy, creative content and meaningful connections. Join a
+                team that brings the same care to its people.</p>
+              <div class="linksmm-careers-intro-actions">
+                <a class="linksmm-button linksmm-button-primary" href="#career-openings">Explore open roles <i
+                    class="bi bi-arrow-down" aria-hidden="true"></i></a>
+                <span><i class="bi bi-globe2" aria-hidden="true"></i> Different perspectives. One team.</span>
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <aside class="linksmm-careers-culture" aria-labelledby="career-culture-title">
+                <div class="linksmm-careers-culture-top"><span class="linksmm-careers-symbol"><i class="bi bi-stars"
+                      aria-hidden="true"></i></span><span>Life at LinkSMM</span></div>
+                <h3 id="career-culture-title">Small team.<br>Room for big ideas.</h3>
+                <p>Your perspective matters here. Ask questions, share ideas and make work you're proud to put your name
+                  on.</p>
+                <div class="linksmm-careers-values"><span><i class="bi bi-check2" aria-hidden="true"></i> Stay
+                    curious</span><span><i class="bi bi-check2" aria-hidden="true"></i> Own your work</span><span><i
+                      class="bi bi-check2" aria-hidden="true"></i> Grow together</span></div>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="linksmm-careers-benefits" aria-labelledby="career-benefits-title">
+        <div class="container">
+          <div class="linksmm-careers-section-top">
+            <div><span class="linksmm-section-tag">More than a job</span>
+              <h2 id="career-benefits-title">A place to do your best work</h2>
+            </div>
+            <p>The support, trust and space to keep moving forward.</p>
+          </div>
+          <div class="row g-4">
+            <div class="col-sm-6 col-lg-3">
+              <article class="linksmm-careers-benefit"><span><i class="bi bi-laptop" aria-hidden="true"></i></span>
+                <h3>Work with flexibility</h3>
+                <p>Find a rhythm that supports focused work and a life beyond your screen.</p>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <article class="linksmm-careers-benefit"><span><i class="bi bi-mortarboard" aria-hidden="true"></i></span>
+                <h3>Keep learning</h3>
+                <p>Build your skills through practical experience, feedback and shared knowledge.</p>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <article class="linksmm-careers-benefit"><span><i class="bi bi-heart" aria-hidden="true"></i></span>
+                <h3>People come first</h3>
+                <p>Work with teammates who value respect, honest conversations and balance.</p>
+              </article>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <article class="linksmm-careers-benefit"><span><i class="bi bi-graph-up-arrow"
+                    aria-hidden="true"></i></span>
+                <h3>Make a real impact</h3>
+                <p>See how your ideas and everyday decisions contribute to our clients' growth.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="linksmm-careers-openings" id="career-openings" aria-labelledby="career-openings-title">
+        <div class="container">
+          <div class="linksmm-careers-section-top">
+            <div><span class="linksmm-section-tag">Find your opportunity</span>
+              <h2 id="career-openings-title">Open roles, fresh possibilities</h2>
+            </div><span class="linksmm-careers-count"><span aria-hidden="true"></span> 6 open positions</span>
+          </div>
+          <div class="linksmm-careers-job-grid">
+            <article class="linksmm-careers-job">
+              <div class="linksmm-careers-job-top"><span class="linksmm-careers-job-icon tone-0"><i
+                    class="bi bi-chat-square-heart" aria-hidden="true"></i></span><span
+                  class="linksmm-careers-department">Marketing</span></div>
+              <h3>Social Media Manager</h3>
+              <ul class="linksmm-careers-job-meta" aria-label="Role information">
+                <li><i class="bi bi-geo-alt" aria-hidden="true"></i>Remote</li>
+                <li><i class="bi bi-clock" aria-hidden="true"></i>Full-time</li>
+              </ul>
+              <p>Build thoughtful content calendars and help brands turn everyday conversations into lasting
+                communities.</p>
+              <details class="linksmm-careers-job-details">
+                <summary><span>Role overview<span class="visually-hidden">: Social Media Manager</span></span><i
+                    class="bi bi-arrow-down-right" aria-hidden="true"></i></summary>
+                <div><span class="linksmm-careers-level">Mid-level</span>
+                  <p>Lead channel planning, coordinate publishing with our creative team, and translate performance data
+                    into clear next steps. Experience managing social channels and collaborating with clients is a plus.
+                  </p>
+                </div>
+              </details>
+            </article>
+            <article class="linksmm-careers-job">
+              <div class="linksmm-careers-job-top"><span class="linksmm-careers-job-icon tone-1"><i
+                    class="bi bi-pencil-square" aria-hidden="true"></i></span><span
+                  class="linksmm-careers-department">Creative</span></div>
+              <h3>Content Strategist</h3>
+              <ul class="linksmm-careers-job-meta" aria-label="Role information">
+                <li><i class="bi bi-geo-alt" aria-hidden="true"></i>Hybrid · Dhaka</li>
+                <li><i class="bi bi-clock" aria-hidden="true"></i>Full-time</li>
+              </ul>
+              <p>Bring research, storytelling and a clear point of view to content that earns attention.</p>
+              <details class="linksmm-careers-job-details">
+                <summary><span>Role overview<span class="visually-hidden">: Content Strategist</span></span><i
+                    class="bi bi-arrow-down-right" aria-hidden="true"></i></summary>
+                <div><span class="linksmm-careers-level">Mid-level</span>
+                  <p>Develop campaign ideas, write briefs and guide content from first draft to delivery. Bring a
+                    portfolio that shows your research process and editorial judgment.</p>
+                </div>
+              </details>
+            </article>
+            <article class="linksmm-careers-job">
+              <div class="linksmm-careers-job-top"><span class="linksmm-careers-job-icon tone-2"><i
+                    class="bi bi-bullseye" aria-hidden="true"></i></span><span
+                  class="linksmm-careers-department">Growth</span></div>
+              <h3>Lead Generation Specialist</h3>
+              <ul class="linksmm-careers-job-meta" aria-label="Role information">
+                <li><i class="bi bi-geo-alt" aria-hidden="true"></i>Remote</li>
+                <li><i class="bi bi-clock" aria-hidden="true"></i>Full-time</li>
+              </ul>
+              <p>Connect the right businesses with the right opportunities through considered research and outreach.</p>
+              <details class="linksmm-careers-job-details">
+                <summary><span>Role overview<span class="visually-hidden">: Lead Generation Specialist</span></span><i
+                    class="bi bi-arrow-down-right" aria-hidden="true"></i></summary>
+                <div><span class="linksmm-careers-level">Mid-level</span>
+                  <p>Research audiences, qualify prospects and build respectful outreach workflows. You should be
+                    comfortable organizing campaign data and sharing useful insights.</p>
+                </div>
+              </details>
+            </article>
+            <article class="linksmm-careers-job">
+              <div class="linksmm-careers-job-top"><span class="linksmm-careers-job-icon tone-0"><i
+                    class="bi bi-palette" aria-hidden="true"></i></span><span
+                  class="linksmm-careers-department">Design</span></div>
+              <h3>Visual Designer</h3>
+              <ul class="linksmm-careers-job-meta" aria-label="Role information">
+                <li><i class="bi bi-geo-alt" aria-hidden="true"></i>Hybrid · Dhaka</li>
+                <li><i class="bi bi-clock" aria-hidden="true"></i>Full-time</li>
+              </ul>
+              <p>Create distinctive campaign visuals that make every brand interaction feel consistent.</p>
+              <details class="linksmm-careers-job-details">
+                <summary><span>Role overview<span class="visually-hidden">: Visual Designer</span></span><i
+                    class="bi bi-arrow-down-right" aria-hidden="true"></i></summary>
+                <div><span class="linksmm-careers-level">Mid-level</span>
+                  <p>Design social assets and campaign concepts, collaborate on creative direction and prepare
+                    production-ready files. A strong sense of typography and layout matters.</p>
+                </div>
+              </details>
+            </article>
+            <article class="linksmm-careers-job">
+              <div class="linksmm-careers-job-top"><span class="linksmm-careers-job-icon tone-1"><i class="bi bi-people"
+                    aria-hidden="true"></i></span><span class="linksmm-careers-department">Client Success</span></div>
+              <h3>Client Success Executive</h3>
+              <ul class="linksmm-careers-job-meta" aria-label="Role information">
+                <li><i class="bi bi-geo-alt" aria-hidden="true"></i>Dhaka</li>
+                <li><i class="bi bi-clock" aria-hidden="true"></i>Full-time</li>
+              </ul>
+              <p>Keep projects moving and make every customer feel informed, supported and understood.</p>
+              <details class="linksmm-careers-job-details">
+                <summary><span>Role overview<span class="visually-hidden">: Client Success Executive</span></span><i
+                    class="bi bi-arrow-down-right" aria-hidden="true"></i></summary>
+                <div><span class="linksmm-careers-level">Entry-level</span>
+                  <p>Coordinate project updates, clarify customer requirements and help teams deliver on time. Clear
+                    communication, care and organization are essential.</p>
+                </div>
+              </details>
+            </article>
+            <article class="linksmm-careers-job">
+              <div class="linksmm-careers-job-top"><span class="linksmm-careers-job-icon tone-2"><i
+                    class="bi bi-lightning-charge" aria-hidden="true"></i></span><span
+                  class="linksmm-careers-department">Marketing</span></div>
+              <h3>Digital Marketing Intern</h3>
+              <ul class="linksmm-careers-job-meta" aria-label="Role information">
+                <li><i class="bi bi-geo-alt" aria-hidden="true"></i>Hybrid · Dhaka</li>
+                <li><i class="bi bi-clock" aria-hidden="true"></i>Internship</li>
+              </ul>
+              <p>Learn by doing alongside a team working on real content and growth projects.</p>
+              <details class="linksmm-careers-job-details">
+                <summary><span>Role overview<span class="visually-hidden">: Digital Marketing Intern</span></span><i
+                    class="bi bi-arrow-down-right" aria-hidden="true"></i></summary>
+                <div><span class="linksmm-careers-level">Entry-level</span>
+                  <p>Support campaign research, reporting and content planning with guidance from the team. Curiosity,
+                    attention to detail and a willingness to learn are welcome.</p>
+                </div>
+              </details>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="linksmm-careers-process" id="career-process" aria-labelledby="career-process-title">
+        <div class="container">
+          <div class="linksmm-section-heading text-center"><span class="linksmm-section-tag">What happens next</span>
+            <h2 id="career-process-title">A thoughtful hiring process</h2>
+            <p>Getting to know each other should feel clear and straightforward.</p>
+          </div>
+          <ol class="linksmm-careers-process-grid">
+            <li><span class="linksmm-careers-step">01</span>
+              <h3>Share your story</h3>
+              <p>Tell us about your experience, interests and the work you would love to do.</p>
+            </li>
+            <li><span class="linksmm-careers-step">02</span>
+              <h3>Let's have a conversation</h3>
+              <p>Meet the team, ask questions and explore how we could work together.</p>
+            </li>
+            <li><span class="linksmm-careers-step">03</span>
+              <h3>Find the right fit</h3>
+              <p>Discuss the role, expectations and next steps with a clear picture of what's ahead.</p>
+            </li>
+          </ol>
+          <div class="linksmm-careers-closing"><i class="bi bi-chat-heart" aria-hidden="true"></i>
+            <div>
+              <h3>Different backgrounds. Shared ambition.</h3>
+              <p>We welcome fresh perspectives and people who care about doing good work. Explore a role that feels
+                right for you.</p>
+            </div><a class="linksmm-button linksmm-button-secondary" href="#career-openings">Browse roles <i
+                class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer Start -->
+  <footer class="linksmm-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-3">
+          <a class="linksmm-logo linksmm-footer-logo" href="index.html">
+            <img src="assets/images/logo-white.svg" width="190" height="46" alt="LinkSMM">
+          </a>
+          <p class="linksmm-footer-about">
+            A flexible marketplace template for presenting social media marketing, branding, lead
+            generation, and digital growth services.
+          </p>
+          <div class="linksmm-social-links">
+            <a href="https://www.facebook.com/" target="_blank">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank">
+              <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank">
+              <i class="bi bi-instagram"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <h2>Services</h2>
+          <ul>
+            <li><a href="shop.html">All Services</a></li>
+            <li><a href="product-details.html">Social Media Management</a></li>
+            <li><a href="product-details.html">Profile Optimization</a></li>
+            <li><a href="product-details.html">Lead Generation</a></li>
+            <li><a href="pricing.html">Marketing Packages</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <h2>Company</h2>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="bulk-order.html">Request a Quote</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-4 col-lg-2">
+          <h2>Support</h2>
+          <ul class="linksmm-footer-policy-links">
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="delivery-policy.html">Delivery Policy</a></li>
+            <li><a href="refund-policy.html">Refund Policy</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-lg-3">
+          <h2>Get in Touch</h2>
+          <ul class="linksmm-contact-list">
+            <li>
+              <span class="linksmm-footer-contact-icon">
+                <i class="bi bi-envelope"></i></span><span><small>Email us</small>
+                <a href="mailto:support@linksmm.example">support@linksmm.example</a>
+              </span>
+            </li>
+            <li>
+              <span class="linksmm-footer-contact-icon">
+                <i class="bi bi-chat-dots"></i></span><span><small>Need help?</small>
+                <a href="contact.html">Contact Support</a>
+              </span>
+            </li>
+            <li>
+              <span class="linksmm-footer-contact-icon"><i class="bi bi-geo-alt"></i></span>
+              <address>
+                <small>Our location</small><span>Dhaka, Bangladesh</span>
+              </address>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="linksmm-footer-bottom">
+        <p> &copy; <span data-current-year>2026</span> LinkSMM. All rights reserved. </p>
+        <p>SMM &amp; digital services marketplace HTML template.</p>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer End -->
+
+  <!-- Back to Top Start -->
+  <button class="linksmm-back-to-top" type="button" aria-label="Back to top" data-back-to-top>
+    <i class="bi bi-arrow-up" aria-hidden="true"></i>
+  </button>
+  <!-- Back to Top End -->
+
+
+  <script src="assets/js/jquery-3.7.1.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <script src="assets/js/custom.js"></script>
+</body>
+
+</html>
